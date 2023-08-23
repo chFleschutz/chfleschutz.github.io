@@ -1,2 +1,3 @@
-# chfleschutz.github.io
-Portfolio website for my projects
+# Portfolio website for my projects
+
+Visit it under [chfleschutz.github.io](https://chfleschutz.github.io)
