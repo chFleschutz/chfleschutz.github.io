@@ -1,0 +1,357 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Outfit:80);
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:16,24);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2980B9;
+    --secondary-color: #335160;
+    --accent-color: #2ECC70;
+    --background-color: #1D2B3A;
+    --card-color: #293644;
+    --text-color: #F4F4F4;
+}
+
+a {
+    color: var(--text-color, #F4F4F4);
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-color, #F4F4F4);
+}
+
+.primary-button {
+    background-color: var(--primary-color, #2980B9);
+    color: var(--text-color, #F4F4F4);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 0.7em 2em;
+    border: 6px;
+    border-radius: 55px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: transform ease 0.2s, box-shadow ease 0.2s;
+}
+
+.primary-button:hover {
+    transform: translate(0, -3px);
+    box-shadow: 0 20px 80px -10px var(--primary-color);
+}
+
+.secondary-button {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: transform ease 0.2s;
+}
+
+.secondary-button:hover {
+    transform: translate(0, -3px);
+}
+
+.ghost-button {
+    background-color: transparent;
+    color: var(--text-color);
+
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 8px 30px;
+    border: 1px solid var(--text-color);
+    border-radius: 55px;
+    cursor: pointer;
+    transition: transform ease 0.2s;
+}
+
+.ghost-button:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translate(0, -3px);
+}
+
+.text {
+    color: var(--text-color);
+    font-family: Nunito Sans, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.accent-color {
+    color: var(--accent-color, #2ECC70);
+}
+
+.align-right {
+    align-self: flex-end;
+}
+
+.site-wrapper {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.site-header {
+    color: var(--text-color, #F4F4F4);
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.site-header .title a {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-variant: all-small-caps;
+    text-transform: uppercase;
+}
+
+.site-header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.site-header nav li {
+    margin-left: 40px;
+}
+
+.site-header nav a {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section {
+    padding: 100px 0px;
+}
+
+.section-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0px;
+}
+
+.section-heading h2 {
+    font-family: Montserrat, sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.section-content {
+    margin: 10px 0px;
+}
+
+.more-button {
+    margin-top: auto;
+    margin-bottom: 10px;
+    margin-left: auto;
+}
+
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 53%;
+}
+
+.hero-title {
+    font-family: Outfit, sans-serif;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.hero-subtitle {
+    font-family: Nunito Sans, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 45%;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.bg-shape {
+    position: fixed;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.bg-primary {
+    left: -600px;
+    background: radial-gradient(ellipse at center, var(--primary-color) 0%, var(--background-color) 70%);
+}
+
+.bg-accent {
+    right: -600px;
+    background: radial-gradient(circle, var(--accent-color) 0%, var(--background-color) 70%);
+}
+
+.projects-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-card {
+    width: calc(33.33% - 10px);
+    background-color: var(--card-color);
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card h3 {
+    color: var(--text-color);
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin: 20px;
+}
+
+.project-card p {
+    color: var(--text-color);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px 0px 20px 0px;
+}
+
+.project-card-image {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    border-radius: 10px;
+}
+
+.project-card-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card-edge {
+    position: absolute;
+    top: -32px;
+    right: -32px;
+    width: 64px;
+    height: 64px;
+    background-color: var(--primary-color);
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.about-section {
+    display: flex;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin: 0;
+}
+
+.profile-table {
+    flex: 1;
+    background-color: var(--card-color);
+    border-radius: 20px;
+}
+
+.profile-table table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+.profile-table th,
+.profile-table td {
+    border: none;
+    text-align: left;
+
+    color: var(--text-color);
+    font-family: Nunito Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
