@@ -83,6 +83,10 @@ body {
     color: var(--text-color, #F4F4F4);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 /* Button Styles */
 
