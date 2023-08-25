@@ -242,14 +242,9 @@ body {
     justify-content: space-between;
 }
 
-.copyright {
-    color: var(--text-color);
+.copyright p {
     opacity: 0.5;
     font-family: monospace;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
 }
 
 
