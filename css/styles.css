@@ -43,7 +43,8 @@ h2 {
     font-weight: 700;
     line-height: normal;
     text-transform: capitalize;
-    margin: 0;
+    text-align: center;
+    margin: 0px 20px;
 }
 
 h3 {
@@ -161,7 +162,7 @@ html {
     border-radius: 10px;
     border: 1px solid var(--text-color);
     padding: 0px;
-    margin: 0px 20px;
+    margin: 0px;
 }
 
 .ghost-box h4 {
@@ -170,7 +171,7 @@ html {
 }
 
 .ghost-box p {
-    padding: 0px 20px;
+    padding: 0 0.5em;
     margin: 10px;
 }
 
@@ -203,7 +204,7 @@ html {
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 10px 0px;
 }
 
@@ -214,23 +215,20 @@ html {
     font-weight: 600;
     line-height: normal;
     text-transform: uppercase;
+    margin: 18px 20px 20px 0px;
 }
 
-.header nav ul {
-    list-style: none;
+.nav-bar {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    white-space: nowrap;
 }
 
-.header nav li {
-    margin-left: 40px;
-}
-
-.header nav a {
-    font-family: Montserrat, sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+.nav-bar a {
+    margin: 20px 0px;
 }
 
 .footer {
@@ -244,6 +242,7 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .copyright p {
@@ -421,7 +420,7 @@ html {
     background-color: var(--card-color);
     border-radius: 20px;
     padding: 16px;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
 .profile-table td {
@@ -446,13 +445,22 @@ html {
     border-radius: 20px;
 }
 
-.icon-list i {
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    background-color: var(--card-color);
+    border-radius: 20px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.icon-grid i {
     font-size: 36px;
     padding: 0px 10px;
     color: var(--accent-color);
 }
 
-.icon-list img {
+.icon-grid img {
     width: 48px;
     height: 48px;
 }
