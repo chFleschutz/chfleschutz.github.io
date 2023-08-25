@@ -342,17 +342,16 @@ html {
     background: radial-gradient(circle, var(--accent-color) 0%, var(--background-color) 70%);
 }
 
-.projects-list {
-    display: flex;
-    justify-content: space-between;
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .project-card {
-    width: calc(33.33% - 10px);
     background-color: var(--card-color);
     border-radius: 20px;
     padding: 20px;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
 }
