@@ -17,9 +17,60 @@
     --text-color: #F4F4F4;
 }
 
+
+/* General Styles */
+
 a {
     color: var(--text-color, #F4F4F4);
     text-decoration: none;
+}
+
+h1 {
+    color: var(--text, #F4F4F4);
+    font-family: Outfit;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+h2 {
+    color: var(--text-color, #F4F4F4);
+    font-family: Montserrat;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+h3 {
+    color: var(--text-color, #F4F4F4);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h4 {
+    color: var(--text-color, #F4F4F4);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+p {
+    color: var(--text-color, #F4F4F4);
+    font-family: Nunito Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 body {
@@ -31,6 +82,9 @@ body {
     font-weight: 400;
     color: var(--text-color, #F4F4F4);
 }
+
+
+/* Button Styles */
 
 .primary-button {
     background-color: var(--primary-color, #2980B9);
@@ -95,6 +149,27 @@ body {
     transform: translate(0, -3px);
 }
 
+
+/* Form Styles */
+
+.ghost-box {
+    flex: 1;
+    border-radius: 10px;
+    border: 1px solid var(--text-color);
+    padding: 0px;
+    margin: 0px 20px;
+}
+
+.ghost-box h4 {
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+.ghost-box p {
+    padding: 0px 20px;
+    margin: 10px;
+}
+
 .text {
     color: var(--text-color);
     font-family: Nunito Sans, sans-serif;
@@ -112,45 +187,41 @@ body {
     align-self: flex-end;
 }
 
+
+/* Site Styles */
+
 .site-wrapper {
     max-width: 1120px;
     margin: 0 auto;
     padding: 0px;
 }
 
-.site-header {
-    color: var(--text-color, #F4F4F4);
-    font-family: Montserrat, sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0px;
 }
 
-.site-header .title a {
-    font-family: Montserrat, sans-serif;
-    font-size: 24px;
+.header h1 {
+    font-family: Outfit;
+    font-size: 20px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: normal;
-    font-variant: all-small-caps;
     text-transform: uppercase;
 }
 
-.site-header nav ul {
+.header nav ul {
     list-style: none;
     display: flex;
 }
 
-.site-header nav li {
+.header nav li {
     margin-left: 40px;
 }
 
-.site-header nav a {
+.header nav a {
     font-family: Montserrat, sans-serif;
     font-size: 20px;
     font-style: normal;
@@ -158,8 +229,34 @@ body {
     line-height: normal;
 }
 
+.footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.copyright {
+    color: var(--text-color);
+    opacity: 0.5;
+    font-family: monospace;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+/* General Section Styles */
+
 .section {
-    padding: 100px 0px;
+    margin: 200px 0px;
 }
 
 .section-heading {
@@ -168,16 +265,6 @@ body {
     justify-content: center;
     align-items: center;
     margin: 30px 0px;
-}
-
-.section-heading h2 {
-    font-family: Montserrat, sans-serif;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: capitalize;
-    margin: 0;
 }
 
 .section-content {
@@ -190,6 +277,8 @@ body {
     margin-left: auto;
 }
 
+
+/* Specific Section Styles */
 
 .hero-section {
     display: flex;
@@ -270,23 +359,10 @@ body {
 }
 
 .project-card h3 {
-    color: var(--text-color);
-    font-family: Montserrat, sans-serif;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-
     margin: 20px;
 }
 
 .project-card p {
-    color: var(--text-color);
-    font-family: Montserrat;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
     margin: 0px 0px 20px 0px;
 }
 
@@ -321,6 +397,7 @@ body {
 
 .about-section {
     display: flex;
+    padding: 30px 0;
 }
 
 .about-text {
@@ -331,27 +408,78 @@ body {
     margin: 0;
 }
 
-.profile-table {
+.profile-table-container {
     flex: 1;
-    background-color: var(--card-color);
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    position: relative;
+    overflow: hidden;
     border-radius: 20px;
 }
 
-.profile-table table {
-    width: 100%;
-    border-collapse: collapse;
-    padding: 10px;
+.profile-table {
+    flex: 0 0 auto;
+    background-color: var(--card-color);
+    border-radius: 20px;
+    padding: 16px;
+    margin-left: 100px;
 }
 
-.profile-table th,
 .profile-table td {
-    border: none;
-    text-align: left;
-
     color: var(--text-color);
     font-family: Nunito Sans;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 26px;
+    border: none;
+    text-align: left;
+    padding: 2px 8px;
+}
+
+.icon-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--card-color);
+    border-radius: 20px;
+}
+
+.icon-list i {
+    font-size: 36px;
+    padding: 0px 10px;
+    color: var(--accent-color);
+}
+
+.icon-list img {
+    width: 48px;
+    height: 48px;
+}
+
+.small-section {
+    padding: 30px 0px;
+}
+
+.small-section h4 {
+    opacity: 0.5;
+    padding: 15px 0px;
+    margin: 0;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px;
+
+    background: linear-gradient(141deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    border-radius: 30px;
+}
+
+.contact-box p {
+    text-align: center;
 }
