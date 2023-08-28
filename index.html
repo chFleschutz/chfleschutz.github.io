@@ -11,177 +11,119 @@
 </head>
 
 <body>
-    <div class="site-wrapper">
-        <header class="header">
-            <a href="#">
-                <h1>Christoph Fleschutz</h1>
-            </a>
-            <div class="nav-bar">
-                <a href="#">home</a>
-                <a href="projects.html">projects</a>
-                <a href="about.html">about me</a>
-                <a href="index.html#contact">contact</a>
-            </div>
-        </header>
+    <header class="header">
+        <h1>Christoph Fleschutz</h1>
+        <div class="nav-bar">
+            <a href="#about-me">about me</a>
+            <a href="#projects">projects</a>
+            <a href="#contact">contact</a>
+        </div>
+    </header>
 
-        <section class="section hero-section">
-            <div class="hero-content">
-                <h1 class="hero-title">Hello, I'm <span class="accent-color">Chris</span></h1>
-                <p class="hero-subtitle">a dedicated computer science student specializing in game engineering and C++
-                    development</p>
-                <a href="#" class="primary-button align-right">Read More</a>
+    <main class="main">
+        <section class="section" style="flex-direction: row;">
+            <div class="hero-text">
+                <h1>Hello, I'm <span class="accent-color">Chris</span></h1>
+                <p>a dedicated computer science student specializing in game engineering and C++ development</p>
             </div>
             <div class="hero-image">
                 <img src="images/hero-pc.png" alt="Hero Image">
             </div>
         </section>
 
-        <section class="section">
-            <div class="section-heading">
-                <ghost class="secondary-button more-button" style="visibility: hidden;">View More</ghost>
-                <h2>Selected Projects</h2>
-                <a href="projects.html" class="secondary-button more-button">View More</a>
-            </div>
-            <div class="section-content projects-grid">
-                <div class="project-card">
-                    <div class="project-card-image">
-                        <img src="images/grey-color.png" alt="Project 1">
-                        <div class="card-edge"></div>
-                    </div>
-                    <h3>Project Title 1</h3>
-                    <p>Lorem ipsum dolor sit amet... and much more interesting nonsense for this beautifull project view
-                        it now with the button below</p>
-                    <a href="#" class="ghost-button align-right">View</a>
+        <section class="section" id="about-me">
+            <h2>About me</h2>
+            <div class="section-card">
+                <div class="section-image">
+                    <img src="images/hero-pc.png" alt="About Image">
                 </div>
-                <div class="project-card">
-                    <div class="project-card-image">
-                        <img src="images/grey-color.png" alt="Project 1">
-                        <div class="card-edge"></div>
-                    </div>
-                    <h3>Project Title 2</h3>
-                    <p>Lorem ipsum dolor sit amet... and much more interesting nonsense for this beautifull project view
-                        it now with the button below</p>
-                    <a href="#" class="ghost-button align-right">View</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-card-image">
-                        <img src="images/grey-color.png" alt="Project 1">
-                        <div class="card-edge"></div>
-                    </div>
-                    <h3>Project Title 3</h3>
-                    <p>Lorem ipsum dolor sit amet... and much more interesting nonsense for this beautifull project view
-                        it now with the button below</p>
-                    <a href="#" class="ghost-button align-right">View</a>
+                <div class="section-text">
+                    <p class="text">
+                        I'm Christoph Fleschutz, a dedicated computer science student with a burning passion for game
+                        engineering and all things tech. Currently, I'm embarking on a thrilling journey at the
+                        University of Applied Sciences Kempten, pursuing a Bachelor's degree in Computer Science with a
+                        specialization in Game Engineering.
+                    </p>
+                    <p class="text">
+                        My fascination with computers started at an early age and has only grown stronger. When I'm not
+                        crafting code, you'll find me immersed in video games or nurturing my collection of small bonsai
+                        trees. It's the blend of creativity and problem-solving that draws me to programming.
+                    </p>
+                    <p class="text">
+                        My focus in the tech realm lies in game engineering and C++ development. I thrive on the
+                        challenge of building immersive worlds from lines of code. Whether it's crafting intricate
+                        gameplay mechanics or delving into rendering techniques, I'm constantly driven to explore the
+                        limits of what's possible.
+                    </p>
+                    <p class="text">
+                        For me, learning is an infinite journey, and I'm on a relentless quest to enhance my skills and
+                        reach for perfection. From the very beginning, the world of programming captivated me, offering
+                        the ability to materialize ideas from imagination to reality. It's the joy of creating, shaping,
+                        and improving that keeps me motivated in this dynamic field.
+
+                    </p>
+                    <p class="text">
+                        Long before I understood the intricacies of programming, I was captivated by computers. The
+                        limitless potential for creation, guided solely by imagination, led me to pursue this path. As I
+                        delved into programming during my school days, the realization that I could bring my ideas to
+                        life with lines of code solidified my decision.
+                    </p>
+                    <p class="text">
+                        Have a project in mind or just want to chat about game engineering, programming, or even bonsai
+                        trees? Feel free to get in touch with me at ch.fleschutz@gmail.com. Additionally, you can
+                        explore more of my projects on my <a href="https://github.com/chFleschutz">GitHub</a> profile.
+                    </p>
+                    <p class="text">
+                        Thank you for stopping by, and I can't wait to see where this incredible world of technology
+                        takes us next!
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section class="section">
-            <div class="section-heading">
-                <ghost class="secondary-button more-button" style="visibility: hidden;">Read more</ghost>
-                <h2>A Bit about me</h2>
-                <a href="about.html" class="secondary-button more-button">Read more</a>
-            </div>
-            <div class="section-content about-section">
-                <div class="about-text">
-                    <p class="text">
-                        Hello, i’m Chris <br>
-                        I’m a computer science student at the University of Applied Sciences Kempten. My journey here
-                        has
-                        been defined by my passion for game engineering and C++ development.<br>
-                        As I immerse myself in coding and design, my mission is to craft digital experiences that truly
-                        resonate. From tackling intricate problems to staying attuned to innovations in the gaming
-                        world,
-                        I'm driven by a constant push to excel. With each line of code, I strive to create not just
-                        functional solutions, but meaningful and exceptional ones.<br>
-                        Through my coursework and hands-on projects, I'm equipping myself with the essentials to bring
-                        captivating digital worlds to life.<br>
-                    </p>
+        <section class="section" id="projects">
+            <h2>Selected Projects</h2>
+            <div class="section-card">
+                <div class="card-image">
+                    <img src="images/hero-pc.png" alt="Project 1">
                 </div>
-                <div class="profile-table-container">
-                    <div class="profile-table">
-                        <div class="card-edge"></div>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Christoph Fleschutz</td>
-                                </tr>
-                                <tr>
-                                    <td>Age</td>
-                                    <td>21</td>
-                                </tr>
-                                <tr>
-                                    <td>Semester</td>
-                                    <td>7th Semester</td>
-                                </tr>
-                                <tr>
-                                    <td>Major</td>
-                                    <td>Computer Science - Game Engineering</td>
-                                </tr>
-                                <tr>
-                                    <td>University</td>
-                                    <td>University of Applied Sciences Kempten</td>
-                                </tr>
-                                <tr>
-                                    <td>Favorite Food</td>
-                                    <td>Pizza</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="card-text">
+                    <h3>Project Title 1</h3>
+                    <p>Lorem ipsum dolor sit amet... and much more interesting nonsense for this beautifull project view
+                        it now with the button below</p>
+                    <a href="#" class="ghost-button">View on GitHub</a>
+                    <div class="tag-grid">
+                        <p class="tag">C#</p>
+                        <p class="tag">Unity</p>
+                        <p class="tag">Blender</p>
+                        <p class="tag">Visual Studio</p>
+                        <p class="tag">Virtual Reality</p>
+                        <p class="tag">Steam VR</p>
                     </div>
                 </div>
             </div>
-            <div class="small-section">
-                <h4>Familiar with</h4>
-                <div class="icon-grid">
-                    <i class="devicon-cplusplus-line"></i>
-                    <i class="devicon-csharp-line"></i>
-                    <i class="devicon-qt-original"></i>
-                    <i class="devicon-visualstudio-plain"></i>
-                    <i class="devicon-vscode-plain"></i>
-                    <i class="devicon-unrealengine-original"></i>
-                    <i class="devicon-unity-original"></i>
-                    <i class="devicon-blender-original"></i>
-                    <i class="devicon-cmake-plain"></i>
-                    <i class="devicon-python-plain"></i>
-                    <i class="devicon-figma-plain"></i>
-                    <i class="devicon-git-plain"></i>
-                    <i class="devicon-github-original"></i>
+            <div class="project-card">
+                <div class="project-card-image">
+                    <img src="images/grey-color.png" alt="Project 1">
+                    <div class="card-edge"></div>
                 </div>
-                <!-- <div class="icon-list">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qt/qt-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
-                    <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cmake/cmake-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+                <h3>Project Title 2</h3>
+                <p>Lorem ipsum dolor sit amet... and much more interesting nonsense for this beautifull project view
+                    it now with the button below</p>
+                <a href="#" class="ghost-button align-right">View</a>
+            </div>
+            <div class="project-card">
+                <div class="project-card-image">
+                    <img src="images/grey-color.png" alt="Project 1">
+                    <div class="card-edge"></div>
                 </div>
-                <div class="icon-list">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qt/qt-original.svg" />
-                    <i class="devicon-visualstudio-plain" style="color: #A578DC;"></i>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
-                    <i class="devicon-unrealengine-original" style="color: #F4F4F4;"></i>
-                    <i class="devicon-unity-original" style="color: #F4F4F4;"></i>
-                    <i class="devicon-blender-original" style="color: #FF881C;"></i>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cmake/cmake-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
-                    <i class="devicon-github-original" style="color: #F4F4F4;"></i>
-                </div> -->
+                <h3>Project Title 3</h3>
+                <p>Lorem ipsum dolor sit amet... and much more interesting nonsense for this beautifull project view
+                    it now with the button below</p>
+                <a href="#" class="ghost-button align-right">View</a>
             </div>
         </section>
+
 
         <section class="section" id="contact">
             <div class="contact-box">
@@ -192,36 +134,27 @@
                 </div>
             </div>
         </section>
+    </main>
 
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="ghost-box">
-                    <h4>Name</h4>
-                    <p>Christoph Fleschutz</p>
-                </div>
-                <div class="ghost-box">
-                    <h4>Email</h4>
-                    <p>ch.fleschutz@gmail.com</p>
-                </div>
-                <div class="ghost-box">
-                    <h4>Addresse</h4>
-                    <p>Krokusweg 10, 87634 Obergünzburg</p>
-                </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="ghost-box">
+                <h4>Name</h4>
+                <p>Christoph Fleschutz</p>
             </div>
-            <div class="copyright">
-                <p>© 2023 Christoph Fleschutz</p>
+            <div class="ghost-box">
+                <h4>Email</h4>
+                <p>ch.fleschutz@gmail.com</p>
             </div>
-        </footer>
-        <!-- 
-            <div class="bg-shape bg-primary" style="top: -450px; left: -500px;"></div>
-            <div class="bg-shape bg-primary" style="top: 1250px;"></div>
-            <div class="bg-shape bg-accent" style="top: 500px;"></div>
-            <div class="bg-shape bg-accent" style="top: 2410px;"></div>
-
-            <img src="images/blue-circle.png" style="opacity: .5;" alt="Hero Image"> 
-        -->
-    </div>
-
+            <div class="ghost-box">
+                <h4>Addresse</h4>
+                <p>Krokusweg 10, 87634 Obergünzburg</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2023 Christoph Fleschutz</p>
+        </div>
+    </footer>
 </body>
 
 </html>
