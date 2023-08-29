@@ -130,8 +130,8 @@ html {
 .outline-box {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     border-radius: 10px;
     border: 1px solid var(--text-color);
@@ -315,6 +315,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 30px;
     background: linear-gradient(141deg, var(--primary-color) 0%, var(--accent-color) 100%);
     border-radius: 30px;
@@ -332,4 +333,18 @@ html {
 
 .expand-arrow:hover {
     transform: translate(0, -3px);
+}
+
+.icon-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.icon-button:hover {
+    background-color: var(--card-color);
 }

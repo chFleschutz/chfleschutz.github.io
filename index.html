@@ -8,7 +8,9 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/scripts.js"></script>
 </head>
+
 
 <body>
     <section class="fill-screen">
@@ -193,10 +195,12 @@
     <section class="section" id="contact">
         <div class="gradient-box">
             <h2>Get in Touch</h2>
-            <p>If you have any questions don’t hesitate to contact me</p>
+            <h4>If you have any questions don’t hesitate to contact me</h4>
             <div class="outline-box">
-                <p>ch.fleschutz@gmail.com</p>
-                <span class="material-symbols-rounded">content_copy</span>
+                <p id="email">ch.fleschutz@gmail.com</p>
+                <div class="icon-button" onclick="copyToClipboard('email')">
+                    <span class="material-symbols-rounded">content_copy</span>
+                </div>
             </div>
         </div>
     </section>
