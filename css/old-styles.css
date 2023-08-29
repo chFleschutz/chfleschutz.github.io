@@ -1,0 +1,493 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Outfit:80);
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:16,24);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2980B9;
+    --secondary-color: #335160;
+    --accent-color: #2ECC70;
+    --background-color: #1D2B3A;
+    --card-color: #293644;
+    --text-color: #F4F4F4;
+}
+
+
+/* General Styles */
+
+a {
+    color: var(--text-color, #F4F4F4);
+    text-decoration: none;
+}
+
+h1 {
+    color: var(--text, #F4F4F4);
+    font-family: Outfit;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+h2 {
+    color: var(--text-color, #F4F4F4);
+    font-family: Montserrat;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0px 20px;
+}
+
+h3 {
+    color: var(--text-color, #F4F4F4);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h4 {
+    color: var(--text-color, #F4F4F4);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+p {
+    color: var(--text-color, #F4F4F4);
+    font-family: Nunito Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-color, #F4F4F4);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Button Styles */
+
+.primary-button {
+    background-color: var(--primary-color, #2980B9);
+    color: var(--text-color, #F4F4F4);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 0.7em 2em;
+    border: 6px;
+    border-radius: 55px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: transform ease 0.2s, box-shadow ease 0.2s;
+}
+
+.primary-button:hover {
+    transform: translate(0, -3px);
+    box-shadow: 0 20px 80px -10px var(--primary-color);
+}
+
+.secondary-button {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: transform ease 0.2s;
+}
+
+.secondary-button:hover {
+    transform: translate(0, -3px);
+}
+
+.ghost-button {
+    background-color: transparent;
+    color: var(--text-color);
+
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 8px 30px;
+    border: 1px solid var(--text-color);
+    border-radius: 55px;
+    cursor: pointer;
+    transition: transform ease 0.2s;
+}
+
+.ghost-button:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translate(0, -3px);
+}
+
+
+/* Form Styles */
+
+.ghost-box {
+    flex: 1;
+    border-radius: 10px;
+    border: 1px solid var(--text-color);
+    padding: 0px;
+    margin: 0px;
+}
+
+.ghost-box h4 {
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+.ghost-box p {
+    padding: 0 0.5em;
+    margin: 10px;
+}
+
+.text {
+    color: var(--text-color);
+    font-family: Nunito Sans, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.accent-color {
+    color: var(--accent-color, #2ECC70);
+}
+
+.align-right {
+    align-self: flex-end;
+}
+
+
+/* Site Styles */
+
+.site-wrapper {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 0px;
+}
+
+.header h1 {
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 18px 20px 20px 0px;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    white-space: nowrap;
+}
+
+.nav-bar a {
+    margin: 20px 0px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.copyright p {
+    opacity: 0.5;
+    font-family: monospace;
+}
+
+
+/* General Section Styles */
+
+.section {
+    margin: 200px 0px;
+}
+
+.section-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0px;
+}
+
+.section-content {
+    background-color: var(--card-color);
+    border-radius: 30px;
+    margin: 10px 0px;
+}
+
+.more-button {
+    margin-top: auto;
+    margin-bottom: 10px;
+    margin-left: auto;
+}
+
+
+/* Specific Section Styles */
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 53%;
+}
+
+.hero-title {
+    font-family: Outfit, sans-serif;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.hero-subtitle {
+    font-family: Nunito Sans, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 45%;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.bg-shape {
+    position: fixed;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.bg-primary {
+    left: -600px;
+    background: radial-gradient(ellipse at center, var(--primary-color) 0%, var(--background-color) 70%);
+}
+
+.bg-accent {
+    right: -600px;
+    background: radial-gradient(circle, var(--accent-color) 0%, var(--background-color) 70%);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: var(--card-color);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card h3 {
+    margin: 20px;
+}
+
+.project-card p {
+    margin: 0px 0px 20px 0px;
+}
+
+.project-card-image {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    border-radius: 10px;
+}
+
+.project-card-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card-edge {
+    position: absolute;
+    top: -32px;
+    right: -32px;
+    width: 64px;
+    height: 64px;
+    background-color: var(--primary-color);
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.about-section {
+    display: flex;
+    padding: 30px 0;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin: 0;
+}
+
+.profile-table-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.profile-table {
+    flex: 0 0 auto;
+    background-color: var(--card-color);
+    border-radius: 20px;
+    padding: 16px;
+    margin-left: 50px;
+}
+
+.profile-table td {
+    color: var(--text-color);
+    font-family: Nunito Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    border: none;
+    text-align: left;
+    padding: 2px 8px;
+}
+
+.icon-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--card-color);
+    border-radius: 20px;
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    background-color: var(--card-color);
+    border-radius: 20px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.icon-grid i {
+    font-size: 36px;
+    padding: 0px 10px;
+    color: var(--accent-color);
+}
+
+.icon-grid img {
+    width: 48px;
+    height: 48px;
+}
+
+.small-section {
+    padding: 30px 0px;
+}
+
+.small-section h4 {
+    opacity: 0.5;
+    padding: 15px 0px;
+    margin: 0;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px;
+
+    background: linear-gradient(141deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    border-radius: 30px;
+}
+
+.contact-box p {
+    text-align: center;
+}
