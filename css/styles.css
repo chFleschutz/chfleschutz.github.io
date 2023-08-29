@@ -88,6 +88,7 @@ body {
 }
 
 html {
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -178,6 +179,7 @@ html {
     align-items: flex-start;
     padding: 10px 0px;
     gap: 20px;
+    z-index: 100;
 }
 
 .header h1 {
@@ -286,6 +288,11 @@ html {
 .footer p {
     opacity: 0.5;
     font-family: monospace;
+}
+
+.footer-line {
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    height: 15px;
 }
 
 
