@@ -10,6 +10,7 @@
     --background-color: #1D2B3A;
     --card-color: #293644;
     --text-color: #F4F4F4;
+    --max-width: 1440px;
 }
 
 
@@ -118,7 +119,7 @@ html {
     text-decoration: none;
     cursor: pointer;
     border: 1px solid var(--text-color);
-    border-radius: 55px;
+    border-radius: 20px;
     padding: 4px 20px;
     margin: 10px 0px;
     transition: transform ease 0.2s;
@@ -164,8 +165,7 @@ html {
 
 .fill-screen {
     height: 100vh;
-    width: 1120px;
-    background-color: var(--background-color);
+    width: var(--max-width);
     display: flex;
     flex-direction: column;
     padding: 0px 20px;
@@ -205,7 +205,7 @@ html {
 }
 
 .section {
-    max-width: 1120px;
+    max-width: var(--max-width);
     margin: 200px auto;
     padding: 0;
 
@@ -248,7 +248,6 @@ html {
     height: auto;
     border-radius: 20px;
     position: relative;
-
     z-index: 1;
 }
 
@@ -301,6 +300,7 @@ html {
     max-width: 100%;
     margin: 0px auto;
     gap: 1%;
+    z-index: 1;
 }
 
 .hero-text {
@@ -347,4 +347,18 @@ html {
 
 .expand-arrow:hover {
     transform: translate(0, -3px);
+}
+
+.bg-line-stripe {
+    position: absolute;
+    z-index: -1;
+}
+
+.bg-line {
+    height: 40px;
+    width: 200px;
+    rotate: 30deg;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #2980B9 0%, #2ECC70 100%);
+    margin: 20px;
 }
