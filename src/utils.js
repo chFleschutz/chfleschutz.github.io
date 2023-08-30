@@ -1,4 +1,4 @@
-function copyToClipboard(element) {
+export function copyToClipboard(element) {
     let text = document.getElementById(element).innerHTML;
     const copyContent = async () => {
         try {
