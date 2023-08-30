@@ -1,0 +1,23 @@
+import './styles.css'
+
+export function setupHero() {
+    const hero = document.createElement('div');
+    hero.innerHTML = `
+    <div class="hero-section">
+        <div class="hero-text">
+            <h1>Hello, I'm <span class="accent-color">Chris</span></h1>
+            <p>a dedicated computer science student specializing in game engineering and C++ development</p>
+        </div>
+        <div class="hero-image">
+            <img src="images/painting.png" alt="Hero Image">
+            <div class="bg-line-stripe" style="translate: -130px -450px;">
+                <div class="bg-line" style="width: 800px;"></div>
+                <div class="bg-line" style="width: 800px;"></div>
+                <div class="bg-line" style="width: 800px;"></div>
+                <div class="bg-line" style="width: 800px;"></div>
+            </div>
+        </div>
+    </div>
+    `;
+    return hero;
+}
