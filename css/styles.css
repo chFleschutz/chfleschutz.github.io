@@ -166,7 +166,7 @@ html {
 
 .fill-screen {
     height: 100vh;
-    width: var(--max-width);
+    max-width: var(--max-width);
     display: flex;
     flex-direction: column;
     padding: 0px 20px;
@@ -224,6 +224,7 @@ html {
     background-color: var(--card-color);
     border-radius: 30px;
     padding: 20px;
+    margin: 0px 10px;
 }
 
 .card-image {
