@@ -2,8 +2,10 @@ import './styles.css'
 
 export function setupAbout() {
     const about = document.createElement('section');
+    about.id = 'about-me';
+    about.style.marginTop = '50px';
+    about.style.paddingTop = '20px';
     about.innerHTML = `
-    <section class="section" id="about-me" style="margin-top: 50px; padding-top: 20px;">
     <h2>About me</h2>
     <div class="section-card">
         <div class="card-image">
@@ -40,7 +42,6 @@ export function setupAbout() {
             </p>
         </div>
     </div>
-    </section>
     `;	
     return about;
 }

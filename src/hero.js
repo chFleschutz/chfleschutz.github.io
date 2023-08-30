@@ -2,8 +2,8 @@ import './styles.css'
 
 export function setupHero() {
     const hero = document.createElement('div');
+    hero.className = 'hero-section';
     hero.innerHTML = `
-    <div class="hero-section">
         <div class="hero-text">
             <h1>Hello, I'm <span class="accent-color">Chris</span></h1>
             <p>a dedicated computer science student specializing in game engineering and C++ development</p>
@@ -17,7 +17,6 @@ export function setupHero() {
                 <div class="bg-line" style="width: 800px;"></div>
             </div>
         </div>
-    </div>
     `;
     return hero;
 }

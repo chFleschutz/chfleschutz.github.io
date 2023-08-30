@@ -92,6 +92,40 @@ html {
     scroll-behavior: smooth;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 0px;
+    gap: 20px;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-right: auto;
+
+}
+
+header a {
+    text-decoration: none;
+    transition: transform ease 0.2s;
+}
+
+header a:hover {
+    transform: translate(0, -3px);
+}
+
+section {
+    max-width: var(--max-width);
+    margin: 200px auto;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
 
 
 /* General Styles */
@@ -173,47 +207,12 @@ html {
     margin: 0 auto;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 10px 0px;
-    gap: 20px;
-    z-index: 100;
-}
-
-.header h1 {
-    font-size: 20px;
-    text-transform: uppercase;
-    margin-right: auto;
-
-}
-
-.header a {
-    text-decoration: none;
-    transition: transform ease 0.2s;
-}
-
-.header a:hover {
-    transform: translate(0, -3px);
-}
-
 .nav-bar {
     display: flex;
     align-items: center;
     gap: 50px;
     white-space: nowrap;
     margin: auto 0;
-}
-
-.section {
-    max-width: var(--max-width);
-    margin: 200px auto;
-    padding: 0;
-
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
 }
 
 .section-card {

@@ -3,7 +3,6 @@ import { copyToClipboard } from './utils.js';
 
 export function setupContact() {
     const contact = document.createElement('section');
-    contact.className = 'section';
     contact.id = 'contact';
     contact.innerHTML = `
     <div class="gradient-box">

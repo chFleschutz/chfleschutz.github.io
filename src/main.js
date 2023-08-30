@@ -12,13 +12,17 @@ const appContainer = document.querySelector('#app');
 
 const heroSection = document.createElement('section');
 heroSection.className = 'fill-screen';
-heroSection.innerHTML = `
-        ${setupHeader().innerHTML}
-        ${setupHero().innerHTML}
-        <a class="expand-arrow" href="#about-me">
-            <span class="material-symbols-rounded">expand_more</span>
-        </a>
+
+heroSection.appendChild(setupHeader());
+heroSection.appendChild(setupHero());
+
+const expandArrow = document.createElement('a');
+expandArrow.className = 'expand-arrow';
+expandArrow.href = '#about-me';
+expandArrow.innerHTML = `
+    <span class="material-symbols-rounded">expand_more</span>
 `;
+heroSection.appendChild(expandArrow);
 
 appContainer.appendChild(heroSection);
 appContainer.appendChild(setupAbout());
