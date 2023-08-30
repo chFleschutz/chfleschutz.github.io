@@ -1,5 +1,7 @@
 import './styles.css'
 
+import painting from './assets/painting.png';
+
 export function setupProjects() {
     const projects = document.createElement('section');
     projects.id = 'projects';
@@ -7,7 +9,7 @@ export function setupProjects() {
         <h2>Selected Projects</h2>
         <div class="section-card">
             <div class="card-image">
-                <img src="images/painting.png" alt="Project 1">
+                <img src="${painting}" alt="Project 1">
             </div>
             <div class="card-text">
                 <h3>Project Title 1</h3>
@@ -66,12 +68,12 @@ export function setupProjects() {
                 </div>
             </div>
             <div class="card-image">
-                <img src="images/painting.png" alt="Project 2">
+                <img src="${painting}" alt="Project 2">
             </div>
         </div>
         <div class="section-card">
             <div class="card-image">
-                <img src="images/painting.png" alt="Project 3">
+                <img src="${painting}" alt="Project 3">
             </div>
             <div class="card-text">
                 <h3>Project Title 1</h3>

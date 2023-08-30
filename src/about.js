@@ -1,5 +1,7 @@
 import './styles.css'
 
+import painting from './assets/painting.png';
+
 export function setupAbout() {
     const about = document.createElement('section');
     about.id = 'about-me';
@@ -9,7 +11,7 @@ export function setupAbout() {
     <h2>About me</h2>
     <div class="section-card">
         <div class="card-image">
-            <img src="images/painting.png" alt="About Image">
+            <img src="${painting}" alt="About Image">
         </div>
         <div class="card-text">
             <h3>Get to Know Me</h3>
@@ -45,3 +47,5 @@ export function setupAbout() {
     `;	
     return about;
 }
+
+
