@@ -13,7 +13,7 @@ export function setupHero() {
         </div>
         <div class="hero-image">
             <canvas id="canvas"></canvas>
-            <div class="bg-line-stripe" style="transform: translate(0px, 250px);">
+            <div class="bg-line-stripe" style="transform: translate(0px, 30vh);">
                 <div class="bg-line" style="width: 800px;"></div>
                 <div class="bg-line" style="width: 800px;"></div>
                 <div class="bg-line" style="width: 800px;"></div>
