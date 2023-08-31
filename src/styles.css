@@ -319,6 +319,7 @@ canvas {
 
 .hero-text {
     padding-bottom: 50px; /* Feels more centered */
+    max-width: 45%;
 }
 
 .hero-text h1 {
@@ -332,8 +333,8 @@ canvas {
 
 .hero-image {
     flex: 1;
-    min-width: 50%;
     width: 100%;
+    max-height: 70vh;
     aspect-ratio: 1 / 1;
 }
 

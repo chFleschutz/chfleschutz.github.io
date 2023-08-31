@@ -16,13 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const torus = new THREE.Mesh(geometry, material);
     scene.add(torus);
 
-
-    function render(time) {
-        time *= 0.001; // convert time to seconds
-
+    window.onresize = function () {
         const canvas = renderer.domElement;
         camera.aspect = canvas.clientWidth / canvas.clientHeight;
         camera.updateProjectionMatrix();
+        renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
+    };
+
+    function render(time) {
+        time *= 0.001; // convert time to seconds
 
         torus.rotation.x = time;
         torus.rotation.y = time;
