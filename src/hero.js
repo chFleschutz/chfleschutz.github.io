@@ -1,18 +1,19 @@
 import './styles.css'
 
-import painting from './assets/painting.png';
+import { setupHeader } from './header.js'
+import './three.js'
 
 export function setupHero() {
-    const hero = document.createElement('div');
-    hero.className = 'hero-section';
-    hero.innerHTML = `
+    const heroContent = document.createElement('div');
+    heroContent.className = 'hero-section';
+    heroContent.innerHTML = `
         <div class="hero-text">
             <h1>Hello, I'm <span class="accent-color">Chris</span></h1>
             <p>a dedicated computer science student specializing in game engineering and C++ development</p>
         </div>
         <div class="hero-image">
-            <img src="${painting}" alt="Hero Image">
-            <div class="bg-line-stripe" style="translate: -130px -450px;">
+            <canvas id="canvas"></canvas>
+            <div class="bg-line-stripe" style="transform: translate(0px, 250px);">
                 <div class="bg-line" style="width: 800px;"></div>
                 <div class="bg-line" style="width: 800px;"></div>
                 <div class="bg-line" style="width: 800px;"></div>
@@ -20,5 +21,18 @@ export function setupHero() {
             </div>
         </div>
     `;
-    return hero;
+        
+    const expandArrow = document.createElement('a');
+    expandArrow.className = 'expand-arrow';
+    expandArrow.href = '#about-me';
+    expandArrow.innerHTML = `
+        <span class="material-symbols-rounded">expand_more</span>
+    `;
+    
+    const heroSection = document.createElement('section');
+    heroSection.className = 'fill-screen';
+    heroSection.appendChild(setupHeader());
+    heroSection.appendChild(heroContent);
+    heroSection.appendChild(expandArrow);
+    return heroSection;
 }

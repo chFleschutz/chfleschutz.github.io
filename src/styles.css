@@ -203,6 +203,7 @@ section {
     max-width: var(--max-width);
     display: flex;
     flex-direction: column;
+    justify-content: justify-between;
     padding: 0px 20px;
     margin: 0 auto;
 }
@@ -300,18 +301,16 @@ footer p {
 /* Specific Styles */
 
 .hero-section {
+    flex: 1;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 100vh;
-    max-width: 100%;
-    margin: 0px auto;
-    gap: 1%;
+    align-items: center;
+    gap: 20px;
     z-index: 1;
 }
 
 .hero-text {
-    margin: auto 0;
     padding-bottom: 50px; /* Feels more centered */
 }
 
@@ -325,13 +324,21 @@ footer p {
 }
 
 .hero-image {
-    max-width: 40%;
-    margin: auto 0;
+    flex: 1;
+    min-width: 50%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
 }
 
 .hero-image img {
     max-width: 100%;
     height: auto;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .gradient-box {
@@ -358,6 +365,7 @@ footer p {
 
 .bg-line-stripe {
     position: absolute;
+    top: 0; 
     z-index: -1;
 }
 
