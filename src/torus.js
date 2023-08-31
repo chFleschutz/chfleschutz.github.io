@@ -1,10 +1,6 @@
 import * as THREE from 'three'
 
-import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
-import { OutlinePass } from 'three/examples/jsm/postprocessing/OutlinePass.js';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-
-import cubeModel from './assets/cube.glb'
+import painting from './assets/painting.png'
 
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.querySelector('#canvas');
@@ -13,16 +9,22 @@ document.addEventListener('DOMContentLoaded', () => {
     renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
 
     const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 1000);
-    camera.position.setZ(50);
+    camera.position.setZ(40);
     camera.position.setY(0);
     camera.rotateX(0.0);
 
     const scene = new THREE.Scene();
 
-    const geometry = new THREE.TorusKnotGeometry(10, 3, 128, 32);
-    const material = new THREE.MeshPhongMaterial({ color: 0x2ECC70, colorWrite: true });
-    const torus = new THREE.Mesh(geometry, material);
-    scene.add(torus);
+    const geometry = new THREE.SphereGeometry(10, 32, 128, 32);
+    const material = new THREE.MeshPhongMaterial();
+    const planet = new THREE.Mesh(geometry, material);
+    scene.add(planet);
+
+    const textureLoader = new THREE.TextureLoader();
+    textureLoader.load(painting, (texture) => {
+        material.map = texture;
+        material.needsUpdate = true;
+      });
 
     const pointLight1 = new THREE.PointLight(0xffffff);
     pointLight1.position.set(-20, 20, 20);
@@ -31,17 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const ambientLight = new THREE.AmbientLight(0xffffff);
     scene.add(ambientLight);
-
-    // const loader = new GLTFLoader();
-    // loader.load(
-    //     cubeModel,
-    //     function (gltf) {
-    //         scene.add(gltf.scene);
-    //     },
-    //     undefined,
-    //     function (error) {
-    //         console.error(error);
-    //     });
 
     var raycaster = new THREE.Raycaster();
     var mouse = new THREE.Vector2();
@@ -73,25 +64,13 @@ document.addEventListener('DOMContentLoaded', () => {
         renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
     };
 
-
-    var targetPosition = new THREE.Vector3();
-
+    let previousTime = performance.now();
     function render(time) {
         time *= 0.001; // convert time to seconds
+        const deltaTime = time - previousTime;
+        previousTime = time;
 
-        torus.rotation.x = time * 0.25;
-        torus.rotation.y = time * 0.5;
-
-        raycaster.setFromCamera(mouse, camera);
-        var intersects = raycaster.intersectObjects(scene.children);
-        if (intersects.length > 0) {
-            torus.material.color.set(0xff0000);
-            targetPosition.set(0, 0, 60);
-        }
-        else {
-            torus.material.color.set(0x2ECC70);
-            targetPosition.set(0, 0, 50);
-        }
+        planet.rotateOnAxis(new THREE.Vector3(0, 0.917, 0.398), deltaTime * 0.5);
 
         renderer.render(scene, camera);
         requestAnimationFrame(render);
