@@ -1,8 +1,8 @@
 import * as THREE from 'three'
 
-import planetDiffuse from './assets/venus_color.jpg'
-import planetRoughness from './assets/planet_roughness.png'
-import planetNormal from './assets/planet_normal.png'
+// import planetColor from './assets/earth_color.jpg'
+import planetColor from './assets/gas_giant_color.jpg'
+import painting from './assets/painting.png'
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,39 +16,44 @@ document.addEventListener('DOMContentLoaded', () => {
     camera.position.setZ(100);
     camera.position.setY(0);
     camera.rotateX(0.0);
+    
+    const textureLoader = new THREE.TextureLoader();
+
+    const boxGeometry = new THREE.BoxGeometry(25, 25, 25);
+    const boxMaterial = new THREE.MeshStandardMaterial({ wireframe: true });
+    const box = new THREE.Mesh(boxGeometry, boxMaterial);
+
+    const planetMaterial = new THREE.MeshStandardMaterial({
+        map: textureLoader.load(planetColor),
+    });
+    const planetGeometry = new THREE.SphereGeometry(10, 32, 128, 32);
+    const planet = new THREE.Mesh(planetGeometry, planetMaterial);
+
+    const torusGeometry = new THREE.TorusGeometry(15, 2, 16, 100);
+    const torusMaterial = new THREE.MeshStandardMaterial({ 
+        map: textureLoader.load(planetColor),
+    });
+    const torus = new THREE.Mesh(torusGeometry, torusMaterial);
 
     // Set up the scene
     const scene = new THREE.Scene();
-
-    // Load textures
-    const textureLoader = new THREE.TextureLoader();
-    const colorTexture = textureLoader.load(planetDiffuse);
-    // const roughnessMap = textureLoader.load(planetRoughness);
-    // const normalMap = textureLoader.load(planetNormal);
-
-    // Create material
-    const planetMaterial = new THREE.MeshStandardMaterial({
-        map: colorTexture,
-        //   roughnessMap: roughnessMap, 
-        //   normalMap: normalMap,       
-    });
-
-    const planetGeometry = new THREE.SphereGeometry(10, 32, 128, 32);
-    const planet = new THREE.Mesh(planetGeometry, planetMaterial);
-    scene.add(planet);
-
-    const boxGeometry = new THREE.BoxGeometry(25, 25, 25);
-    const boxMaterial = new THREE.MeshStandardMaterial({ color: 0x00ff00, wireframe: true });
-    const box = new THREE.Mesh(boxGeometry, boxMaterial);
     scene.add(box);
 
+    box.add(planet);
+
+    torus.rotateX(70 * (Math.PI / 180));
+    torus.scale.set(1, 1, .1);
+    planet.add(torus);
+
+
+    // Add lights
     const pointLight1 = new THREE.PointLight(0xffffff);
-    pointLight1.position.set(-20, 20, 20);
-    pointLight1.intensity = 1000;
+    pointLight1.position.set(-30, 20, 50);
+    pointLight1.intensity = 5000;
     scene.add(pointLight1);
 
     const ambientLight = new THREE.AmbientLight(0xffffff);
-    ambientLight.intensity = 0.5;
+    ambientLight.intensity = 2;
     scene.add(ambientLight);
 
 
@@ -71,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     calcAbsoluteOffset(canvas);
 
     // Create a mouse vector to store the mouse position and update it on mouse move
-    var mouse = new THREE.Vector2();
+    var mouse = new THREE.Vector2(-1, 1); // start mouse at top left corner
     function onMouseMove(event) {
         mouse.x = ((event.clientX - absoluteOffsetLeft) / canvas.clientWidth) * 2 - 1;
         mouse.y = -((event.clientY - absoluteOffsetTop) / canvas.clientHeight) * 2 + 1;
@@ -97,25 +102,22 @@ document.addEventListener('DOMContentLoaded', () => {
         previousTime = time;
 
         // Cast a ray from the camera to the mouse position and check if it intersects the planet
-        var planetRotationSpeed = 0.5;
+        var planetRotationSpeed = 0.4;
         var planetTargetScale = 1;
         raycaster.setFromCamera(mouse, camera);
         const intersects = raycaster.intersectObject(planet);
         if (intersects.length > 0) {
-            planetRotationSpeed = 1.5;
+            planetRotationSpeed = 0.8;
             planetTargetScale = 1.1;
-        } else {
-            planetRotationSpeed = 0.5;
-            planetTargetScale = 1;
         }
-
-        planet.rotateOnAxis(new THREE.Vector3(0, 0.917, 0.398), deltaTime * planetRotationSpeed);
-        planet.scale.lerp(new THREE.Vector3(planetTargetScale, planetTargetScale, planetTargetScale), 0.2);
-
+        
         // Rotate the box to always look at the mouse
-        var mouseInfluence = 5;
+        var mouseInfluence = 10;
         box.lookAt(-mouse.x * mouseInfluence, -mouse.y * mouseInfluence, -100);
 
+        // planet.rotateOnAxis(new THREE.Vector3(0, 0.917, 0.398), deltaTime * planetRotationSpeed);
+        planet.rotateOnAxis(new THREE.Vector3(0, 1, 0), deltaTime * planetRotationSpeed);
+        planet.scale.lerp(new THREE.Vector3(planetTargetScale, planetTargetScale, planetTargetScale), 0.2);
 
         renderer.render(scene, camera);
         requestAnimationFrame(renderFrame);
