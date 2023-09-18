@@ -3,6 +3,7 @@ import './styles.css'
 import { setupProjectCard } from './project-card';
 
 import painting from './assets/painting.png';
+import abductionImage from './assets/abduction-image.png';
 
 export function setupProjects() {
     const projectSection = document.createElement('section');
@@ -46,7 +47,7 @@ export function setupProjects() {
             This project was supervised and evaluated by Prof. Dr. Bichlmeier, our class professor, whose guidance and expertise significantly contributed to 
             the game's development. It stands as a testament to our collaborative efforts and dedication to creating an engaging VR gaming experience during 
             our academic journey.`,
-            imageSrc: painting,
+            imageSrc: abductionImage,
             githubLink: 'https://github.com/chFleschutz/abduction-in-lab-42',
             tags: ['Unity Game Engine', 'C#', 'Virtual Reality', 'Blender', 'Game Development'],
             imageLeftSide: false
