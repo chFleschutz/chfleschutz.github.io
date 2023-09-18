@@ -10,7 +10,7 @@
     --background-color: #1D2B3A;
     --card-color: #293644;
     --text-color: #F4F4F4;
-    --max-width: 1440px;
+    --max-width: 1200px;
 }
 
 
@@ -190,6 +190,7 @@ canvas {
     border-radius: 6px;
     padding: 5px;
     transition: transform ease 0.2s;
+    text-decoration: none;
 }
 
 .icon-button:hover {
@@ -212,6 +213,18 @@ canvas {
     margin: 0;
 }
 
+
+.big-icon {
+    font-size: 35px;
+}
+
+.icon-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
 
 /* General Section Styles */
 

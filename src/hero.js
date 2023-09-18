@@ -11,6 +11,14 @@ export function setupHero() {
         <div class="hero-text">
             <h1>Hello, I'm <span class="accent-color">Chris</span></h1>
             <p>a dedicated computer science student specializing in game engineering and C++ development</p>
+            <div class="icon-list">
+                <a class="icon-button" href="https://github.com/chFleschutz" target="_blank">
+                    <i class="devicon-github-original big-icon"></i>
+                </a>
+                <a class="icon-button" href="https://www.linkedin.com/in/christoph-fleschutz" target="_blank">
+                    <i class="devicon-linkedin-plain big-icon"></i>
+                </a>
+            </div>
         </div>
         <div class="hero-image">
             <canvas id="canvas"></canvas>
@@ -22,14 +30,14 @@ export function setupHero() {
             </div>
         </div>
     `;
-        
+
     const expandArrow = document.createElement('a');
     expandArrow.className = 'expand-arrow';
     expandArrow.href = '#about-me';
     expandArrow.innerHTML = `
         <span class="material-symbols-rounded">expand_more</span>
     `;
-    
+
     const heroSection = document.createElement('section');
     heroSection.className = 'fill-screen';
     heroSection.appendChild(setupHeader());
