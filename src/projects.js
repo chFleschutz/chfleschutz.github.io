@@ -3,6 +3,7 @@ import './styles.css'
 import { setupProjectCard } from './project-card';
 
 import painting from './assets/painting.png';
+import vulkaniteImage from './assets/vulkanite-image.png';
 import abductionImage from './assets/abduction-image.png';
 
 export function setupProjects() {
@@ -29,7 +30,7 @@ export function setupProjects() {
             
             Together, these components create a dynamic learning experience in the realm of real-time 3D graphics rendering, and future development of 
             a physically-based material system promises further insights into the intricate world of programming a render engine.`,
-            imageSrc: painting,
+            imageSrc: vulkaniteImage,
             githubLink: 'https://github.com/chFleschutz/VulkaniteRenderEngine',
             tags: ['Vulkan API', 'C++', 'GLSL' , 'GLFW', 'GLM', 'tiny-obj-loader', 'Real-Time Rendering' ],
             imageLeftSide: true
