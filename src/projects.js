@@ -13,14 +13,24 @@ export function setupProjects() {
 
     const projectData = [
         {
-            title: 'Vulkanite Render Engine (WIP)',
-            description: `Vulkanite Render Engine stands as an intriguing work-in-progress project, originating from an exercise for my Bachelor's thesis. Developed in alongside with the thesis, its primary goal is to explore the boundaries of real-time 3D graphics rendering, offering a valuable platform for learning and experimentation. <br><br>
-                Key features include harnessing the capabilities of the Vulkan API for in-depth exploration of modern graphics programming, efficient 3D model handling for hands-on 3-dimensional transformations and representation studies, and the integration of a Blinn-Phong shader to dive deep into per-fragment lighting. The engine's versatility extends to supporting various lighting scenarios, encompassing directional lights and a limited number of point lights for a comprehensive understanding of lighting in rendering. <br><br>
-                Technologies such as GLFW for window management, GLM for mathematical operations, and tiny object loader for seamless model integration provide the necessary tools for exploration. <br><br>
-                Together, these components create a dynamic learning experience in the realm of real-time 3D graphics rendering, and the ongoing development of a material system promises further insights into the intricate world of graphics programming. `,
+            title: 'Vulkanite Render Engine (Work in Progress)',
+            description: `The Vulkanite Render Engine is an intriguing work-in-progress project that originated as part of my Bachelor's thesis. 
+            Developed in parallel with the thesis, its primary goal is to push the boundaries of real-time 3D graphics rendering, providing a valuable 
+            platform for learning and experimentation. <br><br>
+
+            Key features include leveraging the capabilities of the Vulkan API for in-depth exploration of modern graphics programming, efficient 3D model 
+            handling for practical three-dimensional transformations and representation studies. The engine's versatility extends to support various 
+            lighting scenarios, including per-fragment lighting with directional lights and a limited number of point lights, offering a comprehensive 
+            understanding of lighting in rendering. <br><br>
+            
+            Technologies such as GLFW for window management, GLM for mathematical operations, and tiny-object-loader for seamless model integration 
+            provide the essential tools for exploration. <br><br>
+            
+            Together, these components create a dynamic learning experience in the realm of real-time 3D graphics rendering, and future development of 
+            a physically-based material system promises further insights into the intricate world of programming a render engine.`,
             imageSrc: painting,
             githubLink: 'https://github.com/chFleschutz/VulkaniteRenderEngine',
-            tags: ['Computer Graphics', 'C++', 'Vulkan API', 'GLSL' , 'GLFW', 'GLM', 'tinyobjloader'],
+            tags: ['Computer Graphics', 'C++', 'Vulkan API', 'GLSL' , 'GLFW', 'GLM', 'tiny-obj-loader'],
             imageLeftSide: true
         },
         {
@@ -43,7 +53,7 @@ export function setupProjects() {
             Explore the technical intricacies of "Hive Mind," immersing yourself in the world of procedural generation, hexagonal tile movement, and strategic gameplay, all enhanced by the power and beauty of Unreal Engine 5.`,
             imageSrc: painting,
             githubLink: 'https://github.com/chFleschutz/Project_Hive',
-            tags: ['C++', 'Unreal Engine', 'Game Development'],
+            tags: ['C++', 'Unreal Engine', 'Procedural Generation', 'Blender', 'Game Development'],
             imageLeftSide: true
         }
     ]
