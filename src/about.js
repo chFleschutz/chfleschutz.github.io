@@ -37,7 +37,7 @@ export function setupAbout() {
                 life with lines of code solidified my decision. <br><br>
                 Have a project in mind or just want to chat about game engineering, programming, or even bonsai
                 trees? Feel free to get in touch with me at ch.fleschutz@gmail.com. Additionally, you can
-                explore more of my projects on my <a href="https://github.com/chFleschutz">GitHub</a> profile.
+                explore more of my projects on my <a href="https://github.com/chFleschutz" target="_blank">GitHub</a> profile.
                 <br><br>
                 Thank you for stopping by, and I can't wait to see where this incredible world of technology
                 takes us next!

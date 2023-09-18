@@ -357,6 +357,14 @@ canvas {
     height: auto;
 }
 
+.more-projects {
+    margin: 0px auto;
+}
+
+.more-projects p {
+    margin-top: 0px;
+}
+
 .gradient-box {
     display: flex;
     flex-direction: column;

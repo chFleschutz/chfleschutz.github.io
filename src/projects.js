@@ -52,6 +52,13 @@ export function setupProjects() {
         projectSection.appendChild(setupProjectCard(project.title, project.description, project.imageSrc, project.githubLink, project.tags, project.imageLeftSide));
     });
 
+    const moreSection = document.createElement('div');
+    moreSection.className = 'more-projects';
+    moreSection.innerHTML = `
+        <p>View more projects on my <a href="https://github.com/chFleschutz" target="_blank">GitHub</a> profile</p>
+    `;
+    projectSection.appendChild(moreSection);
+
     return projectSection;
 }
 
