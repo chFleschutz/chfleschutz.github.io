@@ -9,7 +9,7 @@ export function setupContact() {
         <h2>Get in Touch</h2>
         <h4>If you have any questions don’t hesitate to contact me</h4>
         <div class="outline-box">
-            <p id="email">ch.fleschutz@gmail.com</p>
+            <a href="mailto:ch.fleschutz@gmail.com" id="email"><p>ch.fleschutz@gmail.com</p></a>
             <div class="icon-button" id="copyButton">
                 <span class="material-symbols-rounded">content_copy</span>
             </div>

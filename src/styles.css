@@ -278,7 +278,7 @@ canvas {
 
 .card-image img {
     display: block;
-    max-width: 400px;
+    max-width: 300px;
     height: auto;
     border-radius: 20px;
     position: relative;
