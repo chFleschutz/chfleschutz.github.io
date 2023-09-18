@@ -46,6 +46,12 @@ export function setupBackground() {
         <div class="bg-line"></div>
         <div class="bg-line"></div>
     </div>
+    <div class="bg-line-stripe" style="right: -50px; top: 4800px;">
+        <div class="bg-line"></div>
+        <div class="bg-line"></div>
+        <div class="bg-line"></div>
+        <div class="bg-line"></div>
+    </div>
     `;
     return background;
 }
