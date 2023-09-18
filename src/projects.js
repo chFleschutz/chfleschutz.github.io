@@ -35,11 +35,15 @@ export function setupProjects() {
             imageLeftSide: false
         },
         {
-            title: 'Project 1',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae ultricies nisl nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae ultricies nisl nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae ultricies nisl nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae ultricies nisl nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae ultricies nisl nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae ultricies nisl nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae ultricies nisl',
+            title: 'Hive Mind',
+            description: `"Hive Mind" is a turn-based strategy game developed with Unreal Engine 5.1.<br><br>
+            The game features procedurally generated hexagonal maps using Perlin noise. This technique ensures the creation of diverse and unique landscapes every time. The map boasts a range of terrain types, including lakes, mountains, and deserts, each with significant gameplay implications; for instance, units cannot traverse mountains or lakes. <br><br>
+            The core gameplay revolves around turn-based mechanics. Players can strategically plan their moves carefully, and units will execute their actions only after the turn has concluded. Additionally, the game incorporates a building system, enabling players to construct structures for resource generation and unit deployment, thus introducing an additional layer of strategic depth and management complexity. Unit movement takes place on a hexagonal grid, providing precise control and demanding thoughtful positioning. This system enriches gameplay and fosters strategic thinking. <br><br>
+            Benefiting from the capabilities of Unreal Engine 5, "Hive Mind" showcases cutting-edge advancements in graphics rendering and game development technology.<br><br>
+            Explore the technical intricacies of "Hive Mind," immersing yourself in the world of procedural generation, hexagonal tile movement, and strategic gameplay, all enhanced by the power and beauty of Unreal Engine 5.`,
             imageSrc: painting,
-            githubLink: '#',
-            tags: ['C++', 'Vulkan', 'Unreal Engine'],
+            githubLink: 'https://github.com/chFleschutz/Project_Hive',
+            tags: ['C++', 'Unreal Engine', 'Game Development'],
             imageLeftSide: true
         }
     ]
