@@ -1,8 +1,9 @@
 import './styles.css'
 
 import { setupHeader } from './header.js'
-import './torus.js'
-// import './solar-system.js'
+//import './torus.js'
+//import './solar-system.js'
+import './planet.js'
 
 export function setupHero() {
     const heroContent = document.createElement('div');

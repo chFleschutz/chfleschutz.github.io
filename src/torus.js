@@ -9,13 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
     renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
 
     const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 1000);
-    camera.position.setZ(40);
+    camera.position.setZ(50);
     camera.position.setY(0);
     camera.rotateX(0.0);
 
     const scene = new THREE.Scene();
 
-    const geometry = new THREE.SphereGeometry(10, 32, 128, 32);
+    const geometry = new THREE.TorusKnotGeometry(10, 3, 128, 32);
     const material = new THREE.MeshPhongMaterial();
     const planet = new THREE.Mesh(geometry, material);
     scene.add(planet);
