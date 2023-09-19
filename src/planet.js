@@ -1,7 +1,8 @@
 import * as THREE from 'three'
 
 // import planetColor from './assets/earth_color.jpg'
-import planetColor from './assets/gas_giant_color.jpg'
+import planetColor from './assets/paint-seamlesss.png'
+import ringColor from './assets/ring.png'
 import painting from './assets/painting.png'
 
 
@@ -17,10 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
     camera.position.setY(0);
     camera.rotateX(0.0);
     
+    // Setup objects
     const textureLoader = new THREE.TextureLoader();
 
     const boxGeometry = new THREE.BoxGeometry(25, 25, 25);
-    const boxMaterial = new THREE.MeshStandardMaterial({ wireframe: true });
+    const boxMaterial = new THREE.MeshStandardMaterial({ wireframe: true, visible: false});
     const box = new THREE.Mesh(boxGeometry, boxMaterial);
 
     const planetMaterial = new THREE.MeshStandardMaterial({
@@ -31,25 +33,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const torusGeometry = new THREE.TorusGeometry(15, 2, 16, 100);
     const torusMaterial = new THREE.MeshStandardMaterial({ 
-        map: textureLoader.load(planetColor),
+        map: textureLoader.load(ringColor),
     });
     const torus = new THREE.Mesh(torusGeometry, torusMaterial);
+
+    const planetController = new THREE.Object3D();
 
     // Set up the scene
     const scene = new THREE.Scene();
     scene.add(box);
 
-    box.add(planet);
+    box.add(planetController);
+    planetController.rotateX(-30 * (Math.PI / 180));
+    planetController.rotateZ(-10 * (Math.PI / 180));
 
-    torus.rotateX(70 * (Math.PI / 180));
-    torus.scale.set(1, 1, .1);
-    planet.add(torus);
+    planetController.add(planet);
+
+    torus.rotateX(90 * (Math.PI / 180));
+    torus.scale.set(1, 1, .01);
+    planetController.add(torus);
 
 
     // Add lights
     const pointLight1 = new THREE.PointLight(0xffffff);
     pointLight1.position.set(-30, 20, 50);
-    pointLight1.intensity = 5000;
+    pointLight1.intensity = 2000;
     scene.add(pointLight1);
 
     const ambientLight = new THREE.AmbientLight(0xffffff);
@@ -115,9 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
         var mouseInfluence = 10;
         box.lookAt(-mouse.x * mouseInfluence, -mouse.y * mouseInfluence, -100);
 
-        // planet.rotateOnAxis(new THREE.Vector3(0, 0.917, 0.398), deltaTime * planetRotationSpeed);
-        planet.rotateOnAxis(new THREE.Vector3(0, 1, 0), deltaTime * planetRotationSpeed);
-        planet.scale.lerp(new THREE.Vector3(planetTargetScale, planetTargetScale, planetTargetScale), 0.2);
+        planetController.rotateOnAxis(new THREE.Vector3(0, 1, 0), deltaTime * planetRotationSpeed);
+        planetController.scale.lerp(new THREE.Vector3(planetTargetScale, planetTargetScale, planetTargetScale), 0.2);
 
         renderer.render(scene, camera);
         requestAnimationFrame(renderFrame);
