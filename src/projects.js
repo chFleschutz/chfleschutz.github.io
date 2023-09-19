@@ -5,6 +5,7 @@ import { setupProjectCard } from './project-card';
 import painting from './assets/painting.png';
 import vulkaniteImage from './assets/vulkanite-image.png';
 import abductionImage from './assets/abduction-image.png';
+import hiveMindImage from './assets/hive-mind-image.png';
 
 export function setupProjects() {
     const projectSection = document.createElement('section');
@@ -68,7 +69,7 @@ export function setupProjects() {
             technology.<br><br>
             Explore the technical intricacies of "Hive Mind," immersing yourself in the world of procedural generation, hexagonal tile movement, and 
             strategic gameplay, all enhanced by the power and beauty of Unreal Engine 5.`,
-            imageSrc: painting,
+            imageSrc: hiveMindImage,
             githubLink: 'https://github.com/chFleschutz/hive-mind',
             tags: ['Unreal Engine', 'C++', 'Procedural Generation', 'Blender', 'Game Development'],
             imageLeftSide: true
