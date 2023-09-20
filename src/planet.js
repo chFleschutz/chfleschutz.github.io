@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
 
     const camera = new THREE.PerspectiveCamera(30, 1, 0.1, 1000);
-    camera.position.setZ(100);
+    camera.position.setZ(80);
     camera.position.setY(0);
     camera.rotateX(0.0);
     
@@ -101,6 +101,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     window.addEventListener('resize', onWindowResize, false);
 
+    let clickCount = 0;
+    function onMouseClick() {
+        if (raycaster.intersectObject(planet).length > 0) {
+            clickCount++;
+        }
+
+        if (clickCount > 20) {
+            window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+            clickCount = 0;
+        }
+    }
+    window.addEventListener('click', onMouseClick, false);
+
     // Render Loop
     var raycaster = new THREE.Raycaster();
     let previousTime = performance.now();
@@ -113,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         var planetRotationSpeed = 0.4;
         var planetTargetScale = 1;
         raycaster.setFromCamera(mouse, camera);
-        const intersects = raycaster.intersectObject(planet);
+        const intersects = raycaster.intersectObject(planetController);
         if (intersects.length > 0) {
             planetRotationSpeed = 0.8;
             planetTargetScale = 1.1;
