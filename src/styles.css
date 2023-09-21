@@ -373,6 +373,7 @@ canvas {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     padding: 30px;
     background: linear-gradient(141deg, var(--primary-color) 0%, var(--accent-color) 100%);
     border-radius: 30px;
