@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
 
     const camera = new THREE.PerspectiveCamera(30, 1, 0.1, 1000);
+    camera.aspect = canvas.clientWidth / canvas.clientHeight;
+    camera.updateProjectionMatrix();
     camera.position.setZ(80);
     camera.position.setY(0);
     camera.rotateX(0.0);
