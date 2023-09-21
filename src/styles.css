@@ -96,7 +96,6 @@ html {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     padding: 10px 0px;
     gap: 20px;
     z-index: 100;
@@ -105,8 +104,6 @@ header {
 header h1 {
     font-size: 20px;
     text-transform: uppercase;
-    margin-right: auto;
-
 }
 
 header a {
@@ -116,6 +113,12 @@ header a {
 
 header a:hover {
     transform: translate(0, -3px);
+}
+ 
+@media screen and (max-width: 768px) {
+    header h1 {
+        max-width: 100px;
+    }
 }
 
 section {
@@ -248,6 +251,14 @@ canvas {
     margin: auto 0;
 }
 
+@media screen and (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        margin-top: 15px;
+        gap: 20px;
+    }
+}
+
 .section-card {
     display: flex;
     flex-direction: row;
@@ -290,7 +301,7 @@ canvas {
 
 .card-text {
     flex: 1;
-    min-width: 300px;
+    min-width: 250px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
