@@ -22,18 +22,17 @@ export function setupProjects() {
             platform for learning and experimentation. <br><br>
 
             Key features include leveraging the capabilities of the Vulkan API for in-depth exploration of modern graphics programming, efficient 3D model 
-            handling for practical three-dimensional transformations and representation studies. The engine's versatility extends to support various 
-            lighting scenarios, including per-fragment lighting with directional lights and a limited number of point lights, offering a comprehensive 
-            understanding of lighting in rendering. <br><br>
-            
+            handling for practical three-dimensional transformations and representation studies. The engine uses per-fragment lighting and supports 
+            directional and point lights to bring the scene to light. <br><br>
+           
             Technologies such as GLFW for window management, GLM for mathematical operations, and tiny-object-loader for seamless model integration 
-            provide the essential tools for exploration. <br><br>
+            provide the essential tools for this project. <br><br>
             
             Together, these components create a dynamic learning experience in the realm of real-time 3D graphics rendering, and future development of 
             a physically-based material system promises further insights into the intricate world of programming a render engine.`,
             imageSrc: vulkaniteImage,
             githubLink: 'https://github.com/chFleschutz/VulkaniteRenderEngine',
-            tags: ['Vulkan API', 'C++', 'GLSL' , 'GLFW', 'GLM', 'tiny-obj-loader', 'Real-Time Rendering' ],
+            tags: ['Vulkan API', 'C++', 'GLSL' , 'GLFW', 'GLM', 'tiny-obj-loader', 'Real-Time Rendering'],
             imageLeftSide: true
         },
         {
@@ -58,17 +57,15 @@ export function setupProjects() {
             title: 'Hive Mind',
             description: `Hive Mind is a turn-based strategy game developed with Unreal Engine 5.1.<br><br>
             The game features procedurally generated hexagonal maps using Perlin noise. This technique ensures the creation of diverse and unique landscapes
-            every time. The map boasts a range of terrain types, including lakes, mountains, and deserts, each with gameplay implications. For instance, units 
-            cannot traverse mountains or lakes. <br><br>
+            every time. The map boasts a range of terrain types, including lakes, mountains, and deserts, each with gameplay implications. For instance, 
+            mountains or lakes limit the movement for some units. <br><br>
             The core gameplay revolves around turn-based mechanics. Players can strategically plan their moves carefully, and units will execute their 
             actions only after the turn has concluded. Additionally, the game incorporates a building system, enabling players to construct structures for 
             resource generation and unit deployment, thus introducing an additional layer of strategic depth and management complexity. Unit movement takes 
             place on a hexagonal grid, providing precise control and demanding thoughtful positioning. This system enriches gameplay and fosters strategic 
             thinking. <br><br>
             Benefiting from the capabilities of Unreal Engine 5, "Hive Mind" showcases cutting-edge advancements in graphics rendering and game development 
-            technology.<br><br>
-            Explore the technical intricacies of "Hive Mind," immersing yourself in the world of procedural generation, hexagonal tile movement, and 
-            strategic gameplay, all enhanced by the power and beauty of Unreal Engine 5.`,
+            technology.`,
             imageSrc: hiveMindImage,
             githubLink: 'https://github.com/chFleschutz/hive-mind',
             tags: ['Unreal Engine', 'C++', 'Procedural Generation', 'Blender', 'Game Development'],
