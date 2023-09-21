@@ -260,6 +260,7 @@ canvas {
 }
 
 .card-image {
+    max-width: 300px;
     display: inline-block;
     position: relative;
     margin: 40px 20px 60px 40px;
@@ -279,7 +280,7 @@ canvas {
 
 .card-image img {
     display: block;
-    max-width: 300px;
+    max-width: 100%;
     height: auto;
     border-radius: 20px;
     position: relative;
@@ -288,7 +289,7 @@ canvas {
 
 .card-text {
     flex: 1;
-    min-width: 400px;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
