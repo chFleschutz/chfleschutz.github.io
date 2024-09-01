@@ -3,7 +3,7 @@ import './styles.css'
 import { setupProjectCard } from './project-card';
 
 import painting from './assets/painting.png';
-import vulkaniteImage from './assets/vulkanite-image.png';
+import aegixImage from './assets/aegix-image.png';
 import abductionImage from './assets/abduction-image.png';
 import hiveMindImage from './assets/hive-mind-image.png';
 
@@ -16,23 +16,14 @@ export function setupProjects() {
 
     const projectData = [
         {
-            title: 'Vulkanite Render Engine (Work in Progress)',
-            description: `The Vulkanite Render Engine is an intriguing work-in-progress project that originated as part of my Bachelor's thesis. 
-            Developed in parallel with the thesis, its primary goal is to push the boundaries of real-time 3D graphics rendering, providing a valuable 
-            platform for learning and experimentation. <br><br>
-
-            Key features include leveraging the capabilities of the Vulkan API for in-depth exploration of modern graphics programming, efficient 3D model 
-            handling for practical three-dimensional transformations and representation studies. The engine uses per-fragment lighting and supports 
-            directional and point lights to bring the scene to light. <br><br>
-           
-            Technologies such as GLFW for window management, GLM for mathematical operations, and tiny-object-loader for seamless model integration 
-            provide the essential tools for this project. <br><br>
-            
-            Together, these components create a dynamic learning experience in the realm of real-time 3D graphics rendering, and future development of 
-            a physically-based material system promises further insights into the intricate world of programming a render engine.`,
-            imageSrc: vulkaniteImage,
-            githubLink: 'https://github.com/chFleschutz/VulkaniteRenderEngine',
-            tags: ['Vulkan API', 'C++', 'GLSL' , 'GLFW', 'GLM', 'tiny-obj-loader', 'Real-Time Rendering'],
+            title: 'Aegix Engine',
+            description: `
+            Aegix Engine is a lightweight, modern C++ game engine built using the Vulkan Graphics API. It features physically based shading, GLTF and OBJ mesh loading, an immediate mode editor GUI, and an Entity Component System. Aegix is designed as a foundational tool for developers interested in implementing advanced graphics algorithms. 
+            <br>
+            The engine is built with CMake and integrates several external libraries, including entt, glfw, glm, imgui, stb, and tinyobjloader.`,
+            imageSrc: aegixImage,
+            githubLink: 'https://github.com/chFleschutz/aegix-engine',
+            tags: ['Game Engine', 'C++', 'Vulkan API' ],
             imageLeftSide: true
         },
         {
