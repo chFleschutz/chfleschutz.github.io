@@ -19,6 +19,9 @@ export function setupHero() {
                 <a class="icon-button" href="https://www.linkedin.com/in/christoph-fleschutz" target="_blank">
                     <i class="devicon-linkedin-plain big-icon"></i>
                 </a>
+                <a class="icon-button" href="https://chfleschutz.itch.io/" target="_blank">
+                    <img style="width: 35px; height: 35px" src="https://static.itch.io/images/itchio-textless-white.svg" alt="Itch.io">
+                </a>
             </div>
         </div>
         <div class="hero-image">
