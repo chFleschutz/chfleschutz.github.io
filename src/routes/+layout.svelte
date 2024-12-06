@@ -2,19 +2,22 @@
 	import '../app.css';
 </script>
 
-<header>
-	<h1>Christoph Fleschutz</h1>
-	<nav>
-		<a href="/">about</a>
-		<a href="/">projects</a>
-		<a href="/">contact</a>
-	</nav>
-</header>
+<svelte:head>
+	<!-- Preconnect to Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+
+	<!-- Load fonts -->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet"
+	/>
+</svelte:head>
 
 <main>
 	<div class="content">
-        <slot></slot>
-    </div> 
+		<slot></slot>
+	</div>
 </main>
 
 <footer>
@@ -22,31 +25,6 @@
 </footer>
 
 <style>
-	header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		max-width: var(--max-width);
-		padding: 1rem;
-		margin: 0 auto;
-        font-size: 20px;
-	}
-
-	header h1 {
-		font-size: 20px;
-		text-transform: uppercase;
-	}
-
-	nav a {
-		text-decoration: none;
-		transition: transform ease 0.2s;
-		margin: 0 1rem;
-	}
-
-	nav a:hover {
-		transform: translate(0, -3px);
-	}
-
 	main {
 		display: flex;
 		flex-direction: column;
@@ -55,10 +33,11 @@
 		width: 100%;
 	}
 
-    .content {
-        width: var(--max-width);
-        text-align: center;
-    }
+	.content {
+		max-width: var(--max-width);
+        width: 100%;
+		text-align: center;
+	}
 
 	footer {
 		text-align: center;
