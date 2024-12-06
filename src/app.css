@@ -1,0 +1,36 @@
+:root {
+    --primary-color: #2980B9;
+    --secondary-color: #234466;
+    --accent-color: #2ECC70;
+    --background-color: #1D2B3A;
+    --card-color: #293644;
+    --text-color: #F4F4F4;
+    --max-width: 1200px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1 {
+    text-transform: capitalize;
+}
+
+nav {
+    display: flex;
+    gap: 50px;
+    padding: 10px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
