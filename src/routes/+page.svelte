@@ -1,2 +1,12 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+	export let title = 'Christoph Fleschutz';
+</script>
+
+<svelte:head>
+	<title>{title}</title>
+</svelte:head>
+
+<main>
+	<h1>Welcome to My Portfolio!</h1>
+	<p>This is the main page of my website.</p>
+</main>
