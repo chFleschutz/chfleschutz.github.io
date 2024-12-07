@@ -1,61 +1,119 @@
 <script lang="ts">
-    import * as THREE from 'three';
-    import { onMount } from 'svelte';
+	import * as THREE from 'three';
+	import { onMount } from 'svelte';
 
-    let canvas : HTMLDivElement | null = null;
+	let canvas: HTMLDivElement | null = null;
 
-    onMount(() => {
-        if (!canvas)
-            return;
+	onMount(() => {
+		if (!canvas) return;
 
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
-        camera.position.z = 5;
-        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-        renderer.setSize(canvas.clientWidth, canvas.clientHeight);
-        renderer.setClearColor(0x000000, 0);
+		// Renderer
+		const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+		renderer.setPixelRatio(window.devicePixelRatio);
+		renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+		renderer.setClearColor(0x000000, 0);
+		canvas.appendChild(renderer.domElement);
 
-        canvas.appendChild(renderer.domElement);
+		// Camera
+		const aspect = canvas.clientWidth / canvas.clientHeight;
+		const camera = new THREE.PerspectiveCamera(30, aspect, 0.1, 1000);
+		camera.position.z = 80;
+		
+		// Scene
+		const scene = new THREE.Scene();
 
-        // Add a simple cube
-        const geometry = new THREE.BoxGeometry();
-        const material = new THREE.MeshStandardMaterial({ color: 0x00ff00 });
-        const cube = new THREE.Mesh(geometry, material);
-        scene.add(cube);
+		// Textures
+		const textureLoader = new THREE.TextureLoader();
+		const planetTexture = textureLoader.load('/textures/planet-paint.png');
+		const ringTexture = textureLoader.load('/textures/ring.png');
 
-        // Add a light source
-        const light = new THREE.DirectionalLight(0xffffff, 1);
-        light.position.set(5, 5, 5).normalize();
-        scene.add(light);
+		// Planet
+		const planetGeometry = new THREE.SphereGeometry(10, 32, 32);
+		const planetMaterial = new THREE.MeshStandardMaterial({ map: planetTexture });
+		const planet = new THREE.Mesh(planetGeometry, planetMaterial);
 
+		// Ring
+		const ringGeometry = new THREE.TorusGeometry(15, 2, 16, 100);
+		const ringMaterial = new THREE.MeshStandardMaterial({ map: ringTexture });
+		const ring = new THREE.Mesh(ringGeometry, ringMaterial);
+		ring.rotation.x = (90 * Math.PI) / 180;
+		ring.scale.z = 0.01;
 
-        const animate = () => {
-            requestAnimationFrame(animate);
+		// Directional light
+		const light = new THREE.DirectionalLight(0xffffff, 4);
+		light.position.set(-1, 1, 1).normalize();
+		scene.add(light);
 
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.01;
+		// Ambient light
+		const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+		scene.add(ambientLight);
 
-            renderer.render(scene, camera);
-        };
+		// Planet controller
+		const rotationController = new THREE.Object3D();
+		rotationController.add(planet);
+		rotationController.add(ring);
+		rotationController.rotation.x = (-30 * Math.PI) / 180;
+		rotationController.rotation.z = (-10 * Math.PI) / 180;
 
-        animate();
+		// Mouse Controller
+		const mouseController = new THREE.Object3D();
+		mouseController.add(rotationController);
+		scene.add(mouseController);
 
-        const handleResize = () => {
-            if (!canvas)
-                return;
+		// Mouse position
+		const mouse = new THREE.Vector2();
+		const onMouseMove = (event: MouseEvent) => {
+			const rect = canvas?.getBoundingClientRect();
+			if (rect) {
+				mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+				mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+			}
+		};
+		window.addEventListener('mousemove', onMouseMove);
 
-            camera.aspect = canvas.clientWidth / canvas.clientHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(canvas.clientWidth, canvas.clientHeight);
-        };
+		// Animation
+		// const clock = new THREE.Clock();
+		const raycaster = new THREE.Raycaster();
+		const animate = () => {
+			requestAnimationFrame(animate);
 
-        window.addEventListener('resize', handleResize);
+			const deltaTime = 0.01;
+			var speed = 0.2;
+			var scale = 1.0;
 
-        return () => {
-            window.removeEventListener('resize', handleResize);
-            renderer.dispose();
-        };
-    });
+			raycaster.setFromCamera(mouse, camera);
+			const intersects = raycaster.intersectObjects([planet]);
+			if (intersects.length > 0) {
+				speed = 0.5;
+				scale = 1.1;
+			}
+
+			const mouseInfluence = 10;
+			mouseController.lookAt(-mouse.x * mouseInfluence, -mouse.y * mouseInfluence, -100);
+
+			rotationController.rotateOnAxis(new THREE.Vector3(0, 1, 0), speed * deltaTime);
+			rotationController.scale.lerp(new THREE.Vector3(scale, scale, scale), 0.2);
+
+			renderer.render(scene, camera);
+		};
+
+		animate();
+
+		const handleResize = () => {
+			if (!canvas) return;
+
+			camera.aspect = canvas.clientWidth / canvas.clientHeight;
+			camera.updateProjectionMatrix();
+			renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+		};
+
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+			renderer.dispose();
+		};
+	});
 </script>
 
 <div bind:this={canvas} style="width: 100%; height: 100%;"></div>
