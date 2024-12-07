@@ -2,30 +2,27 @@
 	import * as THREE from 'three';
 	import { onMount } from 'svelte';
 
-	let canvas: HTMLDivElement | null = null;
+	let canvas: HTMLDivElement;
 
 	onMount(() => {
-		if (!canvas) return;
+		const scene = new THREE.Scene();
 
-		// Renderer
+		const aspect = canvas.clientWidth / canvas.clientHeight;
+		const camera = new THREE.PerspectiveCamera(30, aspect, 0.1, 1000);
+		camera.position.z = 80;
+
 		const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 		renderer.setPixelRatio(window.devicePixelRatio);
 		renderer.setSize(canvas.clientWidth, canvas.clientHeight);
 		renderer.setClearColor(0x000000, 0);
 		canvas.appendChild(renderer.domElement);
 
-		// Camera
-		const aspect = canvas.clientWidth / canvas.clientHeight;
-		const camera = new THREE.PerspectiveCamera(30, aspect, 0.1, 1000);
-		camera.position.z = 80;
-		
-		// Scene
-		const scene = new THREE.Scene();
-
 		// Textures
-		const textureLoader = new THREE.TextureLoader();
-		const planetTexture = textureLoader.load('/textures/planet-paint.png');
-		const ringTexture = textureLoader.load('/textures/ring.png');
+		const loader = new THREE.TextureLoader();
+		let planetTexture = loader.load('/textures/planet.png');
+		planetTexture.colorSpace = THREE.SRGBColorSpace;
+		let ringTexture = loader.load('/textures/ring.png');
+		ringTexture.colorSpace = THREE.SRGBColorSpace;
 
 		// Planet
 		const planetGeometry = new THREE.SphereGeometry(10, 32, 32);
@@ -39,23 +36,18 @@
 		ring.rotation.x = (90 * Math.PI) / 180;
 		ring.scale.z = 0.01;
 
-		// Directional light
-		const light = new THREE.DirectionalLight(0xffffff, 4);
+		// Lighting
+		const light = new THREE.DirectionalLight(0xffffff, 8);
 		light.position.set(-1, 1, 1).normalize();
 		scene.add(light);
+		scene.add(new THREE.AmbientLight(0xffffff, 1));
 
-		// Ambient light
-		const ambientLight = new THREE.AmbientLight(0xffffff, 1);
-		scene.add(ambientLight);
-
-		// Planet controller
+		// Controllers
 		const rotationController = new THREE.Object3D();
 		rotationController.add(planet);
 		rotationController.add(ring);
-		rotationController.rotation.x = (-30 * Math.PI) / 180;
-		rotationController.rotation.z = (-10 * Math.PI) / 180;
+		rotationController.rotation.set(THREE.MathUtils.degToRad(-20), 0, THREE.MathUtils.degToRad(-10));
 
-		// Mouse Controller
 		const mouseController = new THREE.Object3D();
 		mouseController.add(rotationController);
 		scene.add(mouseController);
@@ -71,15 +63,23 @@
 		};
 		window.addEventListener('mousemove', onMouseMove);
 
+		// Resize
+		const onResize = () => {
+			camera.aspect = canvas.clientWidth / canvas.clientHeight;
+			camera.updateProjectionMatrix();
+			renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+		};
+		window.addEventListener('resize', onResize);
+
 		// Animation
-		// const clock = new THREE.Clock();
+		const clock = new THREE.Clock();
 		const raycaster = new THREE.Raycaster();
 		const animate = () => {
 			requestAnimationFrame(animate);
 
-			const deltaTime = 0.01;
-			var speed = 0.2;
-			var scale = 1.0;
+			const deltaTime = clock.getDelta();
+			let speed = 0.3;
+			let scale = 1.0;
 
 			raycaster.setFromCamera(mouse, camera);
 			const intersects = raycaster.intersectObjects([planet]);
@@ -92,28 +92,28 @@
 			mouseController.lookAt(-mouse.x * mouseInfluence, -mouse.y * mouseInfluence, -100);
 
 			rotationController.rotateOnAxis(new THREE.Vector3(0, 1, 0), speed * deltaTime);
-			rotationController.scale.lerp(new THREE.Vector3(scale, scale, scale), 0.2);
+			rotationController.scale.lerp(new THREE.Vector3(scale, scale, scale), 0.1);
 
 			renderer.render(scene, camera);
 		};
 
 		animate();
 
-		const handleResize = () => {
-			if (!canvas) return;
-
-			camera.aspect = canvas.clientWidth / canvas.clientHeight;
-			camera.updateProjectionMatrix();
-			renderer.setSize(canvas.clientWidth, canvas.clientHeight);
-		};
-
-		window.addEventListener('resize', handleResize);
-
 		return () => {
-			window.removeEventListener('resize', handleResize);
+			window.removeEventListener('resize', onResize);
+			window.removeEventListener('mousemove', onMouseMove);
 			renderer.dispose();
+			planetTexture.dispose();
+			ringTexture.dispose();
 		};
 	});
 </script>
 
-<div bind:this={canvas} style="width: 100%; height: 100%;"></div>
+<div bind:this={canvas}></div>
+
+<style>
+	div {
+		width: 100%;
+		height: 100%;
+	}
+</style>
