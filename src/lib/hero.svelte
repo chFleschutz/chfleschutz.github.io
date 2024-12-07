@@ -3,6 +3,8 @@
 	import { faGithub } from '@fortawesome/free-brands-svg-icons';
 	import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 	import { faItchIo } from '@fortawesome/free-brands-svg-icons';
+
+    import Planet from './planet.svelte';
 </script>
 
 <div class="hero">
@@ -23,6 +25,7 @@
 		</div>
 	</div>
 	<div class="hero-image">
+        <Planet />
 	</div>
 </div>
 
@@ -54,8 +57,9 @@
 	.hero-image {
 		flex: 1;
 		text-align: center;
-		padding: 1rem;
 		max-width: 43%;
+		aspect-ratio: 1;
+		padding: 1rem;
 	}
 
 	.icon-list {

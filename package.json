@@ -16,6 +16,7 @@
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.9.0",
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
+		"@types/three": "^0.170.0",
 		"eslint": "^9.7.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.36.0",
@@ -32,6 +33,7 @@
 		"@fortawesome/free-brands-svg-icons": "^6.7.1",
 		"@fortawesome/free-solid-svg-icons": "^6.7.1",
 		"@fortawesome/svelte-fontawesome": "^0.2.3",
-		"@sveltejs/adapter-static": "^3.0.6"
+		"@sveltejs/adapter-static": "^3.0.6",
+		"three": "^0.171.0"
 	}
 }
