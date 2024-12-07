@@ -13,8 +13,8 @@
 		align-items: center;
 		justify-content: space-between;
 		max-width: var(--max-width);
-		padding: 1rem;
 		gap: 3rem;
+        padding: 1rem 0;
 	}
 
 	header h1 {

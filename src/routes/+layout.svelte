@@ -1,5 +1,7 @@
 <script>
 	import '../app.css';
+
+	import Background from '$lib/background.svelte';
 </script>
 
 <svelte:head>
@@ -15,32 +17,37 @@
 </svelte:head>
 
 <main>
-	<div class="content">
+	<Background />
+
+	<div class="layout">
 		<slot></slot>
+
+		<footer>
+			<p>&copy; 2024 Created by Christoph Fleschutz</p>
+		</footer>
 	</div>
 </main>
-
-<footer>
-	<p>&copy; 2024 Created by Christoph Fleschutz</p>
-</footer>
 
 <style>
 	main {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		text-align: center;
+		position: relative;
+		min-height: 100vh;
 		width: 100%;
+		overflow-x: hidden;
+		overflow-y: hidden;
 	}
 
-	.content {
+	.layout {
 		max-width: var(--max-width);
-        width: 100%;
-		text-align: center;
+		width: 100%;
+		padding: 0 1rem;
 	}
 
 	footer {
-		text-align: center;
 		padding: 1rem;
 	}
 </style>

@@ -23,7 +23,6 @@
 		</div>
 	</div>
 	<div class="hero-image">
-		<FontAwesomeIcon icon={faGithub} />
 	</div>
 </div>
 
@@ -37,8 +36,7 @@
 
 	.hero-text {
 		flex: 1;
-		padding: 1rem;
-        padding-bottom: 3rem;
+        padding-bottom: 1rem;
 		text-align: left;
 	}
 
@@ -57,7 +55,7 @@
 		flex: 1;
 		text-align: center;
 		padding: 1rem;
-		max-width: 42%;
+		max-width: 43%;
 	}
 
 	.icon-list {
