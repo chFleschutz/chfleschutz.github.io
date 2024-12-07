@@ -13,8 +13,13 @@
 	<Header />
 
 	<div class="hero">
-		<h1>Welcome to My Portfolio!</h1>
-		<p>This is the main page of my website.</p>
+		<div class="hero-text">
+			<h1>Hello, I'm <span class="accent">Chris</span></h1>
+			<p>a dedicated computer science student specializing in game engineering and C++ development</p>
+		</div>
+		<div class="hero-image">
+			<FontAwesomeIcon icon={faChevronDown} />
+		</div>
 	</div>
 
 	<div class="arrow">
@@ -32,9 +37,30 @@
 	.hero {
 		display: flex;
 		flex: 1;
-		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		justify-content: space-between;
+	}
+
+	.hero-text {
+		flex: 1;
+		padding: 1rem;
+		text-align: left;
+	}
+
+	.hero-text h1 {
+		font-size: 5rem;
+		margin: 1rem 0;
+	}
+
+	.hero-text p {
+		font-size: 1.6rem;
+	}
+
+	.hero-image {
+		flex: 1;
+		text-align: center;
+		padding: 1rem;
+		max-width: 40%;
 	}
 
 	.arrow {
