@@ -10,42 +10,19 @@
 	<title>Christoph Fleschutz</title>
 </svelte:head>
 
-<section class="full-page">
-	<Header />
-	<Hero />
-	<div class="arrow icon-button">
-		<FontAwesomeIcon icon={faChevronDown} />
-	</div>
-</section>
-<section>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-</section>
+<div class="section">Section 1</div>
+<div class="section">Section 2</div>
+<div class="section">Section 3</div>
+<div class="section">Section 4</div>
 
 <style>
-	.full-page {
-		display: flex;
-		flex-direction: column;
-		height: 100vh;
-	}
-
-	.arrow {
+	.section {
+		height: 100%;
+		width: 100%;
+		scroll-snap-align: start; 
 		display: flex;
 		justify-content: center;
-		max-height: 1.25rem;
-		padding: 3rem;
+		align-items: center;
+		font-size: 2rem;
 	}
 </style>
