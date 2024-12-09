@@ -1,7 +1,5 @@
 <script>
 	import '../app.css';
-
-	import Background from '$lib/background.svelte';
 </script>
 
 <svelte:head>
@@ -17,8 +15,6 @@
 </svelte:head>
 
 <main>
-	<Background />
-
 	<div class="layout">
 		<slot></slot>
 
