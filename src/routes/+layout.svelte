@@ -1,5 +1,7 @@
 <script>
 	import '../app.css';
+
+	import Header from '$lib/header.svelte';
 </script>
 
 <svelte:head>
@@ -15,6 +17,8 @@
 </svelte:head>
 
 <main class="fullpage">
+	<Header />
+
 	<slot></slot>
 </main>
 

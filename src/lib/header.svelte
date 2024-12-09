@@ -1,25 +1,34 @@
 <header>
-	<h1>Christoph Fleschutz</h1>
-	<nav>
-		<a href="/">about me</a>
-		<a href="/">projects</a>
-		<a href="/">contact</a>
-	</nav>
+	<div class="header-container">
+		<h1>Christoph<br>Fleschutz</h1>
+		<nav>
+			<a href="/">home</a>
+			<a href="/">about me</a>
+			<a href="/">projects</a>
+			<a href="/">contact</a>
+		</nav>
+	</div>
 </header>
 
 <style>
 	header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		max-width: var(--max-width);
-		gap: 3rem;
-        padding: 1rem 0;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
 	}
 
 	header h1 {
 		font-size: 20px;
 		text-transform: uppercase;
+		margin: 0;
+	}
+
+	.header-container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 2.5rem;
 	}
 
 	nav {
