@@ -58,7 +58,6 @@ a:hover {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    color: var(--text-color);
     text-decoration: none;
     transition: transform ease 0.2s;
 }
