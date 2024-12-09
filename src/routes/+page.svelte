@@ -3,6 +3,7 @@
 	import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 	import Hero from '$lib/sections/hero.svelte';
+	import About from '$lib/sections/about.svelte';
 </script>
 
 <svelte:head>
@@ -10,7 +11,7 @@
 </svelte:head>
 
 <div class="section"><Hero /></div>
-<div class="section">Section 2</div>
+<div class="section"><About/></div>
 <div class="section">Section 3</div>
 <div class="section">Section 4</div>
 

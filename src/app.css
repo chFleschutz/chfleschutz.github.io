@@ -33,7 +33,8 @@ a:hover {
 }
 
 .fullpage-container {
-    width: 80vw !important;
+    position: relative;
+    width: 70vw !important;
     height: 100vh;
     display: flex;
     align-items: center;
