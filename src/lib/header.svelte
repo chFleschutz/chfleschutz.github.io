@@ -23,12 +23,6 @@
 		z-index: 1000;
 	}
 
-	header h1 {
-		font-size: 20px;
-		text-transform: uppercase;
-		margin: 0;
-	}
-
 	.header-container {
 		display: flex;
 		justify-content: space-between;
@@ -39,6 +33,6 @@
 	.section-list {
 		display: flex;
 		white-space: nowrap;
-		gap: 3rem;
+		gap: 4rem;
 	}
 </style>

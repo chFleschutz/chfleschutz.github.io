@@ -1,20 +1,18 @@
 <script lang="ts">
-	import { currentSection, sectionCount, scrollToSection } from "./section-store";
-
+	import { currentSection, sectionCount, scrollToSection } from './section-store';
 </script>
 
 <div class="page-indicator">
 	{#each Array.from({ length: $sectionCount }, (_, i) => i) as section}
-		<div
+		<button
 			class="indicator"
 			class:selected={$currentSection === section}
-			role="button"
-			tabindex="0"
 			on:click={() => scrollToSection(section)}
 			on:keydown={(e) => e.key === 'Enter' && scrollToSection(section)}
+			aria-label="Go to section"
 		>
 			<div class="indicator-line" class:selected={$currentSection === section}></div>
-		</div>
+		</button>
 	{/each}
 </div>
 

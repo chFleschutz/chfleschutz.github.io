@@ -19,7 +19,8 @@ body {
 h1 {
     font-size: 1.5rem;
     font-weight: 700;
-    text-transform: capitalize;
+    text-transform: uppercase;
+    margin: 0;
 }
 
 h2 {
@@ -69,11 +70,12 @@ a:hover {
 
 button {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: var(--text-color);
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding: 0;
     transition: transform ease 0.2s;
 }
 
