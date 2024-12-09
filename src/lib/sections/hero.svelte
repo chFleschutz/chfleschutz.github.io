@@ -6,8 +6,8 @@
 <div class="fullpage-container">
 	<div class="hero">
 		<div class="hero-text">
-			<h1>Hello, I'm <span class="accent">Chris</span></h1>
-			<p>a dedicated computer science student specializing in game engineering and C++ development</p>
+			<h2>Hello, I'm <span class="accent">Chris</span></h2>
+			<h3>a dedicated computer science student specializing in game engineering and C++ development</h3>
 			<LinkIcons />
 		</div>
 		<div class="hero-image">
@@ -26,17 +26,6 @@
 		flex: 1;
         padding-bottom: 1rem;
 		text-align: left;
-	}
-
-	.hero-text h1 {
-		font-size: 5rem;
-		margin: 1rem 0;
-	}
-
-	.hero-text p {
-		font-size: 1.5rem;
-        line-height: 1.7;
-        margin: 1rem 0;
 	}
 
 	.hero-image {

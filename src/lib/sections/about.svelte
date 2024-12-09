@@ -33,18 +33,7 @@
 		text-align: left;
 		max-width: 500px;
 	}
-
-	.about-text h2 {
-		font-size: 3rem;
-		margin: 1rem 0;
-	}
-
-	.about-text p {
-		font-size: 1.5rem;
-		line-height: 1.7;
-		margin: 1rem 0;
-	}
-
+	
 	.about-image {
 		max-width: 500px;
 		width: 100%;

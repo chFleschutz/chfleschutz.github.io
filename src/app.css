@@ -1,17 +1,14 @@
 :root {
     --primary-color: #2980B9;
-    --secondary-color: #234466;
     --accent-color: #2ECC70;
     --background-color: #0a0a0a;
-    --card-color: #293644;
     --text-color: #F4F4F4;
-    --max-width: 1160px;
     --inactive-color: #7f8c8d;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     margin: 0;
     padding: 0;
@@ -20,10 +17,30 @@ body {
 }
 
 h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
     text-transform: capitalize;
 }
 
+h2 {
+    font-size: 4.0rem;
+    font-weight: 700;
+    margin: 1.5rem 0;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.0rem;
+    font-weight: 400;
+}
+
 a {
+    font-size: 1rem;
+    font-weight: 400;
     color: var(--text-color);
     text-decoration: none;
 }
@@ -58,6 +75,8 @@ a:hover {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    display: inline-block;
+    font-size: 2rem;
     text-decoration: none;
     transition: transform ease 0.2s;
 }
