@@ -59,16 +59,11 @@ a:hover {
     margin: 0 auto;
 }
 
-.primary {
-    color: var(--primary-color);
-}
-
-.secondary {
-    color: var(--secondary-color);
-}
-
-.accent {
-    color: var(--accent-color);
+.text-gradient {
+    width: fit-content;
+    background: linear-gradient(90deg, var(--primary-color) 5%, var(--accent-color) 95%);
+    color: transparent;
+    background-clip: text;
 }
 
 .icon-button {

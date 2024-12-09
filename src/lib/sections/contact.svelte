@@ -17,7 +17,7 @@
 
 <div class="fullpage-container">
 	<div class="contact">
-		<h2>Let's Get In Touch</h2>
+		<h2 class="text-gradient">Let's Get In Touch</h2>
 		<p>If you have any questions feel free to contact me</p>
 		<div
 			class="email-container"

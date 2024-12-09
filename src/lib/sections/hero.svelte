@@ -6,7 +6,7 @@
 <div class="fullpage-container">
 	<div class="hero">
 		<div class="hero-text">
-			<h2>Hello, I'm <span class="accent">Chris</span></h2>
+			<h2 class="text-gradient">Hello, I'm Chris</h2>
 			<h3>a dedicated computer science student specializing in game engineering and C++ development</h3>
 			<LinkIcons />
 		</div>

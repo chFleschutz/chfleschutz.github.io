@@ -1,7 +1,7 @@
 <div class="fullpage-container">
 	<div class="about">
 		<div class="about-text">
-			<h2>About me</h2>
+			<h2 class="text-gradient">About me</h2>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mauris dolor, maximus at
 				est vitae, lobortis rhoncus ligula.

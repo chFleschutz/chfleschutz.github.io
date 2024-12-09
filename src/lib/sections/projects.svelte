@@ -1,6 +1,6 @@
 <div class="fullpage-container">
 	<div class="projects">
-		<h2>Showcase</h2>
+		<h2 class="text-gradient">Showcase</h2>
 		<p class="projects-description">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mauris dolor, maximus at est
 			vitae, lobortis rhoncus ligula.
