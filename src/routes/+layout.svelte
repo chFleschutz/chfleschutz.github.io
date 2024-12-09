@@ -2,6 +2,7 @@
 	import '../app.css';
 
 	import Header from '$lib/header.svelte';
+	import PageIndicator from '$lib/page-indicator.svelte';
 </script>
 
 <svelte:head>
@@ -18,6 +19,7 @@
 
 <main class="fullpage">
 	<Header />
+	<PageIndicator />
 
 	<slot></slot>
 </main>
