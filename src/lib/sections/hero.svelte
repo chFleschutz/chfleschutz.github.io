@@ -1,5 +1,5 @@
 <script>
-    import Planet from '../planet.svelte';
+	import Planet from '../planet.svelte';
 	import LinkIcons from '$lib/components/link-icons.svelte';
 </script>
 
@@ -18,19 +18,21 @@
 
 <style>
 	.hero {
+		width: 100%;
 		display: flex;
+		justify-content: center;
 		align-items: center;
+		gap: 2em;
 	}
 
 	.hero-text {
-		flex: 1;
-        padding-bottom: 1rem;
-		text-align: left;
+		max-width: 550px;
+		width: 50%;
 	}
 
 	.hero-image {
-		flex: 1;
-		max-width: 43%;
+		max-width: 500px;
 		aspect-ratio: 1;
+		width: 50%;
 	}
 </style>
