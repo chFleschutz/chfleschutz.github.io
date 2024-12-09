@@ -1,16 +1,14 @@
 :root {
     --primary-color: #2980B9;
-    --secondary-color: #234466;
     --accent-color: #2ECC70;
     --background-color: #0a0a0a;
-    --card-color: #293644;
     --text-color: #F4F4F4;
-    --max-width: 1160px;
+    --inactive-color: #7f8c8d;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     margin: 0;
     padding: 0;
@@ -19,10 +17,31 @@ body {
 }
 
 h1 {
-    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h2 {
+    font-size: 4.0rem;
+    font-weight: 700;
+    margin: 1.5rem 0;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.0rem;
+    font-weight: 400;
 }
 
 a {
+    font-size: 1rem;
+    font-weight: 400;
     color: var(--text-color);
     text-decoration: none;
 }
@@ -31,28 +50,49 @@ a:hover {
     text-decoration: underline;
 }
 
-.primary {
-    color: var(--primary-color);
+.fullpage-container {
+    position: relative;
+    width: 70vw !important;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    margin: 0 auto;
 }
 
-.secondary {
-    color: var(--secondary-color);
+.text-gradient {
+    width: fit-content;
+    background: linear-gradient(90deg, var(--primary-color) 5%, var(--accent-color) 95%);
+    color: transparent;
+    background-clip: text;
 }
 
-.accent {
-    color: var(--accent-color);
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    color: var(--text-color);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform ease 0.2s;
+}
+
+button:hover {
+    transform: translate(0, -3px);
 }
 
 .icon-button {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    color: var(--text-color);
+    display: inline-block;
+    font-size: 2rem;
     text-decoration: none;
     transition: transform ease 0.2s;
 }
 
 .icon-button:hover {
-    /* transform: scale(1.1); */
     transform: translateY(-4px);
 }

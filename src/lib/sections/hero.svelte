@@ -1,0 +1,38 @@
+<script>
+	import Planet from '../planet.svelte';
+	import LinkIcons from '$lib/components/link-icons.svelte';
+</script>
+
+<div class="fullpage-container">
+	<div class="hero">
+		<div class="hero-text">
+			<h2 class="text-gradient">Hello, I'm Chris</h2>
+			<h3>a dedicated computer science student specializing in game engineering and C++ development</h3>
+			<LinkIcons />
+		</div>
+		<div class="hero-image">
+			<Planet />
+		</div>
+	</div>
+</div>
+
+<style>
+	.hero {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2em;
+	}
+
+	.hero-text {
+		max-width: 550px;
+		width: 50%;
+	}
+
+	.hero-image {
+		max-width: 500px;
+		aspect-ratio: 1;
+		width: 50%;
+	}
+</style>

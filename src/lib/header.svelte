@@ -1,39 +1,39 @@
+<script lang="ts">
+	import { scrollToSection } from "./section-store";
+</script>
+
 <header>
-	<h1>Christoph Fleschutz</h1>
-	<nav>
-		<a href="/">about me</a>
-		<a href="/">projects</a>
-		<a href="/">contact</a>
-	</nav>
+	<div class="header-container">
+		<h1>Christoph<br />Fleschutz</h1>
+		<div class="section-list">
+			<button on:click={() => scrollToSection(0)}>home</button>
+			<button on:click={() => scrollToSection(1)}>about me</button>
+			<button on:click={() => scrollToSection(2)}>projects</button>
+			<button on:click={() => scrollToSection(3)}>contact</button>
+		</div>
+	</div>
 </header>
 
 <style>
 	header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 1000;
+	}
+
+	.header-container {
 		display: flex;
-		align-items: center;
 		justify-content: space-between;
-		max-width: var(--max-width);
-		gap: 3rem;
-        padding: 1rem 0;
+		align-items: center;
+		gap: 2rem;
+		padding: 2.5rem;
 	}
 
-	header h1 {
-		font-size: 20px;
-		text-transform: uppercase;
-	}
-
-	nav {
+	.section-list {
 		display: flex;
 		white-space: nowrap;
-		gap: 3rem;
-	}
-
-	nav a {
-		text-decoration: none;
-		transition: transform ease 0.2s;
-	}
-
-	nav a:hover {
-		transform: translate(0, -3px);
+		gap: 4rem;
 	}
 </style>

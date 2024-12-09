@@ -1,5 +1,9 @@
 <script>
 	import '../app.css';
+
+	import Header from '$lib/header.svelte';
+	import PageIndicator from '$lib/page-indicator.svelte';
+	import Footer from '$lib/footer.svelte';
 </script>
 
 <svelte:head>
@@ -14,36 +18,24 @@
 	/>
 </svelte:head>
 
-<main>
-	<div class="layout">
-		<slot></slot>
+<main class="fullpage">
+	<Header />
+	<PageIndicator />
+	<Footer />
 
-		<footer>
-			<p>&copy; 2024 Created by Christoph Fleschutz</p>
-		</footer>
-	</div>
+	<slot></slot>
 </main>
 
 <style>
-	main {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		position: relative;
-		min-height: 100vh;
-		width: 100%;
-		overflow-x: hidden;
-		overflow-y: hidden;
+	:global(body) {
+		margin: 0;
+		overflow: hidden;
 	}
 
-	.layout {
-		max-width: var(--max-width);
-		width: 100%;
-		padding: 0 1rem;
-	}
-
-	footer {
-		padding: 1rem;
+	.fullpage {
+		height: 100vh;
+		width: 100vw;
+		scroll-snap-type: y mandatory;
+		overflow-y: scroll;
 	}
 </style>

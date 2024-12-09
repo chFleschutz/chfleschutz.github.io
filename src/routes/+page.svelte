@@ -1,51 +1,57 @@
-<script>
-	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
-	import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+<script lang="ts">
+	import { onMount } from 'svelte';
+	
+	import { currentSection, isLastSection, sectionCount } from '$lib/section-store';
+	
+	import Hero from '$lib/sections/hero.svelte';
+	import About from '$lib/sections/about.svelte';
+	import Projects from '$lib/sections/projects.svelte';
+	import Contact from '$lib/sections/contact.svelte';
+	
+	onMount(() => {
+		// Query all sections
+		const sectionElements = document.querySelectorAll('.section');
+		sectionCount.set(Number(sectionElements.length));
 
-	import Header from '$lib/header.svelte';
-	import Hero from '$lib/hero.svelte';
+		// Create an observer to detect the current section
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						const sectionNumber = Number((entry.target as HTMLElement).dataset.section);
+						currentSection.set(sectionNumber);
+						isLastSection.set(sectionNumber === sectionElements.length - 1);
+					}
+				});
+			},
+			{ threshold: 0.5 }
+		);
+
+		sectionElements.forEach((section, index) => {
+			(section as HTMLElement).dataset.section = String(index);
+			observer.observe(section);
+		});
+
+		return () => observer.disconnect();
+	});
 </script>
 
 <svelte:head>
 	<title>Christoph Fleschutz</title>
 </svelte:head>
 
-<section class="full-page">
-	<Header />
-	<Hero />
-	<div class="arrow icon-button">
-		<FontAwesomeIcon icon={faChevronDown} />
-	</div>
-</section>
-<section>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-	<h1>Projects</h1>
-</section>
+<div class="section"><Hero /></div>
+<div class="section"><About /></div>
+<div class="section"><Projects /></div>
+<div class="section"><Contact /></div>
 
 <style>
-	.full-page {
-		display: flex;
-		flex-direction: column;
-		height: 100vh;
-	}
-
-	.arrow {
+	.section {
+		height: 100%;
+		width: 100%;
+		scroll-snap-align: start;
 		display: flex;
 		justify-content: center;
-		max-height: 1.25rem;
-		padding: 3rem;
+		align-items: center;
 	}
 </style>
