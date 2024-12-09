@@ -4,6 +4,7 @@
 
 	import Hero from '$lib/sections/hero.svelte';
 	import About from '$lib/sections/about.svelte';
+	import Projects from '$lib/sections/projects.svelte';
 </script>
 
 <svelte:head>
@@ -12,7 +13,7 @@
 
 <div class="section"><Hero /></div>
 <div class="section"><About/></div>
-<div class="section">Section 3</div>
+<div class="section"><Projects/></div>
 <div class="section">Section 4</div>
 
 <style>
