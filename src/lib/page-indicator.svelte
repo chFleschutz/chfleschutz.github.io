@@ -1,13 +1,6 @@
 <script lang="ts">
-	import { currentSection, sectionCount } from "./section-store";
+	import { currentSection, sectionCount, scrollToSection } from "./section-store";
 
-	const scrollToSection = (section: number) => {
-		const sectionElement = document.querySelector(
-			`.section[data-section="${section}"]`
-		) as HTMLElement;
-		if (!sectionElement) return;
-		sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-	};
 </script>
 
 <div class="page-indicator">

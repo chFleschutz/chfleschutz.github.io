@@ -66,6 +66,21 @@ a:hover {
     background-clip: text;
 }
 
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform ease 0.2s;
+}
+
+button:hover {
+    transform: translate(0, -3px);
+}
+
 .icon-button {
     background-color: transparent;
     border: none;

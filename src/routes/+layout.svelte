@@ -22,19 +22,20 @@
 	<Header />
 	<PageIndicator />
 	<Footer />
-	
+
 	<slot></slot>
 </main>
 
 <style>
 	:global(body) {
 		margin: 0;
-		overflow: hidden; 
+		overflow: hidden;
 	}
 
 	.fullpage {
 		height: 100vh;
-		scroll-snap-type: y mandatory; 
-		overflow-y: scroll; 
+		width: 100vw;
+		scroll-snap-type: y mandatory;
+		overflow-y: scroll;
 	}
 </style>
