@@ -1,32 +1,5 @@
 <script lang="ts">
-	import { onMount, tick } from 'svelte';
-	import { writable } from 'svelte/store';
-
-	const currentSection = writable(0);
-	let sections: number = 0;
-
-	onMount(() => {
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						currentSection.set(Number((entry.target as HTMLElement).dataset.section));
-					}
-				});
-			},
-			{ threshold: 0.5 }
-		);
-
-		const sectionElements = document.querySelectorAll('.section');
-		sections = sectionElements.length;
-
-		sectionElements.forEach((section, index) => {
-			(section as HTMLElement).dataset.section = String(index);
-			observer.observe(section);
-		});
-
-		return () => observer.disconnect();
-	});
+	import { currentSection, sectionCount } from "./section-store";
 
 	const scrollToSection = (section: number) => {
 		const sectionElement = document.querySelector(
@@ -38,7 +11,7 @@
 </script>
 
 <div class="page-indicator">
-	{#each Array.from({ length: sections }, (_, i) => i) as section}
+	{#each Array.from({ length: $sectionCount }, (_, i) => i) as section}
 		<div
 			class="indicator"
 			class:selected={$currentSection === section}

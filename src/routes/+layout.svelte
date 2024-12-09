@@ -3,6 +3,7 @@
 
 	import Header from '$lib/header.svelte';
 	import PageIndicator from '$lib/page-indicator.svelte';
+	import Footer from '$lib/footer.svelte';
 </script>
 
 <svelte:head>
@@ -20,7 +21,8 @@
 <main class="fullpage">
 	<Header />
 	<PageIndicator />
-
+	<Footer />
+	
 	<slot></slot>
 </main>
 
