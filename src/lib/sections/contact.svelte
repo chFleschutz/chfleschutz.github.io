@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 	import { faCopy } from '@fortawesome/free-solid-svg-icons';
+	import LinkIcons from '$lib/components/link-icons.svelte';
 
 	const email = 'ch.fleschutz@gmail.com';
 	let copied = false;
@@ -30,7 +31,7 @@
 				<FontAwesomeIcon icon={faCopy} />
 			</div>
 		</div>
-		<div></div>
+        <LinkIcons />
 	</div>
 </div>
 

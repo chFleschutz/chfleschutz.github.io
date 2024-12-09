@@ -1,10 +1,6 @@
 <script>
-	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
-	import { faGithub } from '@fortawesome/free-brands-svg-icons';
-	import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-	import { faItchIo } from '@fortawesome/free-brands-svg-icons';
-
     import Planet from '../planet.svelte';
+	import LinkIcons from '$lib/components/link-icons.svelte';
 </script>
 
 <div class="fullpage-container">
@@ -12,18 +8,7 @@
 		<div class="hero-text">
 			<h1>Hello, I'm <span class="accent">Chris</span></h1>
 			<p>a dedicated computer science student specializing in game engineering and C++ development</p>
-			
-			<div class="icon-list">
-				<a class="icon-button" href="https://github.com/chFleschutz" target="_blank">
-					<FontAwesomeIcon icon={faGithub} />
-				</a>
-				<a class="icon-button" href="https://www.linkedin.com/in/christoph-fleschutz" target="_blank">
-					<FontAwesomeIcon icon={faLinkedin} />
-				</a>
-				<a class="icon-button" href="https://chfleschutz.itch.io" target="_blank">
-					<FontAwesomeIcon icon={faItchIo} />
-				</a>
-			</div>
+			<LinkIcons />
 		</div>
 		<div class="hero-image">
 			<Planet />
@@ -58,13 +43,5 @@
 		flex: 1;
 		max-width: 43%;
 		aspect-ratio: 1;
-	}
-
-	.icon-list {
-		display: flex;
-		gap: 1.5rem;
-		font-size: 2.2rem;
-		margin: 1rem 0;
-        padding: 0.25rem;
 	}
 </style>
