@@ -74,6 +74,7 @@
 		// Animation
 		const clock = new THREE.Clock();
 		const raycaster = new THREE.Raycaster();
+		let lookAt = new THREE.Vector3(0, 0, -100);
 		const animate = () => {
 			requestAnimationFrame(animate);
 
@@ -88,8 +89,9 @@
 				scale = 1.1;
 			}
 
-			const mouseInfluence = 10;
-			mouseController.lookAt(-mouse.x * mouseInfluence, -mouse.y * mouseInfluence, -100);
+			const lookFactor = 10;
+			lookAt.lerp(new THREE.Vector3(-mouse.x * lookFactor, -mouse.y * lookFactor, -100), 0.01);
+			mouseController.lookAt(lookAt);
 
 			rotationController.rotateOnAxis(new THREE.Vector3(0, 1, 0), speed * deltaTime);
 			rotationController.scale.lerp(new THREE.Vector3(scale, scale, scale), 0.1);
