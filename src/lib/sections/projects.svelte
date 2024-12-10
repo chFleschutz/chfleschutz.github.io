@@ -48,7 +48,6 @@
 	.projects-description {
 		max-width: 600px;
 		width: 100%;
-		margin: 0;
 	}
 
 	.projects-list {
@@ -56,6 +55,6 @@
 		justify-content: space-between;
 		gap: 5%;
 		width: 100%;
-		margin: 2.5rem 0;
+		margin: 2rem 0;
 	}
 </style>

@@ -22,12 +22,16 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		gap: 2em;
+		gap: 3em;
 	}
 
 	.hero-text {
-		max-width: 550px;
+		max-width: 600px;
 		width: 50%;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
 	}
 
 	.hero-image {

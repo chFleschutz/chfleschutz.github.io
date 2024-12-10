@@ -23,6 +23,7 @@
 
 <style>
 	.icon-list {
+        width: fit-content;
 		display: flex;
 		gap: 1.5rem;
 		font-size: 2.2rem;
