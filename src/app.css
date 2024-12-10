@@ -1,0 +1,90 @@
+:root {
+    --primary-color: #2980B9;
+    --accent-color: #2ECC70;
+    --background-color: #0a0a0a;
+    --text-color: #F4F4F4;
+    --inactive-color: #7f8c8d;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h2 {
+    font-size: 4.0rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.0rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+a {
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.fullpage-container {
+    position: relative;
+    width: 70vw !important;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+.text-gradient {
+    width: fit-content;
+    background: linear-gradient(90deg, var(--primary-color) 5%, var(--accent-color) 95%);
+    color: transparent;
+    background-clip: text;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    color: var(--text-color);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hover-effect {
+    transition: transform ease 0.2s;
+}
+
+.hover-effect:hover {
+    transform: translateY(-3px);
+}

@@ -1,40 +1,38 @@
-# My Portfolio Website
+# sv
 
-[![Website Status](https://img.shields.io/website?url=https://chfleschutz.github.io)](https://chfleschutz.github.io)
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-Welcome to my portfolio website repository! This website serves as my online portfolio, showcasing my projects, skills, and a bit about myself.
+## Creating a project
 
-## Built with
+If you're seeing this, you've probably already done this step. Congrats!
 
-The website was built using these technologies:
+```bash
+# create a new project in the current directory
+npx sv create
 
-- HTML
-- CSS
-- JavaScript
-- [Three.js](https://threejs.org/)
-- [Vite](https://vitejs.dev/)
+# create a new project in my-app
+npx sv create my-app
+```
 
-## Usage
+## Developing
 
-Visit my website hosted on GitHub Pages at https://chfleschutz.github.io, or run this website locally by following these steps:
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-1. Clone the repository:
-   
-   ```bash
-   git clone https://github.com/chFleschutz/chfleschutz.github.io.git
-   ```
-   
-2. Install dependencies (assuming you have [Node.js](https://nodejs.org/) installed):
-   
-   ```bash
-   cd your-local-repository-folder
-   npm install
-   ```
-   
-3. Start the development server:
-   
-   ```bash
-   npm run dev
-   ```
+```bash
+npm run dev
 
-4. Open the link in the console in your web browser to view the website.
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
