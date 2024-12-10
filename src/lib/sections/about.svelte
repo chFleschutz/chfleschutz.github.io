@@ -3,17 +3,18 @@
 		<div class="about-text">
 			<h2 class="text-gradient">About me</h2>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mauris dolor, maximus at
-				est vitae, lobortis rhoncus ligula.
-            </p>
-            <p>
-				Vestibulum dolor est, ornare a nisl sit amet, placerat tempus enim. Sed eget nunc non ligula
-				eleifend maximus. Vestibulum vitae justo ultrices, facilisis sem sed, fermentum dui.
+				I'm currently completing my Master's degree at the University of Applied Sciences Kempten.
+			</p>
+			<p>
+				My areas of interests are efficient C++ development, graphics programming using Vulkan and
+				general game development.
+			</p>
+			<p>
+				With attention to detail, I enjoy creating simple but elegant solutions to improve
+				performance and user experience
 			</p>
 		</div>
-		<div class="about-image">
-			<img src="/textures/planet.png" alt="" />
-		</div>
+			<img class="about-image" src="/images/portrait.jpg" alt="" />
 	</div>
 </div>
 
@@ -22,25 +23,26 @@
 		width: 100%;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-gap: 3em;
 		align-items: center;
+		gap: 5%;
 	}
 
 	.about-text {
-		justify-self: right;
-		padding-bottom: 1rem;
-		text-align: left;
 		max-width: 500px;
+		justify-self: right;
+		text-align: left;
+		padding-bottom: 1rem;
 	}
-	
+
+	.about-text h2 {
+		margin-bottom: 2rem;
+	}
+
 	.about-image {
 		max-width: 500px;
 		width: 100%;
 		aspect-ratio: 1;
-	}
-
-	.about-image img {
-		width: 100%;
-		height: auto;
+		object-fit: cover;
+		object-position: top;
 	}
 </style>
