@@ -6,34 +6,31 @@
 	<div class="projects">
 		<h2 class="text-gradient">Showcase</h2>
 		<p class="projects-description">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mauris dolor, maximus at est
-			vitae, lobortis rhoncus ligula.
+			Here are some highlights of my projects. You can find more on my <a
+				href="https://github.com/chFleschutz?tab=repositories"> Github Profile </a
+			>
 		</p>
 		<div class="projects-list">
 			<ProjectShowcase
-				title="Project 1"
-				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-				link="/"
-				image="/textures/planet.png"
+				title="Aegix Engine"
+				description="C++ and Vulkan game engine featuring Physically Based Rendering, GLTF model loading and more."
+				link="https://github.com/chFleschutz/aegix-engine"
+				image="/images/aegix.png"
 			/>
-            <ProjectShowcase
-                title="Project 2"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                link="/"
-                image="/textures/planet.png"
-            />
-            <ProjectShowcase
-                title="Project 3"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                link="/"
-                image="/textures/planet.png"
-            />
-            <ProjectShowcase
-                title="Project 4"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                link="/"
-                image="/textures/planet.png"
-            />
+			<ProjectShowcase
+				title="Abduction in Lab 42"
+				description="Virtual Reality game developed in Unity. A puzzle game where you must free your robot companion."
+				link="https://github.com/chFleschutz/abduction-in-lab-42"
+				image="/images/abduction-lab-42.png"
+				imagePosition="50% 30%"
+			/>
+			<ProjectShowcase
+				title="Hive Mind"
+				description="Turn-based strategy game developed in Unreal. Build structures and deploy untis to defeat your opponent."
+				link="https://github.com/chFleschutz/hive-mind"
+				image="/images/hive-mind.png"
+				imagePosition="50% 20%"
+			/>
 		</div>
 	</div>
 </div>
@@ -46,14 +43,14 @@
 	}
 
 	.projects-description {
-		max-width: 600px;
+		max-width: 500px;
 		width: 100%;
 	}
 
 	.projects-list {
 		display: flex;
 		justify-content: space-between;
-		gap: 5%;
+		gap: 2rem;
 		width: 100%;
 		margin: 2rem 0;
 	}
