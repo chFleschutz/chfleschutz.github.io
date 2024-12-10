@@ -41,13 +41,16 @@ p {
 
 a {
     font-size: 1rem;
-    font-weight: 400;
-    color: var(--text-color);
+    font-weight: 300;
+    text-transform: uppercase;
     text-decoration: none;
+    color: var(--text-color);
 }
 
-a:hover {
-    text-decoration: underline;
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .fullpage-container {
@@ -67,7 +70,6 @@ a:hover {
     background-clip: text;
 }
 
-
 button {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.25rem;
@@ -76,23 +78,12 @@ button {
     border: none;
     cursor: pointer;
     padding: 0;
+}
+
+.hover-effect {
     transition: transform ease 0.2s;
 }
 
-button:hover {
-    transform: translate(0, -3px);
-}
-
-.icon-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 2rem;
-    text-decoration: none;
-    transition: transform ease 0.2s;
-}
-
-.icon-button:hover {
-    transform: translateY(-4px);
+.hover-effect:hover {
+    transform: translateY(-3px);
 }

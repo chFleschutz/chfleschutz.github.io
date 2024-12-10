@@ -10,7 +10,6 @@
 				Vestibulum dolor est, ornare a nisl sit amet, placerat tempus enim. Sed eget nunc non ligula
 				eleifend maximus. Vestibulum vitae justo ultrices, facilisis sem sed, fermentum dui.
 			</p>
-			<a href="/">Get my resume</a>
 		</div>
 		<div class="about-image">
 			<img src="/textures/planet.png" alt="" />

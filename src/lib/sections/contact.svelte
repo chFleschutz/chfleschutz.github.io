@@ -20,7 +20,7 @@
 		<h2 class="text-gradient">Let's Get In Touch</h2>
 		<p>If you have any questions feel free to contact me</p>
 		<div
-			class="email-container"
+			class="email-container hover-effect"
 			on:click={copyEmail}
 			on:keydown={(e) => e.key === 'Enter' && copyEmail()}
 			aria-label="Copy email address"

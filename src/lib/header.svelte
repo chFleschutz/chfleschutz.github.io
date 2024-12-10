@@ -6,10 +6,10 @@
 	<div class="header-container">
 		<h1>Christoph<br />Fleschutz</h1>
 		<div class="section-list">
-			<button on:click={() => scrollToSection(0)}>home</button>
-			<button on:click={() => scrollToSection(1)}>about me</button>
-			<button on:click={() => scrollToSection(2)}>projects</button>
-			<button on:click={() => scrollToSection(3)}>contact</button>
+			<button class="hover-effect" on:click={() => scrollToSection(0)}>home</button>
+			<button class="hover-effect" on:click={() => scrollToSection(1)}>about me</button>
+			<button class="hover-effect" on:click={() => scrollToSection(2)}>projects</button>
+			<button class="hover-effect" on:click={() => scrollToSection(3)}>contact</button>
 		</div>
 	</div>
 </header>
