@@ -10,7 +10,7 @@
 	<img src={image} alt="" style="object-position: {imagePosition};" />
 	<h3>{title}</h3>
 	<p>{description}</p>
-	<a href={link} class="hover-effect">View on Github</a>
+	<a class="hover-effect" href={link} target="_blank">View on Github</a>
 </div>
 
 <style>
