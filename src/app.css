@@ -4,47 +4,54 @@
     --background-color: #0a0a0a;
     --text-color: #F4F4F4;
     --inactive-color: #7f8c8d;
+    --font-primary: 'Montserrat', sans-serif;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --font-size-base: 1rem;
+    --font-size-medium: 1.25rem;
+    --font-size-large: 3rem;
+    --font-line-height: 1.5;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-color);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--font-line-height);
     color: var(--text-color);
+    background-color: var(--background-color);
+    padding: 0;
+    margin: 0;
 }
 
 h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-bold);
     text-transform: uppercase;
     margin: 0;
 }
 
 h2 {
-    font-size: 4.0rem;
-    font-weight: 700;
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-bold);
     margin: 0;
 }
 
 h3 {
-    font-size: 1.25rem;
-    font-weight: 400;
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-bold);
 }
 
 p {
-    font-size: 1.0rem;
-    font-weight: 400;
-    line-height: 1.25;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
 }
 
 a {
-    font-size: 1rem;
-    font-weight: 300;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-light);
     text-transform: uppercase;
-    text-decoration: none;
     color: var(--text-color);
 }
 

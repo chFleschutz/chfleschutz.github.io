@@ -7,7 +7,9 @@
 	<div class="hero">
 		<div class="hero-text">
 			<h2 class="text-gradient">Hello, I'm Chris</h2>
-			<h3>a dedicated computer science student specializing in game engineering and C++ development</h3>
+			<p>
+				a dedicated computer science student specializing in game engineering and C++ development
+			</p>
 			<LinkIcons />
 		</div>
 		<div class="hero-image">
@@ -32,6 +34,10 @@
 		flex-direction: column;
 		text-align: center;
 		align-items: center;
+	}
+
+	.hero-text p {
+		font-size: var(--font-size-medium);
 	}
 
 	.hero-image {

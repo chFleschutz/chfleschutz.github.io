@@ -6,9 +6,8 @@
 	<div class="projects">
 		<h2 class="text-gradient">Showcase</h2>
 		<p class="projects-description">
-			Here are some highlights of my projects. You can find more on my <a
-				href="https://github.com/chFleschutz?tab=repositories"> Github Profile </a
-			>
+			Here are some highlights of my projects. You can find more on my
+			<a href="https://github.com/chFleschutz?tab=repositories"> Github Profile </a>
 		</p>
 		<div class="projects-list">
 			<ProjectShowcase
