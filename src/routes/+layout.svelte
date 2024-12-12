@@ -24,9 +24,10 @@
 <main class="fullpage">
 	<Header />
 	<PageIndicator />
-	<Footer />
-
+	
 	<slot></slot>
+	
+	<Footer />
 </main>
 
 <style>
@@ -40,5 +41,11 @@
 		width: 100vw;
 		scroll-snap-type: y mandatory;
 		overflow-y: scroll;
+	}
+
+	@media (max-width: 768px) {
+		.fullpage {
+			scroll-snap-type: none;
+		}
 	}
 </style>

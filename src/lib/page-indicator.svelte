@@ -22,7 +22,7 @@
 		top: 50%;
 		transform: translateY(-50%);
 		z-index: 1000;
-		width: 40px;
+		width: 30px;
 		height: 90px;
 		display: flex;
 		flex-direction: column;
@@ -60,5 +60,11 @@
 
 	.indicator-line.selected {
 		background-color: var(--color-text);
+	}
+
+	@media (max-width: 768px) {
+		.page-indicator {
+			display: none;
+		}
 	}
 </style>

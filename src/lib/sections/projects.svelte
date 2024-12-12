@@ -39,6 +39,7 @@
 		width: 100%;
 		display: flex;
 		flex-direction: column;
+		margin-top: 2rem;
 	}
 
 	.projects-description {
@@ -50,7 +51,20 @@
 		display: flex;
 		justify-content: space-between;
 		gap: 2rem;
-		width: 100%;
 		margin: 2rem 0;
+	}
+
+	@media (max-width: 768px) {
+		.projects {
+			align-items: center;
+			text-align: center;
+		}
+
+		.projects-list {
+			flex-direction: column;
+			align-items: center;
+			gap: 2rem;
+			padding: 2rem;
+		}
 	}
 </style>

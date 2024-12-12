@@ -54,4 +54,12 @@
 		justify-content: center;
 		align-items: center;
 	}
+
+	@media (max-width: 768px) {
+		.section {
+			height: auto;
+			scroll-snap-type: y mandatory;
+			margin-bottom: 10rem;
+		}
+	}
 </style>

@@ -34,4 +34,11 @@
         z-index: -1;
         background: linear-gradient(90deg, var(--color-primary) 5%, var(--color-accent) 95%);
     }
+
+    @media (max-width: 768px) {
+        .footer {
+            position: relative;
+            transform: translateY(0);
+        }
+    }
 </style>

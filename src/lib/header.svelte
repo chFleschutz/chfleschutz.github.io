@@ -52,4 +52,28 @@
 		white-space: nowrap;
 		gap: 4rem;
 	}
+
+	@media (max-width: 768px) {
+		header {
+			position: relative;
+		}
+
+		.header-container {
+			align-items: flex-start;
+			padding: 1.5rem;
+		}
+
+		.section-list {
+			flex-direction: column;
+			gap: 1rem;
+			align-items: flex-end;
+			position: absolute;
+			top: 1.5rem;
+			right: 1.5rem;
+		}
+
+		.section-list button:first-child {
+			display: none;
+		}
+	}
 </style>

@@ -71,6 +71,15 @@ img {
     margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+    .fullpage-container {
+        width: 100vw !important;
+        height: auto;
+        padding: 0 3rem;
+        margin: 0;
+    }
+}
+
 .text-gradient {
     width: fit-content;
     background: linear-gradient(90deg, var(--color-primary) 5%, var(--color-accent) 95%);

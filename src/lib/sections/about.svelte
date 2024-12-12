@@ -45,4 +45,20 @@
 		object-fit: cover;
 		object-position: top;
 	}
+
+	@media (max-width: 768px) {
+		.about {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.about-text {
+			justify-self: center;
+		}
+
+		.about-image {
+			max-width: 200px;
+			justify-self: center;
+		}
+	}
 </style>

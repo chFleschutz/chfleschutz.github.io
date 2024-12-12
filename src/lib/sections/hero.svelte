@@ -45,4 +45,20 @@
 		aspect-ratio: 1;
 		width: 50%;
 	}
+
+	@media (max-width: 768px) {
+		.hero {
+			flex-direction: column-reverse;
+			gap: 0;
+		}
+
+		.hero-text {
+			width: 100%;
+		}
+
+		.hero-image {
+			max-width: 300px;
+			width: 100%;
+		}
+	}
 </style>

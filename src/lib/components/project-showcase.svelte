@@ -15,7 +15,7 @@
 
 <style>
 	.project-showcase {
-		width: 400px;
+		max-width: 400px;
 		display: flex;
 		flex-direction: column;
 	}
