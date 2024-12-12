@@ -53,7 +53,7 @@
 		padding: 1rem;
         margin: 2rem 0;
 		background-color: transparent;
-		border: 1px solid var(--text-color);
+		border: 1px solid var(--color-text);
 		border-radius: 10px;
 	}
 

@@ -14,7 +14,7 @@
 				performance and user experience
 			</p>
 		</div>
-			<img class="about-image" src="/images/portrait.jpg" alt="" />
+			<img class="about-image" src="/images/portrait.jpg" loading="lazy" alt="" />
 	</div>
 </div>
 

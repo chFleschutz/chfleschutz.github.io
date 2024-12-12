@@ -7,14 +7,17 @@
 </script>
 
 <svelte:head>
-	<!-- Preconnect to Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-
-	<!-- Load fonts -->
 	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="preload"
+		as="style"
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+		crossorigin="anonymous"
+	/>
+	<link
 		rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
 	/>
 </svelte:head>
 
