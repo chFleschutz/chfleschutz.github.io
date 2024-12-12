@@ -54,11 +54,11 @@
 	.indicator-line {
 		width: 100%;
 		height: 2px;
-		background-color: var(--inactive-color);
+		background-color: var(--color-inactive);
 		transition: background-color 0.2s;
 	}
 
 	.indicator-line.selected {
-		background-color: var(--text-color);
+		background-color: var(--color-text);
 	}
 </style>

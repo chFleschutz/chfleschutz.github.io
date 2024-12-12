@@ -21,7 +21,7 @@
 	}
 
     .footer p {
-        color: var(--inactive-color);
+        color: var(--color-inactive);
     }
 
     .footer.visible {
@@ -32,6 +32,6 @@
         width: 100%;
         height: 0.7rem;
         z-index: -1;
-        background: linear-gradient(90deg, var(--primary-color) 5%, var(--accent-color) 95%);
+        background: linear-gradient(90deg, var(--color-primary) 5%, var(--color-accent) 95%);
     }
 </style>

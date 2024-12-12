@@ -1,9 +1,9 @@
 :root {
-    --primary-color: #2980B9;
-    --accent-color: #2ECC70;
-    --background-color: #0a0a0a;
-    --text-color: #F4F4F4;
-    --inactive-color: #7f8c8d;
+    --color-primary: #2980B9;
+    --color-accent: #2ECC70;
+    --color-background: #0a0a0a;
+    --color-text: #F4F4F4;
+    --color-inactive: #7f8c8d;
     --font-primary: 'Montserrat', sans-serif;
     --font-weight-light: 300;
     --font-weight-regular: 400;
@@ -19,8 +19,8 @@ body {
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-regular);
     line-height: var(--font-line-height);
-    color: var(--text-color);
-    background-color: var(--background-color);
+    color: var(--color-text);
+    background-color: var(--color-background);
     padding: 0;
     margin: 0;
 }
@@ -52,7 +52,7 @@ a {
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-light);
     text-transform: uppercase;
-    color: var(--text-color);
+    color: var(--color-text);
 }
 
 img {
@@ -73,15 +73,15 @@ img {
 
 .text-gradient {
     width: fit-content;
-    background: linear-gradient(90deg, var(--primary-color) 5%, var(--accent-color) 95%);
+    background: linear-gradient(90deg, var(--color-primary) 5%, var(--color-accent) 95%);
     color: transparent;
     background-clip: text;
 }
 
 button {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.25rem;
-    color: var(--text-color);
+    font-size: var(--font-size-medium);
+    color: var(--color-text);
     background-color: transparent;
     border: none;
     cursor: pointer;
