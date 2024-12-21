@@ -31,6 +31,10 @@
 </main>
 
 <style>
+	:global(body) {
+		overflow: hidden;
+	}
+
 	main {
 		width: 100vw;
 		height: 100vh;
