@@ -10,7 +10,7 @@
 	
 	onMount(() => {
 		// Query all sections
-		const sectionElements = document.querySelectorAll('.section');
+		const sectionElements = document.querySelectorAll('section');
 		sectionCount.set(Number(sectionElements.length));
 
 		// Create an observer to detect the current section
