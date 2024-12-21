@@ -40,13 +40,13 @@
 	<title>Christoph Fleschutz</title>
 </svelte:head>
 
-<div class="section"><Hero /></div>
-<div class="section"><About /></div>
-<div class="section"><Projects /></div>
-<div class="section"><Contact /></div>
+<section><Hero /></section>
+<section><About /></section>
+<section><Projects /></section>
+<section><Contact /></section>
 
 <style>
-	.section {
+	section {
 		height: 100%;
 		width: 100%;
 		scroll-snap-align: start;
@@ -56,7 +56,7 @@
 	}
 
 	@media (max-width: 768px) {
-		.section {
+		section {
 			height: auto;
 			scroll-snap-type: y mandatory;
 			margin-bottom: 10rem;

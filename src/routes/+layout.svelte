@@ -21,30 +21,27 @@
 	/>
 </svelte:head>
 
-<main class="fullpage">
+<main>
 	<Header />
 	<PageIndicator />
-	
+
 	<slot></slot>
 	
 	<Footer />
 </main>
 
 <style>
-	:global(body) {
-		margin: 0;
-		overflow: hidden;
-	}
-
-	.fullpage {
-		height: 100vh;
+	main {
 		width: 100vw;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
 		scroll-snap-type: y mandatory;
 		overflow-y: scroll;
 	}
 
 	@media (max-width: 768px) {
-		.fullpage {
+		main {
 			scroll-snap-type: none;
 		}
 	}
