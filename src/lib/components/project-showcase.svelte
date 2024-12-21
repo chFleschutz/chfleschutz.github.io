@@ -7,7 +7,7 @@
 </script>
 
 <div class="project-showcase">
-	<img src={image} loading="lazy" alt="" style="object-position: {imagePosition};" />
+	<img src={image} alt="" style="object-position: {imagePosition};" />
 	<h3>{title}</h3>
 	<p>{description}</p>
 	<a class="hover-effect" href={link} target="_blank">View on Github</a>
