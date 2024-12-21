@@ -1,5 +1,6 @@
 <script>
 	import Planet from '../planet.svelte';
+	import SDF from '../components/sdf.svelte';
 	import LinkIcons from '$lib/components/link-icons.svelte';
 </script>
 
@@ -16,9 +17,19 @@
 			<Planet />
 		</div>
 	</div>
+	<div class="sdf">
+		<SDF />
+	</div>
 </div>
 
 <style>
+	.sdf {
+		position: absolute;
+		width: 100%;
+		height: 80vh;
+		z-index: -1;
+	}
+
 	.hero {
 		width: 100%;
 		display: flex;
