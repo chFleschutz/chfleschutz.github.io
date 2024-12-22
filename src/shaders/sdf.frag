@@ -5,10 +5,10 @@ uniform vec2 uMouse;
 varying vec3 vPosition;
 
 // Raymarching
-const int maxSteps = 100;
-const float maxDistance = 100.0;
+const int maxSteps = 30;
+const float maxDistance = 10.0;
 const float surfaceDistance = 0.001;
-const float epsilon = 0.0001;
+const float epsilon = 0.0005;
 
 // Controls
 const float mouseAttraction = 1.5;
@@ -109,7 +109,9 @@ void main()
     float t = 0.0;
     float d = 0.0;
     vec3 pos = vec3(0.0);
-    for (int i = 0; i < maxSteps; i++)
+
+    int i = 0;
+    for (i = 0; i < maxSteps; i++)
     {
         pos = rayOrigin + rayDir * t;
 
