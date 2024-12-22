@@ -2,8 +2,8 @@
 	import * as THREE from 'three';
 	import { onMount } from 'svelte';
 
-	import vertexShader from './../../shaders/sdf-vert.glsl';
-	import fragmentShader from './../../shaders/sdf-frag.glsl';
+	import vertexShader from './../../shaders/sdf.vert';
+	import fragmentShader from './../../shaders/sdf.frag';
 
 	let canvas: HTMLCanvasElement;
 
@@ -14,7 +14,21 @@
 		const renderer = new THREE.WebGLRenderer({ canvas });
 		renderer.setSize(canvas.clientWidth, canvas.clientHeight);
 
-		const geometry = new THREE.SphereGeometry(1, 32, 32);
+		const geometry = new THREE.BufferGeometry();
+		geometry.setAttribute(
+			'position',
+			new THREE.BufferAttribute(
+				new Float32Array([
+					-1.0, -1.0, 0.0,
+					1.0, -1.0, 0.0,
+					1.0, 1.0, 0.0,
+					-1.0, -1.0, 0.0,
+					1.0, 1.0, 0.0,
+					-1.0, 1.0, 0.0
+				]),
+				3
+			)
+		);
 		const material = new THREE.ShaderMaterial({
 			vertexShader,
 			fragmentShader,
@@ -22,16 +36,14 @@
 				time: { value: 0 }
 			}
 		});
-		const sphere = new THREE.Mesh(geometry, material);
-		scene.add(sphere);
+		const plane = new THREE.Mesh(geometry, material);
+		scene.add(plane);
 
 		camera.position.z = 5;
 
 		function animate() {
 			requestAnimationFrame(animate);
 			material.uniforms.time.value += 0.01;
-			sphere.rotation.x += 0.01;
-			sphere.rotation.y += 0.01;
 			renderer.render(scene, camera);
 		}
 

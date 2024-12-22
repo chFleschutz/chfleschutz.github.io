@@ -5,7 +5,7 @@
 </script>
 
 <div class="fullpage-container">
-	<div class="hero">
+	<!-- <div class="hero">
 		<div class="hero-text">
 			<h2 class="text-gradient">Hello, I'm Chris</h2>
 			<p>
@@ -16,7 +16,7 @@
 		<div class="hero-image">
 			<Planet />
 		</div>
-	</div>
+	</div> -->
 	<div class="sdf">
 		<SDF />
 	</div>
