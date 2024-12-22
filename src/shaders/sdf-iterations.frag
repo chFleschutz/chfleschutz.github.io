@@ -7,8 +7,7 @@ varying vec3 vPosition;
 // Raymarching
 const int maxSteps = 30;
 const float maxDistance = 10.0;
-const float surfaceDistance = 0.001;
-const float epsilon = 0.0005;
+const float surfaceDistance = 0.01;
 
 // Controls
 const float mouseAttraction = 1.5;
@@ -24,34 +23,31 @@ float sphere(vec3 origin, float radius, vec3 pos)
     return length(pos - origin) - radius;
 }
 
+float elipsoid(vec3 origin, vec3 size, vec3 pos)
+{
+    return length((pos - origin) / size) - 1.0;
+}
+
+float ripple(vec3 pos, vec3 origin, float frequency, float amplitude, float speed)
+{
+    float d = length(pos - origin);
+    return sin(frequency * d - speed * uTime) * amplitude;
+}
+
 float computeSDF(vec3 pos)
 {
-    float s1 = sphere(
-        vec3(0.25 * sin(uTime), 0.0, 0.5), 
-        1.2, 
-        pos);
-    float s2 = sphere(
-        vec3(cos(uTime * 0.5), sin(uTime * 0.5), 0.5), 
-        0.6, 
-        pos);
-    float s3 = sphere(
-        vec3(-0.9, 0.7 * sin(uTime + 0.5), 0.0), 
-        0.7, 
-        pos);
-    float s4 = sphere(
-        vec3(0.8, 0.5 * cos(uTime) - 0.5, 0.5), 
-        0.7, 
-        pos);
-    float s5 = sphere(
-        vec3(uMouse * mouseAttraction, 0.5), 
-        0.5, 
-        pos);
+    float s1 = elipsoid(vec3(0.2 * sin(uTime * 0.5), 0.0, 0.5), vec3(1.7, 1.2, 1.0), pos);
+    float s2 = sphere(vec3(cos(uTime * 0.5), sin(uTime * 0.5), 0.5), 0.6, pos);
+    float s3 = sphere(vec3(-0.9, 0.7 * sin(uTime + 0.5), 0.0), 0.7, pos);
+    float s4 = sphere(vec3(0.8, 0.5 * cos(uTime) - 0.5, 0.5), 0.7, pos);
+    float s5 = sphere(vec3(uMouse * mouseAttraction, 0.0), 0.7, pos)
+        + ripple(pos, vec3(uMouse * mouseAttraction, 0.7), 50.0, 0.02, 7.0);
 
     float d = s1;
     d = smoothUnion(d, s3, 0.7);
     d = smoothUnion(d, s2, 0.7);
     d = smoothUnion(d, s4, 0.7);
-    d = smoothUnion(d, s5, 1.0);
+    d = smoothUnion(d, s5, 0.7);
     return d;
 }
 

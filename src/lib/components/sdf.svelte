@@ -52,7 +52,7 @@
 			
 			material.uniforms.uTime.value += clock.getDelta();
 
-			attractionPoint.lerp(mouse, 0.01);
+			attractionPoint.lerp(mouse, 0.02);
 			material.uniforms.uMouse.value = attractionPoint;
 
 			renderer.render(scene, camera);
