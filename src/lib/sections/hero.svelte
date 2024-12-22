@@ -54,8 +54,7 @@
 
 	@media (max-width: 768px) {
 		.hero {
-			flex-direction: column-reverse;
-			justify-content: start;
+			height: 90vh;
 		}
 
 		.hero-text {
@@ -63,10 +62,7 @@
 		}
 
 		.sdf {
-			position: relative;
-			width: 100%;
-			height: auto;
-			aspect-ratio: 1;
+			display: none;
 		}
 	}
 </style>
