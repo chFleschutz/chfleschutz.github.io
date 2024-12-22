@@ -17,15 +17,16 @@
 			<Planet />
 		</div>
 	</div> -->
-	<div class="sdf">
-		<SDF />
-	</div>
 </div>
+<div class="sdf">
+	<SDF />
+</div>
+
 
 <style>
 	.sdf {
 		position: absolute;
-		width: 100%;
+		width: 80vw;
 		height: 80vh;
 		z-index: -1;
 	}

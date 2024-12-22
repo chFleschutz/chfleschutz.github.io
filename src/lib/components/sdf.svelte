@@ -6,25 +6,24 @@
 	import fragmentShader from './../../shaders/sdf.frag';
 
 	let canvas: HTMLCanvasElement;
+	let container: HTMLDivElement;
 
 	onMount(() => {
+		const parent = canvas.parentElement;
+
 		const aspect = canvas.clientWidth / canvas.clientHeight;
 		const scene = new THREE.Scene();
 		const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
 		const renderer = new THREE.WebGLRenderer({ canvas });
-		renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+		renderer.setSize(container.clientWidth, container.clientHeight);
 
 		const geometry = new THREE.BufferGeometry();
 		geometry.setAttribute(
 			'position',
 			new THREE.BufferAttribute(
 				new Float32Array([
-					-1.0, -1.0, 0.0,
-					1.0, -1.0, 0.0,
-					1.0, 1.0, 0.0,
-					-1.0, -1.0, 0.0,
-					1.0, 1.0, 0.0,
-					-1.0, 1.0, 0.0
+					-1.0, -1.0, 0.0, 1.0, -1.0, 0.0, 1.0, 1.0, 0.0, -1.0, -1.0, 0.0, 1.0, 1.0, 0.0, -1.0, 1.0,
+					0.0
 				]),
 				3
 			)
@@ -46,16 +45,36 @@
 			material.uniforms.time.value += 0.01;
 			renderer.render(scene, camera);
 		}
-
 		animate();
+
+		// Resize
+		const onResize = () => {
+			renderer.setSize(container.clientWidth, container.clientHeight);
+			camera.aspect = container.clientWidth / container.clientHeight;
+			camera.updateProjectionMatrix();
+		};
+		window.addEventListener('resize', onResize);
+
+		return () => {
+			window.removeEventListener('resize', onResize);
+			renderer.dispose();
+
+			console.log('disposed');
+		};
 	});
 </script>
 
-<canvas bind:this={canvas}></canvas>
+<div class="three-container" bind:this={container}>
+	<canvas bind:this={canvas}></canvas>
+</div>
 
 <style>
-	canvas {
+	.three-container {
 		width: 100%;
 		height: 100%;
+	}
+
+	canvas {
+		display: block;
 	}
 </style>
