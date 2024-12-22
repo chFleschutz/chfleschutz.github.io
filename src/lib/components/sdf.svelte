@@ -34,7 +34,8 @@
 			fragmentShader,
 			uniforms: {
 				uTime: { value: 0 },
-				uResolution: { value: new THREE.Vector2(container.clientWidth, container.clientHeight) }
+				uResolution: { value: new THREE.Vector2(container.clientWidth, container.clientHeight) },
+				uMouse: { value: new THREE.Vector2() }
 			}
 		});
 		const plane = new THREE.Mesh(geometry, material);
@@ -42,9 +43,16 @@
 
 		camera.position.z = 5;
 
+		let mouse = new THREE.Vector2();
+		let attractionPoint = new THREE.Vector2();
 		function animate() {
 			requestAnimationFrame(animate);
+			
 			material.uniforms.uTime.value += 0.01;
+
+			attractionPoint.lerp(mouse, 0.01);
+			material.uniforms.uMouse.value = attractionPoint;
+
 			renderer.render(scene, camera);
 		}
 		animate();
@@ -56,11 +64,20 @@
 		};
 		window.addEventListener('resize', onResize);
 
+		// Mouse position
+		const onMouseMove = (event: MouseEvent) => {
+			const rect = canvas.getBoundingClientRect();
+			mouse = new THREE.Vector2(
+				((event.clientX - rect.left) / rect.width) * 2 - 1,
+				-((event.clientY - rect.top) / rect.height) * 2 + 1
+			);
+		};
+		window.addEventListener('mousemove', onMouseMove);
+
 		return () => {
 			window.removeEventListener('resize', onResize);
+			window.removeEventListener('mousemove', onMouseMove);
 			renderer.dispose();
-
-			console.log('disposed');
 		};
 	});
 </script>

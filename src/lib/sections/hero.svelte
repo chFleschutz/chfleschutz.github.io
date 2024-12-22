@@ -5,7 +5,7 @@
 </script>
 
 <div class="fullpage-container">
-	<!-- <div class="hero">
+	<div class="hero">
 		<div class="hero-text">
 			<h2 class="text-gradient">Hello, I'm Chris</h2>
 			<p>
@@ -13,22 +13,20 @@
 			</p>
 			<LinkIcons />
 		</div>
-		<div class="hero-image">
-			<Planet />
-		</div>
-	</div> -->
-</div>
-<div class="sdf">
-	<SDF />
+	</div>
+	<div class="sdf">
+		<SDF />
+	</div>
 </div>
 
 
 <style>
 	.sdf {
 		position: absolute;
-		width: 80vw;
+		width: 100%;
 		height: 80vh;
 		z-index: -1;
+		filter: blur(5px);
 	}
 
 	.hero {
@@ -52,12 +50,6 @@
 		font-size: var(--font-size-medium);
 	}
 
-	.hero-image {
-		max-width: 500px;
-		aspect-ratio: 1;
-		width: 50%;
-	}
-
 	@media (max-width: 768px) {
 		.hero {
 			flex-direction: column-reverse;
@@ -65,11 +57,6 @@
 		}
 
 		.hero-text {
-			width: 100%;
-		}
-
-		.hero-image {
-			max-width: 300px;
 			width: 100%;
 		}
 	}
