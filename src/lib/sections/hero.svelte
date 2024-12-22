@@ -26,7 +26,6 @@
 		width: 100%;
 		height: 80vh;
 		z-index: -1;
-		filter: blur(5px);
 	}
 
 	.hero {
