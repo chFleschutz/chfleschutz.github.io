@@ -1,4 +1,5 @@
-uniform float time;
+uniform float uTime;
+uniform vec2 uResolution;
 
 varying vec3 vPosition;
 
@@ -20,7 +21,7 @@ float computeSDF(vec3 pos)
 
 void main()
 {
-    vec2 uv = vPosition.xy;
+    vec2 uv = (gl_FragCoord.xy - 0.5 * uResolution.xy) / uResolution.x;
 
     vec3 rayOrigin = vec3(0.0, 0.0, 3.0);
     vec3 rayDirection = normalize(vec3(uv, -1.0));

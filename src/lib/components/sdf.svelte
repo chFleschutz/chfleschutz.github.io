@@ -32,7 +32,8 @@
 			vertexShader,
 			fragmentShader,
 			uniforms: {
-				time: { value: 0 }
+				uTime: { value: 0 },
+				uResolution: { value: new THREE.Vector2(container.clientWidth, container.clientHeight) }
 			}
 		});
 		const plane = new THREE.Mesh(geometry, material);
@@ -42,7 +43,7 @@
 
 		function animate() {
 			requestAnimationFrame(animate);
-			material.uniforms.time.value += 0.01;
+			material.uniforms.uTime.value += 0.01;
 			renderer.render(scene, camera);
 		}
 		animate();
@@ -50,8 +51,7 @@
 		// Resize
 		const onResize = () => {
 			renderer.setSize(container.clientWidth, container.clientHeight);
-			camera.aspect = container.clientWidth / container.clientHeight;
-			camera.updateProjectionMatrix();
+			material.uniforms.uResolution.value.set(container.clientWidth, container.clientHeight);
 		};
 		window.addEventListener('resize', onResize);
 
