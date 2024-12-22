@@ -61,7 +61,7 @@ float computeSDF(vec3 pos)
     d = smoothUnion(d, s3, 0.8);
     d = smoothUnion(d, s2, 0.8);
     d = smoothUnion(d, s4, 0.8);
-    d = smoothUnion(d, s5, 2.0);
+    d = smoothUnion(d, s5, 1.0);
     return d;
 }
 
