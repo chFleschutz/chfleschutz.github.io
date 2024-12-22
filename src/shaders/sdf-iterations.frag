@@ -13,31 +13,6 @@ const float epsilon = 0.0005;
 // Controls
 const float mouseAttraction = 1.5;
 
-// Lighting
-struct Light
-{
-    vec3 direction;
-    vec3 color;
-};
-
-struct Material
-{
-    vec3 ambient;
-    vec3 diffuse;
-    vec3 specular;
-    float shininess;
-};
-
-const Light light = Light(
-    vec3(-0.5, 1.0, 1.0), 
-    vec3(0.5));
-
-const Material material = Material(
-    vec3(0.05), 
-    vec3(0.16, 0.5, 0.72), 
-    vec3(0.18, 0.8, 0.44), 
-    32.0);
-
 float smoothUnion(float a, float b, float k)
 {
     float h = clamp(0.5 + 0.5 * (b - a) / k, 0.0, 1.0);
@@ -80,25 +55,6 @@ float computeSDF(vec3 pos)
     return d;
 }
 
-vec3 computeNormal(vec3 pos)
-{
-    float dx = computeSDF(pos + vec3(epsilon, 0.0, 0.0)) - computeSDF(pos - vec3(epsilon, 0.0, 0.0));
-    float dy = computeSDF(pos + vec3(0.0, epsilon, 0.0)) - computeSDF(pos - vec3(0.0, epsilon, 0.0));
-    float dz = computeSDF(pos + vec3(0.0, 0.0, epsilon)) - computeSDF(pos - vec3(0.0, 0.0, epsilon));
-    return normalize(vec3(dx, dy, dz));
-}
-
-vec3 computeLighting(vec3 normal, vec3 viewDir)
-{
-    // Blinn-Phong shading
-    vec3 halfVector = normalize(light.direction + viewDir);
-
-    vec3 ambient = material.ambient * light.color;
-    vec3 diffuse = material.diffuse * light.color * max(dot(normal, light.direction), 0.1);
-    vec3 specular = material.specular * light.color * pow(max(dot(normal, halfVector), 0.0), material.shininess);
-    return ambient + diffuse + specular;
-}
-
 void main()
 {
     vec2 uv = (gl_FragCoord.xy - 0.5 * uResolution.xy) / min(uResolution.x, uResolution.y);
@@ -124,9 +80,6 @@ void main()
             discard;
     }
 
-    vec3 viewDir = normalize(rayOrigin - pos);
-    vec3 normal = computeNormal(pos);
-    vec3 color = computeLighting(normal, viewDir);
-
+    vec3 color = mix(vec3(0.0), vec3(0.9), float(i) / float(maxSteps));
     gl_FragColor = vec4(color, 1.0);
 }

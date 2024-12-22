@@ -3,7 +3,8 @@
 	import { onMount } from 'svelte';
 
 	import vertexShader from './../../shaders/sdf.vert';
-	import fragmentShader from './../../shaders/sdf.frag';
+	// import fragmentShader from './../../shaders/sdf.frag';
+	import fragmentShader from './../../shaders/sdf-iterations.frag';
 
 	let canvas: HTMLCanvasElement;
 	let container: HTMLDivElement;
