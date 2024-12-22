@@ -42,13 +42,14 @@
 		scene.add(plane);
 
 		camera.position.z = 5;
-
+		
+		const clock = new THREE.Clock();
 		let mouse = new THREE.Vector2();
 		let attractionPoint = new THREE.Vector2();
 		function animate() {
 			requestAnimationFrame(animate);
 			
-			material.uniforms.uTime.value += 0.01;
+			material.uniforms.uTime.value += clock.getDelta();
 
 			attractionPoint.lerp(mouse, 0.01);
 			material.uniforms.uMouse.value = attractionPoint;
@@ -71,6 +72,9 @@
 				((event.clientX - rect.left) / rect.width) * 2 - 1,
 				-((event.clientY - rect.top) / rect.height) * 2 + 1
 			);
+			// Clamp mouse position
+			mouse.x = Math.min(Math.max(mouse.x, -1), 1);
+			mouse.y = Math.min(Math.max(mouse.y, -1), 1);
 		};
 		window.addEventListener('mousemove', onMouseMove);
 

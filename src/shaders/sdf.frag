@@ -33,7 +33,7 @@ const Light light = Light(
     vec3(0.4));
 
 const Material material = Material(
-    vec3(0.1), 
+    vec3(0.05), 
     vec3(0.16, 0.5, 0.72), 
     vec3(0.18, 0.8, 0.44), 
     32.0);
@@ -52,7 +52,7 @@ float sphere(vec3 origin, float radius, vec3 pos)
 float computeSDF(vec3 pos)
 {
     float s1 = sphere(vec3(0.25 * sin(uTime), 0.0, 0.5), 1.2, pos);
-    float s2 = sphere(vec3(cos(uTime), 1.0, 0.5), 0.6, pos);
+    float s2 = sphere(vec3(cos(uTime), sin(uTime), 0.5), 0.6, pos);
     float s3 = sphere(vec3(-0.9, sin(uTime + 0.5), 0.0), 0.7, pos);
     float s4 = sphere(vec3(0.8, 0.5 * cos(uTime) - 0.5, 0.5), 0.7, pos);
     float s5 = sphere(vec3(uMouse * mouseAttraction, 0.5), 0.5, pos);
@@ -61,7 +61,7 @@ float computeSDF(vec3 pos)
     d = smoothUnion(d, s3, 0.8);
     d = smoothUnion(d, s2, 0.8);
     d = smoothUnion(d, s4, 0.8);
-    d = smoothUnion(d, s5, 1.0);
+    d = smoothUnion(d, s5, 1.5);
     return d;
 }
 
@@ -79,7 +79,7 @@ vec3 computeLighting(vec3 normal, vec3 viewDir)
     vec3 halfVector = normalize(light.direction + viewDir);
 
     vec3 ambient = material.ambient * light.color;
-    vec3 diffuse = material.diffuse * light.color * max(dot(normal, light.direction), 0.0);
+    vec3 diffuse = material.diffuse * light.color * max(dot(normal, light.direction), 0.1);
     vec3 specular = material.specular * light.color * pow(max(dot(normal, halfVector), 0.0), material.shininess);
     return ambient + diffuse + specular;
 }
