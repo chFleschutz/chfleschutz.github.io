@@ -16,6 +16,7 @@
 		const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
 		const renderer = new THREE.WebGLRenderer({ canvas });
 		renderer.setSize(container.clientWidth, container.clientHeight);
+		renderer.setClearColor(0x000000, 0);
 
 		const geometry = new THREE.BufferGeometry();
 		geometry.setAttribute(
