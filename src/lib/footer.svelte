@@ -1,9 +1,11 @@
 <script lang="ts">
     import { isLastSection } from './section-store';
+
+    const currentYear = new Date().getFullYear();
 </script>
 
 <div class="footer" class:visible={$isLastSection}>
-	<p>Created by me &copy 2024</p>
+	<p>Created by me &copy {currentYear}</p>
     <div class="gradient"></div>
 </div>
 
