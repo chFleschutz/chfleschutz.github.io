@@ -4,15 +4,15 @@
 
 <div class="fullpage-container">
 	<div class="projects">
-		<h2 class="text-gradient">Showcase</h2>
+		<h2 class="text-gradient">Projects</h2>
 		<p class="projects-description">
-			Here are some highlights of my projects. You can find more on my
+			Here are a few highlights from my projects. For more, visit my
 			<a href="https://github.com/chFleschutz?tab=repositories"> Github Profile </a>
 		</p>
 		<div class="projects-list">
 			<ProjectShowcase
 				title="Aegix Engine"
-				description="C++ and Vulkan game engine featuring Physically Based Rendering, GLTF model loading and more."
+				description="C++ and Vulkan game engine featuring physically based rendering, GLTF model loading and more."
 				link="https://github.com/chFleschutz/aegix-engine"
 				image="/images/aegix.jpg"
 			/>
@@ -25,7 +25,7 @@
 			/>
 			<ProjectShowcase
 				title="Hive Mind"
-				description="Turn-based strategy game developed in Unreal. Build structures and deploy untis to defeat your opponent."
+				description="Turn-based strategy game developed in Unreal. Build structures and deploy units to defeat your opponent."
 				link="https://github.com/chFleschutz/hive-mind"
 				image="/images/hive-mind.jpg"
 				imagePosition="50% 20%"
