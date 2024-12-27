@@ -1,7 +1,11 @@
 <script>
-	import Planet from '../planet.svelte';
-	import SDF from '../components/sdf.svelte';
+	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
+	import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+	
 	import LinkIcons from '$lib/components/link-icons.svelte';
+	import SDF from '../components/sdf.svelte';
+
+	import { scrollToSection } from '$lib/section-store';
 </script>
 
 <div class="hero">
@@ -11,6 +15,11 @@
 		<p>A master's student specializing in game engineering, C++ and real-time graphics</p>
 		<LinkIcons />
 	</div>
+
+	<button class="chevron hover-effect" on:click={() => scrollToSection(1)}>
+		<FontAwesomeIcon icon={faChevronDown} size="2x" />
+	</button>
+
 
 	<div class="sdf">
 		<SDF />
@@ -42,6 +51,13 @@
 
 	.hero-text p {
 		font-size: var(--font-size-medium);
+	}
+
+	.chevron {
+		position: absolute;
+		bottom: 2rem;
+		font-size: 0.75rem;
+		padding: 0.5rem;
 	}
 
 	.sdf {
