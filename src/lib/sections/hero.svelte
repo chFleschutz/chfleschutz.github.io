@@ -6,10 +6,9 @@
 
 <div class="hero">
 	<div class="hero-text">
-		<!-- <h2>Hello, I'm <span style="color: var(--color-accent)">Chris</span></h2> -->
-		<h2 class="text-gradient">Hello, I'm Chris</h2>
+		<h2 class="text-gradient">Hi, I'm Chris</h2>
 
-		<p>a dedicated computer science student specializing in game engineering and C++ development</p>
+		<p>A master's student specializing in game engineering, C++ and real-time graphics</p>
 		<LinkIcons />
 	</div>
 
@@ -29,7 +28,7 @@
 	}
 
 	.hero-text {
-		max-width: 600px;
+		max-width: 550px;
 		width: 50%;
 		display: flex;
 		flex-direction: column;
