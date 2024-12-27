@@ -61,5 +61,9 @@
 			scroll-snap-type: y mandatory;
 			margin-bottom: 10rem;
 		}
+
+		section:last-child {
+			margin-bottom: 0;
+		}
 	}
 </style>
