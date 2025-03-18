@@ -24,6 +24,12 @@
 				image="/images/volume-render.jpg"
 			/>
 			<ProjectShowcase
+				title="AI for Games"
+				description="Collection of game AI algorithms, including flow field pathfinding, tactical maps and hill climbing."
+				link="https://github.com/chFleschutz/ai-for-games"
+				image="/images/flowfield-directions.jpg"
+			/>
+			<ProjectShowcase
 				title="Abduction in Lab 42"
 				description="Virtual Reality game developed in Unity. A puzzle game where you must free your robot companion."
 				link="https://github.com/chFleschutz/abduction-in-lab-42"
