@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ProjectShowcase from '$lib/components/project-showcase.svelte';
+	import Carousel from '$lib/components/carousel.svelte';
 </script>
 
 <div class="fullpage-container">
@@ -9,7 +10,7 @@
 			Here are a few highlights from my projects. For more, visit my
 			<a href="https://github.com/chFleschutz?tab=repositories"> Github Profile </a>
 		</p>
-		<div class="projects-list">
+		<Carousel>
 			<ProjectShowcase
 				title="Aegix Engine"
 				description="C++ and Vulkan game engine featuring physically based rendering, GLTF model loading and more."
@@ -30,7 +31,7 @@
 				image="/images/hive-mind.jpg"
 				imagePosition="50% 20%"
 			/>
-		</div>
+		</Carousel>
 	</div>
 </div>
 
@@ -47,24 +48,10 @@
 		width: 100%;
 	}
 
-	.projects-list {
-		display: flex;
-		justify-content: space-between;
-		gap: 2rem;
-		margin: 2rem 0;
-	}
-
 	@media (max-width: 768px) {
 		.projects {
 			align-items: center;
 			text-align: center;
-		}
-
-		.projects-list {
-			flex-direction: column;
-			align-items: center;
-			gap: 2rem;
-			padding: 2rem;
 		}
 	}
 </style>

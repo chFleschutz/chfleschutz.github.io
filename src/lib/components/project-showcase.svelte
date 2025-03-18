@@ -15,9 +15,10 @@
 
 <style>
 	.project-showcase {
-		max-width: 400px;
+		width: 350px;
 		display: flex;
 		flex-direction: column;
+		flex-shrink: 0;
 	}
 
 	.project-showcase p {
