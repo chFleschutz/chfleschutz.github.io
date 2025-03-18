@@ -10,40 +10,42 @@
 			Here are a few highlights from my projects. For more, visit my
 			<a href="https://github.com/chFleschutz?tab=repositories"> Github Profile </a>
 		</p>
-		<Carousel>
-			<ProjectShowcase
+		<div class="project-list">
+			<Carousel>
+				<ProjectShowcase
 				title="Aegix Engine"
 				description="C++ and Vulkan game engine featuring physically based rendering, GLTF model loading and more."
 				link="https://github.com/chFleschutz/aegix-engine"
 				image="/images/aegix.jpg"
-			/>
-			<ProjectShowcase
+				/>
+				<ProjectShowcase
 				title="Data Visualization"
 				description="Collection of data visualization projects using Qt, featuring Voronoi fracture, slice viewer, and volume rendering."
 				link="https://github.com/chFleschutz/simulation-and-data-visualization"
 				image="/images/volume-render.jpg"
-			/>
-			<ProjectShowcase
+				/>
+				<ProjectShowcase
 				title="AI for Games"
 				description="Collection of game AI algorithms, including flow field pathfinding, tactical maps and hill climbing."
 				link="https://github.com/chFleschutz/ai-for-games"
 				image="/images/flowfield-directions.jpg"
-			/>
-			<ProjectShowcase
+				/>
+				<ProjectShowcase
 				title="Abduction in Lab 42"
 				description="Virtual Reality game developed in Unity. A puzzle game where you must free your robot companion."
 				link="https://github.com/chFleschutz/abduction-in-lab-42"
 				image="/images/abduction-lab-42.jpg"
 				imagePosition="50% 30%"
-			/>
-			<ProjectShowcase
+				/>
+				<ProjectShowcase
 				title="Hive Mind"
 				description="Turn-based strategy game developed in Unreal. Build structures and deploy units to defeat your opponent."
 				link="https://github.com/chFleschutz/hive-mind"
 				image="/images/hive-mind.jpg"
 				imagePosition="50% 20%"
-			/>
-		</Carousel>
+				/>
+			</Carousel>
+		</div>
 	</div>
 </div>
 
@@ -58,6 +60,10 @@
 	.projects-description {
 		max-width: 500px;
 		width: 100%;
+	}
+
+	.project-list {
+		margin: 2rem 0;
 	}
 
 	@media (max-width: 768px) {
