@@ -18,6 +18,12 @@
 				image="/images/aegix.jpg"
 			/>
 			<ProjectShowcase
+				title="Data Visualization"
+				description="Collection of data visualization projects using Qt, featuring Voronoi fracture, slice viewer, and volume rendering."
+				link="https://github.com/chFleschutz/simulation-and-data-visualization"
+				image="/images/volume-render.jpg"
+			/>
+			<ProjectShowcase
 				title="Abduction in Lab 42"
 				description="Virtual Reality game developed in Unity. A puzzle game where you must free your robot companion."
 				link="https://github.com/chFleschutz/abduction-in-lab-42"
