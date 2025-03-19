@@ -1,25 +1,32 @@
 <script lang="ts">
+	import emblaCarouselSvelte from 'embla-carousel-svelte';
+	import type { EmblaCarouselType, EmblaOptionsType } from 'embla-carousel';
 
+	const options: EmblaOptionsType = {
+		loop: false,
+		slidesToScroll: 'auto'
+	};
 </script>
 
-<div class="carousel">
-    <div class="carousel-container">
-        <slot></slot>
-    </div>
+<div class="embla">
+	<div class="embla-viewport" use:emblaCarouselSvelte={{ options, plugins: [] }}>
+		<div class="embla-container">
+			<slot></slot>
+		</div>
+	</div>
 </div>
 
 <style>
-    .carousel {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-    }
+	.embla {
+		margin: auto;
+	}
 
-    .carousel-container {
-        display: flex;
-        gap: 2rem;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-		scrollbar-width: none;
-    }
+	.embla-viewport {
+		overflow: hidden;
+	}
+
+	.embla-container {
+		display: flex;
+		gap: 2rem;
+	}
 </style>
