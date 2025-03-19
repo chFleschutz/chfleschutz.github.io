@@ -55,34 +55,19 @@
 	</div>
 
 	<div class="embla-controls">
-		<div class="embla-buttons">
-			<button
-				class="embla-button"
-				aria-label="Previous"
-				bind:this={prevButton}
-				onclick={() => embla.scrollPrev()}
-			>
-				<svg class="embla-button-svg" viewBox="0 0 532 532">
-					<path
-						fill="currentColor"
-						d="M355.66 11.354c13.793-13.805 36.208-13.805 50.001 0 13.785 13.804 13.785 36.238 0 50.034L201.22 266l204.442 204.61c13.785 13.805 13.785 36.239 0 50.044-13.793 13.796-36.208 13.796-50.002 0a5994246.277 5994246.277 0 0 0-229.332-229.454 35.065 35.065 0 0 1-10.326-25.126c0-9.2 3.393-18.26 10.326-25.2C172.192 194.973 332.731 34.31 355.66 11.354Z"
-					></path>
-				</svg>
-			</button>
-			<button
-				class="embla-button"
-				aria-label="Next"
-				bind:this={nextButton}
-				onclick={() => embla.scrollNext()}
-			>
-				<svg class="embla-button-svg" viewBox="0 0 532 532">
-					<path
-						fill="currentColor"
-						d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"
-					></path>
-				</svg>
-			</button>
-		</div>
+		<button
+			class="embla-button"
+			aria-label="Previous"
+			bind:this={prevButton}
+			onclick={() => embla.scrollPrev()}
+		>
+			<svg class="embla-button-svg" viewBox="0 0 532 532">
+				<path
+					fill="currentColor"
+					d="M355.66 11.354c13.793-13.805 36.208-13.805 50.001 0 13.785 13.804 13.785 36.238 0 50.034L201.22 266l204.442 204.61c13.785 13.805 13.785 36.239 0 50.044-13.793 13.796-36.208 13.796-50.002 0a5994246.277 5994246.277 0 0 0-229.332-229.454 35.065 35.065 0 0 1-10.326-25.126c0-9.2 3.393-18.26 10.326-25.2C172.192 194.973 332.731 34.31 355.66 11.354Z"
+				></path>
+			</svg>
+		</button>
 
 		<div class="embla-dots" bind:this={dots}>
 			{#each Array(snapCount) as _, i}
@@ -101,6 +86,20 @@
 				{/if}
 			{/each}
 		</div>
+
+		<button
+			class="embla-button"
+			aria-label="Next"
+			bind:this={nextButton}
+			onclick={() => embla.scrollNext()}
+		>
+			<svg class="embla-button-svg" viewBox="0 0 532 532">
+				<path
+					fill="currentColor"
+					d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"
+				></path>
+			</svg>
+		</button>
 	</div>
 </div>
 
@@ -121,33 +120,26 @@
 	}
 
 	.embla-controls {
-		display: grid;
-		grid-template-columns: auto 1fr;
-		justify-content: space-between;
-		gap: 1rem;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		gap: 3rem;
 		margin-top: 2.5rem;
 	}
 
-	.embla-buttons {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 1rem;
-		align-items: center;
-	}
-
 	.embla-button {
-		width: 2rem;
-		height: 2rem;
+		width: 2.5rem;
+		height: 2.5rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		border: solid 1px var(--color-text);
 		border-radius: 50%;
 		cursor: pointer;
 	}
 
 	.embla-button:disabled {
-		opacity: 0.5;
+		opacity: 0.4;
 	}
 
 	.embla-button-svg {
