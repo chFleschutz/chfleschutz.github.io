@@ -95,7 +95,9 @@
 
 <style>
 	.embla {
-		margin: auto;
+		display: flex;
+		flex-direction: column;
+		margin: 2rem 0;
 	}
 
 	.embla-viewport {
