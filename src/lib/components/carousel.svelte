@@ -1,8 +1,12 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { writable } from 'svelte/store';
+
 	import emblaCarousel from 'embla-carousel';
 	import type { EmblaCarouselType, EmblaOptionsType } from 'embla-carousel';
+
+	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
+	import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 	const options: EmblaOptionsType = {
 		loop: false,
@@ -24,7 +28,7 @@
 
 		prevButton?.removeAttribute('disabled');
 		nextButton?.removeAttribute('disabled');
-		
+
 		onSelect();
 	}
 
@@ -61,7 +65,7 @@
 				bind:this={prevButton}
 				onclick={() => embla.scrollPrev()}
 			>
-				Previous
+				<FontAwesomeIcon icon={faChevronLeft} size="1x" />
 			</button>
 			<button
 				class="embla-button"
@@ -69,7 +73,7 @@
 				bind:this={nextButton}
 				onclick={() => embla.scrollNext()}
 			>
-				Next
+				<FontAwesomeIcon icon={faChevronRight} size="1x" />
 			</button>
 		</div>
 
@@ -125,6 +129,13 @@
 	}
 
 	.embla-button {
+		width: 2.5rem;
+		height: 2.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: solid 1px var(--color-text);
+		border-radius: 50%;
 		cursor: pointer;
 	}
 
