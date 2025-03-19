@@ -20,20 +20,20 @@
 	let embla: EmblaCarouselType;
 
 	function onInit() {
-		prevButton.removeAttribute('disabled');
-		nextButton.removeAttribute('disabled');
-
 		snapCount = embla.scrollSnapList().length;
 
+		prevButton?.removeAttribute('disabled');
+		nextButton?.removeAttribute('disabled');
+		
 		onSelect();
 	}
 
 	function onSelect() {
-		if (embla.canScrollPrev()) prevButton.removeAttribute('disabled');
-		else prevButton.setAttribute('disabled', 'disabled');
+		if (embla.canScrollPrev()) prevButton?.removeAttribute('disabled');
+		else prevButton?.setAttribute('disabled', 'disabled');
 
-		if (embla.canScrollNext()) nextButton.removeAttribute('disabled');
-		else nextButton.setAttribute('disabled', 'disabled');
+		if (embla.canScrollNext()) nextButton?.removeAttribute('disabled');
+		else nextButton?.setAttribute('disabled', 'disabled');
 
 		selectedDot.set(embla.selectedScrollSnap());
 	}
