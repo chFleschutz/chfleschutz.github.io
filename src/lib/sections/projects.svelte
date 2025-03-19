@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ProjectShowcase from '$lib/components/project-showcase.svelte';
+	import Carousel from '$lib/components/carousel.svelte';
 </script>
 
 <div class="fullpage-container">
@@ -9,12 +10,24 @@
 			Here are a few highlights from my projects. For more, visit my
 			<a href="https://github.com/chFleschutz?tab=repositories"> Github Profile </a>
 		</p>
-		<div class="projects-list">
+		<Carousel>
 			<ProjectShowcase
 				title="Aegix Engine"
 				description="C++ and Vulkan game engine featuring physically based rendering, GLTF model loading and more."
 				link="https://github.com/chFleschutz/aegix-engine"
 				image="/images/aegix.jpg"
+			/>
+			<ProjectShowcase
+				title="Data Visualization"
+				description="Collection of data visualization projects using Qt, featuring Voronoi fracture, slice viewer, and volume rendering."
+				link="https://github.com/chFleschutz/simulation-and-data-visualization"
+				image="/images/volume-render.jpg"
+			/>
+			<ProjectShowcase
+				title="AI for Games"
+				description="Collection of game AI algorithms, including flow field pathfinding, tactical maps and hill climbing."
+				link="https://github.com/chFleschutz/ai-for-games"
+				image="/images/flowfield-directions.jpg"
 			/>
 			<ProjectShowcase
 				title="Abduction in Lab 42"
@@ -30,7 +43,7 @@
 				image="/images/hive-mind.jpg"
 				imagePosition="50% 20%"
 			/>
-		</div>
+		</Carousel>
 	</div>
 </div>
 
@@ -47,24 +60,12 @@
 		width: 100%;
 	}
 
-	.projects-list {
-		display: flex;
-		justify-content: space-between;
-		gap: 2rem;
-		margin: 2rem 0;
-	}
-
 	@media (max-width: 768px) {
 		.projects {
+			width: 100%;
+			padding: 0 1rem;
 			align-items: center;
 			text-align: center;
-		}
-
-		.projects-list {
-			flex-direction: column;
-			align-items: center;
-			gap: 2rem;
-			padding: 2rem;
 		}
 	}
 </style>
