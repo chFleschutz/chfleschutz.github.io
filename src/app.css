@@ -63,20 +63,22 @@ img {
 
 .fullpage-container {
     position: relative;
-    width: 70vw !important;
+    width: 70vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 0 2rem;
     margin: 0 auto;
 }
 
 @media (max-width: 768px) {
     .fullpage-container {
-        width: 100vw !important;
+        width: 90%;
         height: auto;
-        padding: 0 3rem;
         margin: 0;
+        padding: 0;
     }
 }
 

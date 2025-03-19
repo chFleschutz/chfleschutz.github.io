@@ -105,6 +105,7 @@
 
 <style>
 	.embla {
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		margin: 2rem 0;
@@ -168,5 +169,15 @@
 
 	.embla-dot-selected {
 		border: solid 2px var(--color-text);
+	}
+
+	@media (max-width: 768px) {
+		.embla-button {
+			display: none;
+		}
+
+		.embla-dots {
+			margin: 1rem 0;
+		}
 	}
 </style>

@@ -23,13 +23,27 @@
 
 	.project-showcase p {
 		margin-top: 0rem;
-		margin-bottom: 1.5rem;
+		margin-bottom: 1rem;
 	}
 
 	img {
 		width: 100%;
-		max-height: 200px;
+		height: 200px;
 		object-fit: cover;
 		object-position: center;
+	}
+
+	@media (max-width: 768px) {
+		.project-showcase {
+			width: 100%;
+		}
+
+		.project-showcase p {
+			padding: 0 0.5rem;
+		}
+
+		img {
+			height: 300px;
+		}
 	}
 </style>

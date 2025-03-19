@@ -62,6 +62,8 @@
 
 	@media (max-width: 768px) {
 		.projects {
+			width: 100%;
+			padding: 0 1rem;
 			align-items: center;
 			text-align: center;
 		}
