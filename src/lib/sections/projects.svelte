@@ -7,15 +7,15 @@
 	<div class="projects">
 		<h2 class="text-gradient">Projects</h2>
 		<p class="projects-description">
-			Here are a few highlights from my projects. For more, visit my
+			Here are some highlights from my projects. For more, visit my
 			<a href="https://github.com/chFleschutz?tab=repositories"> Github Profile </a>
 		</p>
 		<Carousel>
 			<ProjectShowcase
 				title="Aegix Engine"
-				description="C++ and Vulkan game engine featuring physically based rendering, GLTF model loading and more."
+				description="Vulkan game engine with physically based rendering, GLTF model loading, a framegraph and more."
 				link="https://github.com/chFleschutz/aegix-engine"
-				image="/images/aegix.jpg"
+				image="/images/aegix-engine.jpg"
 			/>
 			<ProjectShowcase
 				title="Data Visualization"
