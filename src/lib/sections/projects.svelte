@@ -24,11 +24,17 @@
 				image="/images/volume-render.jpg"
 			/>
 			<ProjectShowcase
+				title="Inverse Kinematics"
+				description="Implementation of inverse kinematics algorithms, including CCD and FABRIK."
+				link="https://github.com/chFleschutz/inverse-kinematics-algorithms"
+				image="/images/ik.jpg"
+			/>
+			<ProjectShowcase
 				title="AI for Games"
 				description="Collection of game AI algorithms, including flow field pathfinding, tactical maps and hill climbing."
 				link="https://github.com/chFleschutz/ai-for-games"
 				image="/images/flowfield-directions.jpg"
-			/>
+			/>			
 			<ProjectShowcase
 				title="Abduction in Lab 42"
 				description="Virtual Reality game developed in Unity. A puzzle game where you must free your robot companion."
@@ -38,7 +44,7 @@
 			/>
 			<ProjectShowcase
 				title="Hive Mind"
-				description="Turn-based strategy game developed in Unreal. Build structures and deploy units to defeat your opponent."
+				description="Turn-based strategy game developed in Unreal. Build structures and move your units strategically."
 				link="https://github.com/chFleschutz/hive-mind"
 				image="/images/hive-mind.jpg"
 				imagePosition="50% 20%"
