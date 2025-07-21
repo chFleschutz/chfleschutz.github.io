@@ -2,7 +2,7 @@
 	import '../app.css';
 
 	import Header from '$lib/header.svelte';
-	import PageIndicator from '$lib/page-indicator.svelte';
+	import Footer from '$lib/footer.svelte';
 </script>
 
 <svelte:head>
@@ -22,28 +22,12 @@
 
 <main>
 	<Header />
-	<PageIndicator />
 
 	<slot></slot>
+
+	<Footer />
 </main>
 
 <style>
-	:global(body) {
-		overflow: hidden;
-	}
 
-	main {
-		width: 100vw;
-		height: 100vh;
-		display: flex;
-		flex-direction: column;
-		scroll-snap-type: y mandatory;
-		overflow-y: scroll;
-	}
-
-	@media (max-width: 768px) {
-		main {
-			scroll-snap-type: none;
-		}
-	}
 </style>

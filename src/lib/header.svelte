@@ -1,40 +1,27 @@
 <script lang="ts">
-	import { scrollToSection, currentSection } from './section-store';
+	import { page } from '$app/stores';
+
+	$: currentPath = $page.url.pathname;
 </script>
 
 <header>
 	<div class="header-container">
 		<h1>Christoph<br />Fleschutz</h1>
-		<div class="section-list">
-			<button
-				class="hover-effect"
-				class:text-gradient={$currentSection === 0}
-				on:click={() => scrollToSection(0)}>home</button
-			>
-			<button
-				class="hover-effect"
-				class:text-gradient={$currentSection === 1}
-				on:click={() => scrollToSection(1)}>about me</button
-			>
-			<button
-				class="hover-effect"
-				class:text-gradient={$currentSection === 2}
-				on:click={() => scrollToSection(2)}>projects</button
-			>
-			<button
-				class="hover-effect"
-				class:text-gradient={$currentSection === 3}
-				on:click={() => scrollToSection(3)}>contact</button
-			>
-		</div>
+		<nav>
+			<a href="/" class="hover-effect" class:text-gradient={currentPath === '/'}> home </a>
+			<a href="/projects" class="hover-effect" class:text-gradient={currentPath === '/projects'}>
+				projects
+			</a>
+			<a href="/about" class="hover-effect" class:text-gradient={currentPath === '/about'}>
+				about
+			</a>
+		</nav>
 	</div>
 </header>
 
 <style>
 	header {
-		position: fixed;
-		top: 0;
-		left: 0;
+		position: absolute;
 		width: 100%;
 		z-index: 1000;
 	}
@@ -47,10 +34,15 @@
 		padding: 2.5rem;
 	}
 
-	.section-list {
+	nav {
 		display: flex;
 		white-space: nowrap;
 		gap: 4rem;
+	}
+
+	a {
+		text-decoration: none;
+		font-weight: var(--font-weight-regular);
 	}
 
 	@media (max-width: 768px) {
@@ -63,17 +55,13 @@
 			padding: 1.5rem;
 		}
 
-		.section-list {
+		nav {
 			flex-direction: column;
 			gap: 1rem;
 			align-items: flex-end;
 			position: absolute;
 			top: 1.5rem;
 			right: 1.5rem;
-		}
-
-		.section-list button:first-child {
-			display: none;
 		}
 	}
 </style>

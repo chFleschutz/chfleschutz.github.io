@@ -35,7 +35,6 @@
 		</div>
 		<LinkIcons />
 	</div>
-	<Footer />
 </div>
 
 <style>
