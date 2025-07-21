@@ -49,20 +49,31 @@
 
 		camera.position.z = 5;
 
-		const clock = new THREE.Clock();
 		let mouse = new THREE.Vector2();
 		let attractionPoint = new THREE.Vector2();
+		const clock = new THREE.Clock();
+		const targetFrameTime = 1 / 60;
+		let accumulatedDelta = 0;
+
 		function animate() {
 			requestAnimationFrame(animate);
 
-			material.uniforms.uTime.value += clock.getDelta();
+			accumulatedDelta += clock.getDelta();
+			if (accumulatedDelta < targetFrameTime) {
+				return; // Skip rendering due to fps cap
+			}
 
-			attractionPoint.lerp(mouse, 0.02);
+			const deltaTime = Math.min(accumulatedDelta, 0.1); // Avoid too large deltas
+			accumulatedDelta -= deltaTime;
+
+			attractionPoint.lerp(mouse, 3 * deltaTime);
 			material.uniforms.uMouse.value = attractionPoint;
+			material.uniforms.uTime.value += deltaTime;
 
 			renderer.render(scene, camera);
 		}
-		animate();
+		requestAnimationFrame(animate);
+		
 
 		// Resize
 		const onResize = () => {
