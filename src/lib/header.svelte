@@ -42,7 +42,7 @@
 
 	a {
 		text-decoration: none;
-		font-weight: var(--font-weight-regular);
+		font-weight: var(--font-weight-bold);
 	}
 
 	@media (max-width: 768px) {

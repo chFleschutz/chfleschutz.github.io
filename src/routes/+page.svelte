@@ -1,69 +1,64 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	
-	import { currentSection, isLastSection, sectionCount } from '$lib/section-store';
-	
 	import Hero from '$lib/sections/hero.svelte';
-	import About from '$lib/sections/about.svelte';
-	import Projects from '$lib/sections/projects.svelte';
+	import ProjectShowcaseBig from '$lib/components/project-showcase-big.svelte';
 	import Contact from '$lib/sections/contact.svelte';
-	
-	onMount(() => {
-		// Query all sections
-		const sectionElements = document.querySelectorAll('section');
-		sectionCount.set(Number(sectionElements.length));
-
-		// Create an observer to detect the current section
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						const sectionNumber = Number((entry.target as HTMLElement).dataset.section);
-						currentSection.set(sectionNumber);
-						isLastSection.set(sectionNumber === sectionElements.length - 1);
-					}
-				});
-			},
-			{ threshold: 0.5 }
-		);
-
-		sectionElements.forEach((section, index) => {
-			(section as HTMLElement).dataset.section = String(index);
-			observer.observe(section);
-		});
-
-		return () => observer.disconnect();
-	});
 </script>
 
 <svelte:head>
 	<title>Christoph Fleschutz</title>
 </svelte:head>
 
-<section><Hero /></section>
-<section><About /></section>
-<section><Projects /></section>
-<section><Contact /></section>
+<Hero />
+<div class="section-header">
+	<h2 class="section-title text-gradient">Selected Projects</h2>
+	<a href="/projects" class="section-button hover-effect">View All →</a>
+</div>
+<div class="project-list">
+	<ProjectShowcaseBig
+		title="Aegix Engine"
+		description="Vulkan Game Engine"
+		link="/"
+		image="/images/aegix-engine.jpg"
+	/>
+	<ProjectShowcaseBig
+		title="Dustveil"
+		description="Coop Horde Shooter"
+		link="/"
+		image="/textures/planet.png"
+		reversed={true}
+	/>
+	<ProjectShowcaseBig
+		title="Medical Visualization"
+		description="Visualization of medical CT scans"
+		link="/"
+		image="/images/volume-render.jpg"
+	/>
+</div>
+<Contact />
 
 <style>
-	section {
-		height: 100%;
-		width: 100%;
-		scroll-snap-align: start;
-		display: flex;
-		justify-content: center;
+	.section-header {
+		display: grid;
+		grid-template-columns: 1fr repeat(1, auto) 1fr;
 		align-items: center;
+		padding: 4rem;
+		margin: 100px 0 0 0;
 	}
 
-	@media (max-width: 768px) {
-		section {
-			height: auto;
-			scroll-snap-type: y mandatory;
-			margin-bottom: 10rem;
-		}
-
-		section:last-child {
-			margin-bottom: 0;
-		}
+	.section-title {
+		grid-column-start: 2;
 	}
+
+	.section-button {
+		margin-left: auto;
+		padding: 0.5rem 1rem;
+		font-weight: var(--font-weight-bold);
+	}
+
+	.project-list {
+		display: flex;
+		flex-direction: column;
+		gap: 100px;
+	}
+
 </style>

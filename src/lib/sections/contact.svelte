@@ -3,7 +3,6 @@
 	import { faCopy } from '@fortawesome/free-solid-svg-icons';
 
 	import LinkIcons from '$lib/components/link-icons.svelte';
-	import Footer from '$lib/footer.svelte';
 
 	const email = 'ch.fleschutz@gmail.com';
 	let copied = false;

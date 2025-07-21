@@ -22,12 +22,9 @@
 
 <main>
 	<Header />
-
 	<slot></slot>
-
 	<Footer />
 </main>
 
 <style>
-
 </style>

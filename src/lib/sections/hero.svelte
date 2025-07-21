@@ -3,7 +3,7 @@
 	import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 	
 	import LinkIcons from '$lib/components/link-icons.svelte';
-	import SDF from '../components/sdf.svelte';
+	import SDF from '$lib/components/sdf.svelte';
 
 	import { scrollToSection } from '$lib/section-store';
 </script>
