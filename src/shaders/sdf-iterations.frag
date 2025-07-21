@@ -2,7 +2,7 @@ uniform float uTime;
 uniform vec2 uResolution;
 uniform vec2 uMouse;
 
-varying vec3 vPosition;
+out vec4 outColor;
 
 // Raymarching
 const int maxSteps = 30;
@@ -11,6 +11,11 @@ const float surfaceDistance = 0.01;
 
 // Controls
 const float mouseAttraction = 1.0;
+
+// Colors
+const vec4 blobColor = vec4(0.161, 0.502, 0.725, 1.0); 
+const int stepOffset = 2;
+const int maxStepOffset = 5;
 
 float smoothUnion(float a, float b, float k)
 {
@@ -79,6 +84,6 @@ void main()
             discard;
     }
 
-    vec3 color = mix(vec3(0.0), vec3(0.9), float(i) / float(maxSteps));
-    gl_FragColor = vec4(color, 1.0);
+    float alpha = clamp(float(i - stepOffset) / float(maxSteps - maxStepOffset), 0.0, 1.0);
+    outColor = blobColor * alpha;
 }

@@ -12,7 +12,7 @@
 	<div class="hero-text">
 		<h2 class="text-gradient">Hi, I'm Chris</h2>
 
-		<p>A master's student specializing in game engineering, C++ and real-time graphics</p>
+		<p>I'm a master's student specializing in game engineering, C++ and real-time graphics</p>
 		<LinkIcons />
 	</div>
 
@@ -37,7 +37,7 @@
 	}
 
 	.hero-text {
-		max-width: 550px;
+		max-width: 570px;
 		width: 50%;
 		display: flex;
 		flex-direction: column;
