@@ -62,7 +62,7 @@
 
 <style>
 	.projects-header {
-		margin-bottom: 2rem;
+		margin: 2rem 0;
 	}
 
 	.projects-list {

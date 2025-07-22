@@ -3,5 +3,5 @@
 	import Contact from '$lib/sections/contact.svelte';
 </script>
 
-<section><About /></section>
-<section><Contact /></section>
+<About />
+<Contact />

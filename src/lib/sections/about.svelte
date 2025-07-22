@@ -1,4 +1,3 @@
-<div class="fullpage-container">
 	<div class="about">
 		<div class="about-text">
 			<h2 class="text-gradient">About me</h2>
@@ -16,15 +15,15 @@
 		</div>
 		<img class="about-image" src="/images/portrait.jpg" alt="" />
 	</div>
-</div>
 
 <style>
 	.about {
-		width: 100%;
+		width: 70vw;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		align-items: center;
 		gap: 5%;
+		margin: 5rem auto;
 	}
 
 	.about-text {
