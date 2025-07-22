@@ -8,7 +8,9 @@
 	<title>Christoph Fleschutz</title>
 </svelte:head>
 
-<Hero />
+<div style="margin-top: -140px;">
+	<Hero />
+</div>
 <div class="section-header">
 	<h2 class="section-title text-gradient">Selected Projects</h2>
 	<a href="/projects" class="section-button hover-effect">View All →</a>

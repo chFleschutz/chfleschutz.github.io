@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ProjectShowcase from '$lib/components/project-showcase.svelte';
+	import ProjectCard from '$lib/components/project-card.svelte';
 	import Carousel from '$lib/components/carousel.svelte';
 </script>
 
@@ -11,40 +11,34 @@
 			<a href="https://github.com/chFleschutz?tab=repositories"> Github Profile </a>
 		</p>
 		<Carousel>
-			<ProjectShowcase
+			<ProjectCard
 				title="Aegix Engine"
-				description="Vulkan game engine with physically based rendering, GLTF model loading, a framegraph and more."
 				link="https://github.com/chFleschutz/aegix-engine"
 				image="/images/aegix-engine.jpg"
 			/>
-			<ProjectShowcase
+			<ProjectCard
 				title="Data Visualization"
-				description="Collection of data visualization projects using Qt, featuring Voronoi fracture, slice viewer, and volume rendering."
 				link="https://github.com/chFleschutz/simulation-and-data-visualization"
 				image="/images/volume-render.jpg"
 			/>
-			<ProjectShowcase
+			<ProjectCard
 				title="Inverse Kinematics"
-				description="Implementation of inverse kinematics algorithms, including CCD and FABRIK."
 				link="https://github.com/chFleschutz/inverse-kinematics-algorithms"
 				image="/images/ik.jpg"
 			/>
-			<ProjectShowcase
+			<ProjectCard
 				title="AI for Games"
-				description="Collection of game AI algorithms, including flow field pathfinding, tactical maps and hill climbing."
 				link="https://github.com/chFleschutz/ai-for-games"
 				image="/images/flowfield-directions.jpg"
 			/>			
-			<ProjectShowcase
+			<ProjectCard
 				title="Abduction in Lab 42"
-				description="Virtual Reality game developed in Unity. A puzzle game where you must free your robot companion."
 				link="https://github.com/chFleschutz/abduction-in-lab-42"
 				image="/images/abduction-lab-42.jpg"
 				imagePosition="50% 30%"
 			/>
-			<ProjectShowcase
+			<ProjectCard
 				title="Hive Mind"
-				description="Turn-based strategy game developed in Unreal. Build structures and move your units strategically."
 				link="https://github.com/chFleschutz/hive-mind"
 				image="/images/hive-mind.jpg"
 				imagePosition="50% 20%"

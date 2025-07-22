@@ -1,5 +1,74 @@
 <script lang="ts">
-	import Projects from '$lib/sections/projects.svelte';
+	import ProjectCard from '$lib/components/project-card.svelte';
 </script>
 
-<section><Projects /></section>
+<div class="fullpage-container">
+	<div class="projects-header">
+		<h2 class="text-gradient">Projects</h2>
+		<p>Explore my recent projects and contributions.</p>
+	</div>
+	<div class="projects-list">
+		<ProjectCard
+			title="Aegix Engine"
+			link="/projects/aegix-engine"
+			image="/images/aegix-engine.jpg"
+		/>
+		<ProjectCard title="Dustveil" link="/projects/dustveil" image="/textures/planet.png" />
+		<ProjectCard
+			title="Medical Visualization"
+			link="/projects/medical-visualization"
+			image="/images/volume-render.jpg"
+		/>
+		<ProjectCard
+			title="Inverse Kinematics"
+			link="/projects/inverse-kinematics"
+			image="/images/ik.jpg"
+		/>
+		<ProjectCard
+			title="AI for Games"
+			link="/projects/ai-for-games"
+			image="/images/flowfield-directions.jpg"
+		/>
+		<ProjectCard
+			title="Abduction in Lab 42"
+			link="/projects/abduction-in-lab-42"
+			image="/images/abduction-lab-42.jpg"
+			imagePosition="50% 30%"
+		/>
+		<ProjectCard
+			title="Hive Mind"
+			link="/projects/hive-mind"
+			image="/images/hive-mind.jpg"
+			imagePosition="50% 20%"
+		/>
+		<ProjectCard
+			title="Diagnostic Data Collector"
+			link="/projects/diagnostic-data-collector"
+			image="/textures/planet.png"
+		/>
+		<ProjectCard
+			title="Bachelor Thesis"
+			link="/projects/bachelor-thesis"
+			image="/textures/planet.png"
+		/>
+		<ProjectCard
+			title="Eternal Flame"
+			link="/projects/eternal-flame"
+			image="/textures/planet.png"
+		/>
+		<ProjectCard title="Raspberry" link="/projects/raspberry" image="/textures/planet.png" />
+	</div>
+</div>
+
+<style>
+	.projects-header {
+		margin-bottom: 2rem;
+	}
+
+	.projects-list {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+		gap: 2rem;
+		margin-bottom: 10rem;
+	}
+</style>

@@ -20,11 +20,22 @@
 	/>
 </svelte:head>
 
-<main>
+<div class="page">
 	<Header />
-	<slot></slot>
+	<main>
+		<slot></slot>
+	</main>
 	<Footer />
-</main>
+</div>
 
 <style>
+	.page {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+
+	main {
+		flex: 1;
+	}
 </style>

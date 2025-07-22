@@ -11,16 +11,12 @@
 <div class="hero">
 	<div class="hero-text">
 		<h2 class="text-gradient">Hi, I'm Chris</h2>
-
 		<p>I'm a master's student specializing in game engineering, C++ and real-time graphics</p>
 		<LinkIcons />
 	</div>
-
 	<button class="chevron hover-effect" on:click={() => scrollToSection(1)}>
 		<FontAwesomeIcon icon={faChevronDown} size="2x" />
 	</button>
-
-
 	<div class="sdf">
 		<SDF />
 	</div>
