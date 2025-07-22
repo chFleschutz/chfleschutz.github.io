@@ -1,10 +1,10 @@
 <script>
-	import Header from '$lib/header.svelte';
-	import Footer from '$lib/footer.svelte';
+	import HeaderArticle from '$lib/layout/article-header.svelte';
+	import Footer from '$lib/layout/footer.svelte';
 </script>
 
 <div class="page">
-	<Header />
+	<HeaderArticle />
 	<main>
 		<slot></slot>
 	</main>
@@ -20,5 +20,7 @@
 
 	main {
 		flex: 1;
+		width: 70vw;
+		margin: 0 auto;
 	}
 </style>

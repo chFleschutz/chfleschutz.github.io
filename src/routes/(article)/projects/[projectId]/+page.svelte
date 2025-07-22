@@ -10,7 +10,6 @@
 
 <svelte:head>
 	<title>{data.meta.title}</title>
-
 </svelte:head>
 
 <article>
@@ -31,8 +30,6 @@
 
 <style>
 	article {
-		max-width: 1024px;
-		margin-inline: auto;
 		padding: 1rem;
 	}
 </style>
