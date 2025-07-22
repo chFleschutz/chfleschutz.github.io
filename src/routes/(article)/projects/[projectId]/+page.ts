@@ -9,7 +9,7 @@ type MarkdownModule = {
 
 export const load: PageLoad = async ({ params }) => {
 	try {
-		const post = await import(`../../../content/projects/${params.projectId}.md`) as MarkdownModule;
+		const post = await import(`../../../../content/projects/${params.projectId}.md`) as MarkdownModule;
 		return {
 			id: params.projectId,
 			meta: post.metadata,
