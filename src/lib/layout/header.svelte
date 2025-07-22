@@ -6,7 +6,9 @@
 
 <header>
 	<div class="header-container">
-		<h1>Christoph<br />Fleschutz</h1>
+		<a href="/">
+			<h1>Christoph<br />Fleschutz</h1>
+		</a>
 		<nav>
 			<a href="/" class="hover-effect" class:text-gradient={currentPath === '/'}> home </a>
 			<a href="/projects" class="hover-effect" class:text-gradient={currentPath === '/projects'}>
