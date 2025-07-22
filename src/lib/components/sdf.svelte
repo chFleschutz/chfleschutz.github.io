@@ -64,7 +64,7 @@
 			}
 
 			const deltaTime = Math.min(accumulatedDelta, 0.1); // Avoid too large deltas
-			accumulatedDelta -= deltaTime;
+			accumulatedDelta = 0;
 
 			attractionPoint.lerp(mouse, 3 * deltaTime);
 			material.uniforms.uMouse.value = attractionPoint;
