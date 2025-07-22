@@ -1,10 +1,11 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
+import type { SvelteComponent } from 'svelte';
 import type { ProjectMetadata } from '$lib/types';
 
 type MarkdownModule = {
 	metadata: ProjectMetadata;
-	default: ConstructorOfATypedSvelteComponent;
+	default: typeof SvelteComponent;
 };
 
 export const load: PageLoad = async ({ params }) => {
