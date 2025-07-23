@@ -73,7 +73,7 @@
 	.carousel {
 		display: flex;
 		flex-direction: column;
-        margin: 1rem 0;
+        margin: 2rem 0;
 	}
 
 	.embla {
@@ -88,7 +88,7 @@
 	.embla-slide {
 		flex: 0 0 100%;
 		min-width: 0;
-		aspect-ratio: 16 / 9;
+        max-height: 550px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -96,7 +96,7 @@
 
 	.embla-slide img {
 		max-width: 100%;
-		max-height: auto;
+		max-height: 100%;
 		object-fit: cover;
 		border-radius: 10px;
 	}
