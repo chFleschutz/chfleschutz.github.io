@@ -12,6 +12,8 @@
     --font-size-medium: 1.25rem;
     --font-size-large: 3rem;
     --font-line-height: 1.5;
+    --article-max-width: 950px;
+    --article-width: 70vw;
 }
 
 body {
@@ -54,7 +56,6 @@ a {
     text-transform: uppercase;
     text-decoration: none;
     color: var(--color-text);
-    padding: 0.5rem;
 }
 
 img {
@@ -99,6 +100,7 @@ button {
 
 .hover-effect {
     transition: transform ease 0.2s;
+    padding: 0.5rem;
 }
 
 .hover-effect:hover {

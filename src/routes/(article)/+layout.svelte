@@ -20,8 +20,8 @@
 
 	main {
 		flex: 1;
-		max-width: 950px;
-		width: 70vw;
+		max-width: var(--article-max-width);
+		width: var(--article-width);
 		margin: 0 auto;
 	}
 </style>

@@ -20,6 +20,9 @@
 		align-items: center;
 		gap: 2rem;
 		padding: 2.5rem;
+		max-width: var(--article-max-width);
+		width: var(--article-width);
+		margin: 0 auto;
 	}
 
 	.back-link {
@@ -27,7 +30,6 @@
 		align-items: center;
 		font-weight: var(--font-weight-bold);
 		gap: 0.5rem;
-		margin-right: 15%;
 		padding: 0.5rem;
 	}
 

@@ -41,10 +41,6 @@
 </article>
 
 <style>
-	article {
-		padding: 1rem;
-	}
-
 	.page-heading {
 		display: flex;
 		align-items: center;
