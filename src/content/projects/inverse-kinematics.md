@@ -5,4 +5,5 @@ tags:
     - Qt
 images: 
     - /images/ik.jpg
+repo: https://github.com/chFleschutz/inverse-kinematics-algorithms
 ---

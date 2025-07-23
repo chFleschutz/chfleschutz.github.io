@@ -5,4 +5,5 @@ tags:
     - Qt
 images: 
     - /images/flowfield-directions.jpg
+repo: https://github.com/chFleschutz/ai-for-games
 ---
