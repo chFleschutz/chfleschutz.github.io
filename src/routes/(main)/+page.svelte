@@ -19,20 +19,20 @@
 	<ProjectShowcaseBig
 		title="Aegix Engine"
 		description="Vulkan Game Engine"
-		link="/"
+		link="/projects/aegix-engine"
 		image="/images/aegix-engine.jpg"
 	/>
 	<ProjectShowcaseBig
 		title="Dustveil"
 		description="Coop Horde Shooter"
-		link="/"
+		link="/projects/dustveil"
 		image="/textures/planet.png"
 		reversed={true}
 	/>
 	<ProjectShowcaseBig
 		title="Medical Visualization"
 		description="Visualization of medical CT scans"
-		link="/"
+		link="/projects/medical-visualization"
 		image="/images/volume-render.jpg"
 	/>
 </div>
