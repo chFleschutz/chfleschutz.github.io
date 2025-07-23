@@ -3,6 +3,10 @@
 	import Footer from '$lib/layout/footer.svelte';
 </script>
 
+<svelte:head>
+	<title>Christoph Fleschutz</title>
+</svelte:head>
+
 <div class="page">
 	<Header />
 	<main>

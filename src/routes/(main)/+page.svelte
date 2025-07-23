@@ -4,10 +4,6 @@
 	import Contact from '$lib/sections/contact.svelte';
 </script>
 
-<svelte:head>
-	<title>Christoph Fleschutz</title>
-</svelte:head>
-
 <div style="margin-top: -140px;">
 	<Hero />
 </div>
