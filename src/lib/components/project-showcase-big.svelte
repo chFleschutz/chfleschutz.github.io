@@ -6,7 +6,7 @@
 	export let reversed: boolean = false;
 </script>
 
-<a href={link} class="big-showcase" class:reversed aria-label="{title} Project Showcase">
+<a href={link} class="showcase" class:reversed aria-label="{title} Project Showcase">
 	<div class="image-container">
 		<img src={image} alt="{title} Image" />
 	</div>
@@ -20,55 +20,38 @@
 </a>
 
 <style>
-	@property --gradientColor1 {
-		syntax: '<color>';
-		initial-value: transparent;
-		inherits: false;
-	}
-
-	@property --gradientColor2 {
-		syntax: '<color>';
-		initial-value: transparent;
-		inherits: false;
-	}
-
-	.big-showcase {
+	.showcase {
 		display: flex;
-		background: linear-gradient(120deg, var(--gradientColor1) 10%, var(--gradientColor2) 90%);
-		transition:
-			--gradientColor1 0.3s ease 0s,
-			--gradientColor2 0.3s ease 0.1s;
+		max-width: var(--main-max-width);
+		width: var(--main-width);
+		margin: 0 auto;
 	}
 
-	.big-showcase:hover {
-		--gradientColor1: var(--color-accent);
-		--gradientColor2: var(--color-primary);
+	.showcase:hover img {
+		transform: scale(1.05);
 	}
 
-	.big-showcase:hover .details-button {
-		color: var(--color-text);
-	}
-
-	.big-showcase.reversed {
+	.showcase.reversed {
 		flex-direction: row-reverse;
 	}
 
-	.big-showcase.reversed .details-inner {
+	.showcase.reversed .details-inner {
 		padding: 6% 2% 6% 16%;
 	}
 
 	.image-container {
 		width: 60%;
-		height: 600px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		height: 400px;
+		margin: 2rem;
+		overflow: hidden;
+		border-radius: 10px;
 	}
 
 	img {
-		width: 90%;
-		height: 90%;
+		width: 100%;
+		height: 100%;
 		object-fit: cover;
+		transition: transform 0.3s ease;
 	}
 
 	.details-container {
@@ -92,14 +75,14 @@
 	.details-text {
 		margin: 1rem 0;
 		font-size: var(--font-size-medium);
-		font-weight: var(--font-weight-normal);
+		font-weight: var(--font-weight-light);
 	}
 
 	.details-button {
 		text-decoration: none;
 		text-transform: uppercase;
 		font-weight: var(--font-weight-bold);
-		font-size: 1.1rem;
+		font-size: var(--font-size-medium);
 		transition: color 0.3s ease;
 	}
 </style>

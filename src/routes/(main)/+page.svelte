@@ -23,7 +23,7 @@
 </section>
 <section bind:this={projectSection}>
 	<div class="section-header">
-		<h2 class="section-title text-gradient">Selected Projects</h2>
+		<h2 class="section-title text-gradient">Showcase</h2>
 		<a href="/projects" class="section-button hover-effect">View All →</a>
 	</div>
 	<div class="project-list">
@@ -42,7 +42,7 @@
 		/>
 		<ProjectShowcaseBig
 			title="Medical Visualization"
-			description="Visualization of medical CT scans"
+			description="Visualization of CT scans"
 			link="/projects/medical-visualization"
 			image="/images/volume-render.jpg"
 		/>
@@ -67,6 +67,9 @@
 		align-items: center;
 		padding: 4rem;
 		margin: 100px 0 0 0;
+		max-width: var(--main-max-width);
+		width: var(--main-width);
+		margin: 0 auto;
 	}
 
 	.section-title {

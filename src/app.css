@@ -12,6 +12,8 @@
     --font-size-medium: 1.25rem;
     --font-size-large: 3rem;
     --font-line-height: 1.5;
+    --main-max-width: 1200px;
+    --main-width: 80vw;
     --article-max-width: 950px;
     --article-width: 70vw;
 }
