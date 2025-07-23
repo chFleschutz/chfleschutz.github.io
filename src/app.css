@@ -50,10 +50,11 @@ p {
 
 a {
     font-size: var(--font-size-base);
-    font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-bold);
     text-transform: uppercase;
     text-decoration: none;
     color: var(--color-text);
+    padding: 0.5rem;
 }
 
 img {

@@ -3,6 +3,9 @@
 	import type { ProjectMetadata } from '$lib/types';
 	import CarouselImage from '$lib/components/carousel-image.svelte';
 
+	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
+	import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+
 	export let data: {
 		id: string;
 		meta: ProjectMetadata;
@@ -15,10 +18,18 @@
 </svelte:head>
 
 <article>
-	<h2 class="text-gradient">{data.meta.title}</h2>
+	<div class="page-heading">
+		<h2 class="text-gradient">{data.meta.title}</h2>
+		{#if data.meta.repo}
+			<a href={data.meta.repo} target="_blank" class="repo-link hover-effect">
+				<span>Visit Repo</span>
+				<FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+			</a>
+		{/if}
+	</div>
 	{#if data.meta.tags}
 		<div class="tags">
-			{#each data.meta.tags ?? [] as tag}
+			{#each data.meta.tags as tag}
 				<span class="badge">{tag}</span>
 			{/each}
 		</div>
@@ -32,6 +43,18 @@
 <style>
 	article {
 		padding: 1rem;
+	}
+
+	.page-heading {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.repo-link {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
 	}
 
 	.tags {

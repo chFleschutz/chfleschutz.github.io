@@ -22,7 +22,7 @@
 	<h2 class="text-gradient">Let's Get In Touch</h2>
 	<p>If you have any questions feel free to contact me</p>
 	<span class="copied-message" class:visible={copied}>Copied</span>
-	<button class="email-container hover-effect" on:click={copyEmail} aria-label="Copy email">
+	<button class="email-container hover-effect" onclick={copyEmail} aria-label="Copy email">
 		<p>{email}</p>
 		<FontAwesomeIcon icon={faCopy} />
 	</button>
