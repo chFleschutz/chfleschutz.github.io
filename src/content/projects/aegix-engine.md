@@ -1,7 +1,11 @@
 ---
-title: "Aegix Engine"
-tags: ["C++", "Vulkan"]
-images: ["/images/aegix-engine.jpg"]
+title: Aegix Engine
+tags: 
+    - C++
+    - Vulkan
+images: 
+    - /images/aegix-engine.jpg
+    - /images/aegix-engine.jpg
 ---
 
 # Aegix Engine
