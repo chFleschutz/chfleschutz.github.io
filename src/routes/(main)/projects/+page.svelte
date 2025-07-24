@@ -5,7 +5,8 @@
 <div class="fullpage-container">
 	<div class="projects-header">
 		<h2 class="text-gradient">Projects</h2>
-		<p>Explore my recent projects and contributions.</p>
+		<p>Explore my most notable projects and contributions.</p>
+		<p>View more on my <a href="https://github.com/chFleschutz" target="_blank">GitHub Profile</a>.</p>
 	</div>
 	<div class="projects-list">
 		<ProjectCard
@@ -66,7 +67,7 @@
 
 <style>
 	.projects-header {
-		margin: 2rem 0;
+		margin: 4rem 0;
 	}
 
 	.projects-list {
