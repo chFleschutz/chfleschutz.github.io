@@ -25,7 +25,7 @@
 	}
 
 	.project-card:hover {
-		transform: scale(1.25);
+		transform: scale(1.1);
 		z-index: 10;
 	}
 
@@ -34,7 +34,7 @@
 	}
 
 	.project-card h3 {
-		margin: 10px 0;
+		margin: 0.25rem 0;
 	}
 
 	img {
