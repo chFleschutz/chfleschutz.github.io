@@ -44,7 +44,7 @@
 			title="Medical Visualization"
 			description="Visualization of CT scans"
 			link="/projects/medical-visualization"
-			image="/images/volume-render.jpg"
+			image="/images/medical-vis/volume-render-phong.webp"
 		/>
 	</div>
 </section>
