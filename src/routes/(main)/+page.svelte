@@ -3,7 +3,7 @@
 	import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 	import Hero from '$lib/sections/hero.svelte';
-	import ProjectShowcaseBig from '$lib/components/project-showcase-big.svelte';
+	import ProjectShowcase from '$lib/components/project-showcase.svelte';
 	import Contact from '$lib/sections/contact.svelte';
 
 	let projectSection: HTMLElement;
@@ -27,20 +27,20 @@
 		<a href="/projects" class="section-button hover-effect">View All →</a>
 	</div>
 	<div class="project-list">
-		<ProjectShowcaseBig
+		<ProjectShowcase
 			title="Aegix Engine"
 			description="Vulkan Game Engine"
 			link="/projects/aegix-engine"
 			image="/images/aegix-engine.jpg"
 		/>
-		<ProjectShowcaseBig
+		<ProjectShowcase
 			title="Dustveil"
 			description="Coop Horde Shooter"
 			link="/projects/dustveil"
 			image="/images/dustveil/dustveil-horde.jpg"
 			reversed={true}
 		/>
-		<ProjectShowcaseBig
+		<ProjectShowcase
 			title="Medical Visualization"
 			description="Visualization of CT scans"
 			link="/projects/medical-visualization"
