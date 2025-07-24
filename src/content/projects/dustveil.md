@@ -5,5 +5,7 @@ tags:
     - C++
     - Blender
 images: 
-    - /textures/planet.png
+    - /images/dustveil/dustveil-horde.jpg
+    - /images/dustveil/dustveil-menu.jpg
+    - /images/dustveil/dustveil-poster.jpg
 ---

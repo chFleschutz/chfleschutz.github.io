@@ -13,7 +13,11 @@
 			link="/projects/aegix-engine"
 			image="/images/aegix-engine.jpg"
 		/>
-		<ProjectCard title="Dustveil" link="/projects/dustveil" image="/textures/planet.png" />
+		<ProjectCard 
+			title="Dustveil" 
+			link="/projects/dustveil" 
+			image="/images/dustveil/dustveil-horde.jpg"
+		/>
 		<ProjectCard
 			title="Medical Visualization"
 			link="/projects/medical-visualization"

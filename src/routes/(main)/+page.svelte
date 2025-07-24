@@ -37,7 +37,7 @@
 			title="Dustveil"
 			description="Coop Horde Shooter"
 			link="/projects/dustveil"
-			image="/textures/planet.png"
+			image="/images/dustveil/dustveil-horde.jpg"
 			reversed={true}
 		/>
 		<ProjectShowcaseBig
