@@ -35,7 +35,7 @@
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
-		margin: 15rem 0;
+		margin: 10rem 0;
 	}
 
 	.email-container {
