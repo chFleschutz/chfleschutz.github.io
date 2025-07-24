@@ -4,19 +4,18 @@ tags:
     - C++
     - Vulkan
 images: 
-    - /images/aegix-engine.jpg
+    - /images/aegix/aegix-helmets.webp
+    - /images/aegix/aegix-sponza.webp
+    - /images/aegix/aegix-lights.webp
+    - /images/aegix/aegix-ui.webp
+    - /images/aegix/aegix-metal-roughness.webp
+    - /images/aegix/aegix-pbr-albedo.webp
+    - /images/aegix/aegix-pbr-ao.webp
+    - /images/aegix/aegix-pbr-metallic.webp
+    - /images/aegix/aegix-pbr-roughness.webp
+    - /images/aegix/aegix-pbr-lit.webp
 repo: https://github.com/chFleschutz/aegix-engine
 ---
 
 ## Description
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-![Screenshot 1](/textures/planet.png)
-
-## Features
-
-- Deferred Rendering
-- Physically Based Rendering
-- Framegraph
-- Bloom

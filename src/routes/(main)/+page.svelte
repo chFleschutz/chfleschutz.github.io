@@ -31,7 +31,7 @@
 			title="Aegix Engine"
 			description="Vulkan Game Engine"
 			link="/projects/aegix-engine"
-			image="/images/aegix-engine.jpg"
+			image="/images/aegix/aegix-helmets.webp"
 		/>
 		<ProjectShowcase
 			title="Dustveil"

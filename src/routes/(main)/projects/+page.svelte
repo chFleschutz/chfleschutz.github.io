@@ -12,7 +12,7 @@
 		<ProjectCard
 			title="Aegix Engine"
 			link="/projects/aegix-engine"
-			image="/images/aegix-engine.jpg"
+			image="/images/aegix/aegix-helmets.webp"
 		/>
 		<ProjectCard 
 			title="Dustveil" 
