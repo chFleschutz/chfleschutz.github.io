@@ -7,4 +7,5 @@ tags:
 images: 
     - /images/abduction-lab-42.jpg
 repo: https://github.com/chFleschutz/abduction-in-lab-42
+sortPriority: 50
 ---

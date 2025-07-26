@@ -5,4 +5,5 @@ tags:
     - Qt
 images: 
     - /textures/planet.png
+hidden: true
 ---

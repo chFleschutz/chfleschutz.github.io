@@ -1,8 +1,6 @@
 ---
 title: Aegix Engine
-tags: 
-    - C++
-    - Vulkan
+coverImage: /images/aegix/aegix-helmets.webp
 images: 
     - /images/aegix/aegix-helmets.webp
     - /images/aegix/aegix-sponza.webp
@@ -14,7 +12,11 @@ images:
     - /images/aegix/aegix-pbr-metallic.webp
     - /images/aegix/aegix-pbr-roughness.webp
     - /images/aegix/aegix-pbr-lit.webp
+tags: 
+    - C++
+    - Vulkan
 repo: https://github.com/chFleschutz/aegix-engine
+sortPriority: 99
 ---
 
 ## Description
