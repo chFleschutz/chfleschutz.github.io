@@ -1,16 +1,24 @@
 <script lang="ts">
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 	import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+
+	function goBack() {
+		if (window.history.length > 2) {
+			window.history.back();
+		} else {
+			window.location.href = '/';
+		}
+	}
 </script>
 
 <header>
 	<a href="/">
 		<h1>Christoph<br />Fleschutz</h1>
 	</a>
-	<a href="/projects" class="back-link hover-effect">
+	<button onclick={goBack} class="back-link hover-effect">
 		<FontAwesomeIcon icon={faAngleLeft} />
 		<span>back</span>
-	</a>
+	</button>
 </header>
 
 <style>
