@@ -3,9 +3,9 @@ import type { SvelteComponent } from 'svelte';
 export interface ProjectMetadata {
     title: string;
     coverImage: string;
-    images: string[];
-    tags: string[];
-    repo: string;
+    images?: string[];
+    tags?: string[];
+    repo?: string;
     hidden: boolean;
     sortPriority: number;
 };

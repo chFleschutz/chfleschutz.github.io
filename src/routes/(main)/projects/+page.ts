@@ -20,6 +20,7 @@ export async function load() {
                 id,
                 metadata: {
                     ...metadata,
+                    title: metadata.title || id,
                     coverImage: metadata.coverImage || metadata.images?.[0] || '/textures/planet.png',
                     hidden: metadata.hidden ?? false,
                     sortPriority: metadata.sortPriority ?? 0
