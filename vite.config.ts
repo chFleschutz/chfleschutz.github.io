@@ -7,6 +7,7 @@ export default defineConfig({
 	plugins: [sveltekit(), glsl()],
 	resolve: {
 		alias: {
+			$styles: '/src/styles',
 			$shaders: '/src/shaders',
 			$content: '/src/content'
 		}

@@ -2,7 +2,7 @@
     --color-primary: #2980B9;
     --color-accent: #2ECC70;
     --color-background: #0a0a0a;
-    --color-text: #F4F4F4;
+    --color-text: #eaeaea;
     --color-inactive: #7f8c8d;
     --font-primary: 'Montserrat', sans-serif;
     --font-weight-light: 300;
@@ -14,7 +14,7 @@
     --font-line-height: 1.5;
     --main-max-width: 1200px;
     --main-width: 80vw;
-    --article-max-width: 950px;
+    --article-max-width: 900px;
     --article-width: 70vw;
 }
 

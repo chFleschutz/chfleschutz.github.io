@@ -1,9 +1,10 @@
 <script>
 	import { config } from '@fortawesome/fontawesome-svg-core';
 	import '@fortawesome/fontawesome-svg-core/styles.css';
+	
 	config.autoAddCss = false;
-
-	import '../app.css';
+	import '$styles/app.css';
+	import '$styles/markdown.css';
 </script>
 
 <svelte:head>

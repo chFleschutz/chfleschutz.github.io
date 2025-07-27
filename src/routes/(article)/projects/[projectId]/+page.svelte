@@ -37,7 +37,9 @@
 	{#if data.meta.images}
 		<CarouselImage images={data.meta.images} />
 	{/if}
-	<svelte:component this={data.content} />
+	<div class="markdown">
+		<svelte:component this={data.content} />
+	</div>
 </article>
 
 <style>
