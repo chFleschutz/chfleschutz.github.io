@@ -1,7 +1,7 @@
 :root {
     --md-color-code: #1e242a;
     --md-color-link: #4493f8;
-    --md-font-size-base: 1.1rem;
+    --md-font-size-base: 1.15rem;
     --md-font-size-medium: 1.25rem;
     --md-font-size-large: 2.25rem;
     --md-font-line-height: 1.7;
@@ -11,21 +11,22 @@
     color: var(--color-text);
     font-family: var(--font-family-sans-serif);
     line-height: var(--md-font-line-height);
-    margin: 2rem 0;
+    margin-top: 2rem;
+    margin-bottom: 400px;
 }
 
 .markdown :is(h2) {
     font-size: var(--md-font-size-large);
-    margin-top: 1.5rem;
+    margin-top: 5rem;
 }
 
 .markdown :is(p) {
     font-size: var(--md-font-size-base);
-    margin: 0.5rem 0;
+    margin: 1.5rem 0;
 }
 
 .markdown :is(ul) {
-    margin: 0.5rem 0;
+    margin: 0.75rem 0;
 }
 
 .markdown :is(li) {
@@ -48,4 +49,8 @@
 
 .markdown :is(a:hover) {
     text-decoration: underline;
+}
+
+.markdown :is(img) {
+    margin: 1rem 0;
 }

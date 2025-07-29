@@ -99,6 +99,7 @@
 		max-height: 100%;
 		object-fit: cover;
 		border-radius: 10px;
+		margin: 0;
 	}
 
 	.thumbs {
