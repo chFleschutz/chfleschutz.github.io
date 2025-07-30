@@ -37,7 +37,7 @@
 			title="Dustveil"
 			description="A horde shooter built in Unreal Engine 5 with co-op multiplayer, developed as a student team project."
 			link="/projects/dustveil"
-			image="/images/dustveil/dustveil-horde.jpg"
+			image="/images/dustveil/dustveil-horde.webp"
 			reversed={true}
 		/>
 		<ProjectShowcase
