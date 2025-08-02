@@ -39,7 +39,6 @@ To achieve this, a cube that defines the bounding box of the data is rendered fi
 
 There are several techniques to accumulate the sampled values from the CT scan, but using transfer functions is probably the most interesting approach. They allow the user to map the raw CT scan values directly to RGBA color values. As the ray moves through the volume, these colors are accumulated until full opacity is reached. By adjusting the mapping, different parts of the scan can be highlighted.  
 
-
 ![Transfer Function](/images/medical-vis/transfer-function.webp)
 
 Lighting can further enhance the rendering by improving depth perception when viewing from different angles. This requires estimating the normal at each voxel by sampling neighboring values and computing the gradient. After that a simple Phong lighting model can be applied to add shading.

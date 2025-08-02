@@ -43,6 +43,10 @@
 </article>
 
 <style>
+	article {
+		margin-bottom: 10rem;
+	}
+
 	.page-heading {
 		display: flex;
 		align-items: center;
