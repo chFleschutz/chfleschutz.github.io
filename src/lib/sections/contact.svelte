@@ -5,7 +5,7 @@
 	import LinkIcons from '$lib/components/link-icons.svelte';
 
 	const email = 'ch.fleschutz@gmail.com';
-	let copied = false;
+	let copied = $state(false);
 
 	async function copyEmail() {
 		try {

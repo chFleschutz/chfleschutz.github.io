@@ -5,8 +5,8 @@
 	import vertexShader from '$shaders/sdf.vert';
 	import fragmentShader from '$shaders/sdf-iterations.frag';
 
-	let canvas: HTMLCanvasElement;
-	let container: HTMLDivElement;
+	let canvas: HTMLCanvasElement = $state();
+	let container: HTMLDivElement = $state();
 
 	onMount(() => {
 		const parent = canvas.parentElement;

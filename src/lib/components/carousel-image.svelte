@@ -2,18 +2,27 @@
 	import emblaCarouselSvelte from 'embla-carousel-svelte';
 	import type { EmblaOptionsType, EmblaPluginType, EmblaCarouselType } from 'embla-carousel';
 
-	export let images: string[] = [];
-	export let options: EmblaOptionsType = { loop: false };
-	export let optionsThumbs: EmblaOptionsType = {
+	interface Props {
+		images?: string[];
+		options?: EmblaOptionsType;
+		optionsThumbs?: EmblaOptionsType;
+		plugins?: EmblaPluginType[];
+	}
+
+	let {
+		images = [],
+		options = { loop: false },
+		optionsThumbs = {
 		loop: false,
 		dragFree: true,
 		containScroll: 'keepSnaps'
-	};
-	export let plugins: EmblaPluginType[] = [];
+	},
+		plugins = []
+	}: Props = $props();
 
 	let emblaMain: EmblaCarouselType;
 	let emblaThumbs: EmblaCarouselType;
-	let selectedIndex = 0;
+	let selectedIndex = $state(0);
 
 	function onInitMain(event: CustomEvent<EmblaCarouselType>) {
 		emblaMain = event.detail;

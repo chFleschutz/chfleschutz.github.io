@@ -2,12 +2,16 @@
 	import ProjectCard from '$lib/components/project-card.svelte';
 	import type { ProjectMetadata } from '$lib/types';
 
-	export let data: {
+	interface Props {
+		data: {
 		projects: {
 			id: string;
 			metadata: ProjectMetadata;
 		}[];
 	};
+	}
+
+	let { data }: Props = $props();
 </script>
 
 <div class="fullpage-container">

@@ -5,7 +5,7 @@
 
 	const quote = ['Ups!', 'Tja!', 'Hoppla!', '(╯°□°)╯︵ ┻━┻', '¯\\_(ツ)_/¯'];
 
-	let randomQuote = '...';
+	let randomQuote = $state('...');
 	onMount(() => {
 		randomQuote = quote[Math.floor(Math.random() * quote.length)];
 		console.log(`Error page loaded: ${randomQuote}`);

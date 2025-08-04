@@ -1,9 +1,19 @@
 <script lang="ts">
-	export let title: string = 'Project Title';
-	export let description: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-	export let link: string = '/';
-	export let image: string = '/textures/planet.png';
-	export let reversed: boolean = false;
+	interface Props {
+		title?: string;
+		description?: string;
+		link?: string;
+		image?: string;
+		reversed?: boolean;
+	}
+
+	let {
+		title = 'Project Title',
+		description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+		link = '/',
+		image = '/textures/planet.png',
+		reversed = false
+	}: Props = $props();
 </script>
 
 <a href={link} class="showcase" class:reversed aria-label="{title} Project Showcase">

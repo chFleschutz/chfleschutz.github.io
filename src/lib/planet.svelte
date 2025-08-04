@@ -2,7 +2,7 @@
 	import * as THREE from 'three';
 	import { onMount } from 'svelte';
 
-	let canvas: HTMLDivElement;
+	let canvas: HTMLDivElement = $state();
 
 	onMount(() => {
 		const scene = new THREE.Scene();

@@ -6,7 +6,7 @@
 	import ProjectShowcase from '$lib/components/project-showcase.svelte';
 	import Contact from '$lib/sections/contact.svelte';
 
-	let projectSection: HTMLElement;
+	let projectSection: HTMLElement = $state();
 </script>
 
 <section style="margin-top: -140px;">

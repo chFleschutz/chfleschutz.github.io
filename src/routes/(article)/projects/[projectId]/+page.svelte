@@ -6,11 +6,15 @@
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 	import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
-	export let data: {
+	interface Props {
+		data: {
 		id: string;
 		meta: ProjectMetadata;
 		content: typeof SvelteComponent;
 	};
+	}
+
+	let { data }: Props = $props();
 </script>
 
 <svelte:head>
@@ -38,7 +42,7 @@
 		<CarouselImage images={data.meta.images} />
 	{/if}
 	<div class="markdown">
-		<svelte:component this={data.content} />
+		<data.content />
 	</div>
 </article>
 

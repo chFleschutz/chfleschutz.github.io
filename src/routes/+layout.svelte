@@ -1,10 +1,15 @@
-<script>
+<script lang="ts">
 	import { config } from '@fortawesome/fontawesome-svg-core';
 	import '@fortawesome/fontawesome-svg-core/styles.css';
 	
 	config.autoAddCss = false;
 	import '$styles/app.css';
 	import '$styles/markdown.css';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 </script>
 
 <svelte:head>
@@ -22,4 +27,4 @@
 	/>
 </svelte:head>
 
-<slot></slot>
+{@render children?.()}

@@ -1,8 +1,17 @@
 <script lang="ts">
-	export let title: string = 'Project Title';
-	export let link: string = '/';
-	export let image: string = '/textures/planet.png';
-	export let imagePosition: string = 'center';
+	interface Props {
+		title?: string;
+		link?: string;
+		image?: string;
+		imagePosition?: string;
+	}
+
+	let {
+		title = 'Project Title',
+		link = '/',
+		image = '/textures/planet.png',
+		imagePosition = 'center'
+	}: Props = $props();
 </script>
 
 <a href={link} class="project-card">
