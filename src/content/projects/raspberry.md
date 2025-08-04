@@ -3,7 +3,10 @@ title: Raspberry
 tags: 
     - Unity
     - Game Jam
+coverImage: /images/raspberry/raspberry-shot.webp
 images: 
-    - /textures/planet.png
+    - /images/raspberry/raspberry-menu.webp
+    - /images/raspberry/raspberry-dash.webp
+    - /images/raspberry/raspberry-shot.webp
 repo: https://github.com/chFleschutz/raspberry-jam
 ---
