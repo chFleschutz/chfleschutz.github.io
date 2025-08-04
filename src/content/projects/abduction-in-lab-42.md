@@ -17,4 +17,4 @@ sortPriority: 20
 
 ## Overview
 
-**Abduction in Lab 42** is a VR puzzle game developed in Unity as a university group project. The player has to complete three unique levels, each with its own mechanics and environment. Each level makes use of different VR interactions such as placing objects, physics-based puzzles and shooting a bow and arrow.
+**Abduction in Lab 42** is a VR puzzle game developed in Unity as a university group project in my bachelor's program. The player has to complete three unique levels, each with its own mechanics and environment. Each level makes use of different VR interactions such as placing objects, physics-based puzzles and shooting a bow and arrow.

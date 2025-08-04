@@ -1,7 +1,7 @@
 ---
 title: AI for Games
 tags: 
-    - C++
+    - C++20
     - Qt
 coverImage: /images/ai-for-games/flowfield-directions.webp
 images: 

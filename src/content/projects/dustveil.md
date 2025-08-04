@@ -46,7 +46,7 @@ Instead of calculated a path for each enemy the flowfield can be calculated once
 
 ## Lessons Learned
 
-A key lesson from Dustveil was the importance of structured teamwork in a group project. With five developers working in parallel, tools like an issue tracker and a Scrum workflow kept us aligned and productive. Clear communication and well-defined roles proved especially important under the semester’s time pressure.
+A key lesson from Dustveil was the importance of structured teamwork in a group project. With five developers working in parallel, tools like a Scrum workflow and an issue tracker kept us aligned and productive. Clear communication and well-defined roles proved especially important under the semester’s time pressure.
 
 The project concluded with a presentation at the university’s project fair, where the game received very positive feedback from other students and faculty.
 

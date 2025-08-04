@@ -21,6 +21,8 @@ sortPriority: 50
 
 The game was build in Unreal Engine 5 and uses its motion matching system to create fluid movement animations as the player runs, climbs and jumps across the underworld.
 
+If you want to play the game for yourself, it is available for download on itch.io:
+
 <div style="text-align: center;">
     <iframe title="Download Eternal Flame"
         width="208" height="167"
