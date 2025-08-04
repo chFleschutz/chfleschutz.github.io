@@ -12,5 +12,9 @@ images:
     - /images/abduction-in-lab-42/level1.webp
     - /images/abduction-in-lab-42/level0.webp
 repo: https://github.com/chFleschutz/abduction-in-lab-42
-sortPriority: 50
+sortPriority: 20
 ---
+
+## Overview
+
+**Abduction in Lab 42** is a VR puzzle game developed in Unity as a university group project. The player has to complete three unique levels, each with its own mechanics and environment. Each level makes use of different VR interactions such as placing objects, physics-based puzzles and shooting a bow and arrow.
