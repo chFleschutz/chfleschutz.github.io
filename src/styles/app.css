@@ -2,7 +2,7 @@
     --color-primary: #2980B9;
     --color-accent: #2ECC70;
     --color-background: #0a0a0a;
-    --color-text: #F4F4F4;
+    --color-text: #eaeaea;
     --color-inactive: #7f8c8d;
     --font-primary: 'Montserrat', sans-serif;
     --font-weight-light: 300;
@@ -12,6 +12,10 @@
     --font-size-medium: 1.25rem;
     --font-size-large: 3rem;
     --font-line-height: 1.5;
+    --main-max-width: 1200px;
+    --main-width: 80vw;
+    --article-max-width: 900px;
+    --article-width: 70vw;
 }
 
 body {
@@ -50,8 +54,9 @@ p {
 
 a {
     font-size: var(--font-size-base);
-    font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-bold);
     text-transform: uppercase;
+    text-decoration: none;
     color: var(--color-text);
 }
 
@@ -64,11 +69,8 @@ img {
 .fullpage-container {
     position: relative;
     width: 70vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 0 2rem;
     margin: 0 auto;
 }
@@ -76,7 +78,6 @@ img {
 @media (max-width: 768px) {
     .fullpage-container {
         width: 90%;
-        height: auto;
         margin: 0;
         padding: 0;
     }
@@ -101,6 +102,7 @@ button {
 
 .hover-effect {
     transition: transform ease 0.2s;
+    padding: 0.5rem;
 }
 
 .hover-effect:hover {

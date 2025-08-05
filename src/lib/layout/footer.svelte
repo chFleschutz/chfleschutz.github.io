@@ -2,22 +2,22 @@
     const currentYear = new Date().getFullYear();
 </script>
 
-<div class="footer">
+<footer>
 	<p>Created by me &copy {currentYear}</p>
     <div class="gradient"></div>
-</div>
+</footer>
 
 <style>
-	.footer {
+	footer {
 		width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
 	}
 
-    .footer p {
-        color: var(--color-inactive);
-    }
+	footer p {
+		color: var(--color-inactive);
+	}
 
     .gradient {
         width: 100%;

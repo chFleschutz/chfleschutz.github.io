@@ -1,8 +1,15 @@
-<script>
-	import '../app.css';
+<script lang="ts">
+	import { config } from '@fortawesome/fontawesome-svg-core';
+	import '@fortawesome/fontawesome-svg-core/styles.css';
+	
+	config.autoAddCss = false;
+	import '$styles/app.css';
+	import '$styles/markdown.css';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
 
-	import Header from '$lib/header.svelte';
-	import PageIndicator from '$lib/page-indicator.svelte';
+	let { children }: Props = $props();
 </script>
 
 <svelte:head>
@@ -20,30 +27,4 @@
 	/>
 </svelte:head>
 
-<main>
-	<Header />
-	<PageIndicator />
-
-	<slot></slot>
-</main>
-
-<style>
-	:global(body) {
-		overflow: hidden;
-	}
-
-	main {
-		width: 100vw;
-		height: 100vh;
-		display: flex;
-		flex-direction: column;
-		scroll-snap-type: y mandatory;
-		overflow-y: scroll;
-	}
-
-	@media (max-width: 768px) {
-		main {
-			scroll-snap-type: none;
-		}
-	}
-</style>
+{@render children?.()}

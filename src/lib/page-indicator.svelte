@@ -7,8 +7,8 @@
 		<button
 			class="indicator"
 			class:selected={$currentSection === section}
-			on:click={() => scrollToSection(section)}
-			on:keydown={(e) => e.key === 'Enter' && scrollToSection(section)}
+			onclick={() => scrollToSection(section)}
+			onkeydown={(e) => e.key === 'Enter' && scrollToSection(section)}
 			aria-label="Go to section"
 		>
 			<div class="indicator-line" class:selected={$currentSection === section}></div>

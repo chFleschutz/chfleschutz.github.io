@@ -4,21 +4,26 @@
 
 	import emblaCarousel from 'embla-carousel';
 	import type { EmblaCarouselType, EmblaOptionsType } from 'embla-carousel';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 
 	const options: EmblaOptionsType = {
 		loop: false,
 		slidesToScroll: 'auto'
 	};
 
-	let viewport: HTMLDivElement;
-	let nextButton: HTMLButtonElement;
-	let prevButton: HTMLButtonElement;
-	let dots: HTMLDivElement;
+	let viewport: HTMLDivElement = $state();
+	let nextButton: HTMLButtonElement = $state();
+	let prevButton: HTMLButtonElement = $state();
+	let dots: HTMLDivElement = $state();
 
-	let snapCount = 0;
+	let snapCount = $state(0);
 	const selectedDot = writable(0);
 
-	let embla: EmblaCarouselType;
+	let embla: EmblaCarouselType = $state();
 
 	function onInit() {
 		snapCount = embla.scrollSnapList().length;
@@ -50,7 +55,7 @@
 <div class="embla">
 	<div class="embla-viewport" bind:this={viewport}>
 		<div class="embla-container">
-			<slot></slot>
+			{@render children?.()}
 		</div>
 	</div>
 

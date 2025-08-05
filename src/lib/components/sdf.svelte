@@ -2,20 +2,24 @@
 	import * as THREE from 'three';
 	import { onMount } from 'svelte';
 
-	import vertexShader from './../../shaders/sdf.vert';
-	// import fragmentShader from './../../shaders/sdf.frag';
-	import fragmentShader from './../../shaders/sdf-iterations.frag';
+	import vertexShader from '$shaders/sdf.vert';
+	import fragmentShader from '$shaders/sdf-iterations.frag';
 
-	let canvas: HTMLCanvasElement;
-	let container: HTMLDivElement;
+	let canvas: HTMLCanvasElement = $state();
+	let container: HTMLDivElement = $state();
 
 	onMount(() => {
 		const parent = canvas.parentElement;
 
+		const context = canvas.getContext('webgl2');
+		if (!context) {
+			throw new Error('WebGL2 context not available');
+		}
+
 		const aspect = canvas.clientWidth / canvas.clientHeight;
 		const scene = new THREE.Scene();
 		const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
-		const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+		const renderer = new THREE.WebGLRenderer({ canvas, context, antialias: true, alpha: true });
 		renderer.setSize(container.clientWidth, container.clientHeight);
 		renderer.setClearColor(0x000000, 0);
 
@@ -31,6 +35,7 @@
 			)
 		);
 		const material = new THREE.ShaderMaterial({
+			glslVersion: THREE.GLSL3,
 			vertexShader,
 			fragmentShader,
 			uniforms: {
@@ -43,21 +48,32 @@
 		scene.add(plane);
 
 		camera.position.z = 5;
-		
-		const clock = new THREE.Clock();
+
 		let mouse = new THREE.Vector2();
 		let attractionPoint = new THREE.Vector2();
+		const clock = new THREE.Clock();
+		const targetFrameTime = 1 / 60;
+		let accumulatedDelta = 0;
+
 		function animate() {
 			requestAnimationFrame(animate);
-			
-			material.uniforms.uTime.value += clock.getDelta();
 
-			attractionPoint.lerp(mouse, 0.02);
+			accumulatedDelta += clock.getDelta();
+			if (accumulatedDelta < targetFrameTime) {
+				return; // Skip rendering due to fps cap
+			}
+
+			const deltaTime = Math.min(accumulatedDelta, 0.1); // Avoid too large deltas
+			accumulatedDelta = 0;
+
+			attractionPoint.lerp(mouse, 3 * deltaTime);
 			material.uniforms.uMouse.value = attractionPoint;
+			material.uniforms.uTime.value += deltaTime;
 
 			renderer.render(scene, camera);
 		}
-		animate();
+		requestAnimationFrame(animate);
+		
 
 		// Resize
 		const onResize = () => {
