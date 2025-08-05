@@ -95,4 +95,36 @@
 		font-size: var(--font-size-medium);
 		transition: color 0.3s ease;
 	}
+
+	@media (max-width: 768px) {
+		.showcase {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.showcase.reversed {
+			flex-direction: column;
+		}
+
+		.showcase.reversed .details-inner {
+			padding: 0;
+		}
+
+		.image-container {
+			width: 100%;
+			height: 300px;
+			margin: 1rem 0;
+		}
+
+		.details-container {
+			width: 100%;
+			padding: 0 2rem;
+			text-align: center;
+		}
+
+		.details-inner {
+			padding: 0;
+		}
+
+	}
 </style>

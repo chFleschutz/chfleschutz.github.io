@@ -77,8 +77,8 @@ img {
 
 @media (max-width: 768px) {
     .fullpage-container {
-        width: 90%;
-        margin: 0;
+        width: 80%;
+        margin: 0 auto;
         padding: 0;
     }
 }

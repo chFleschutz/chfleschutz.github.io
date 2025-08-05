@@ -13,10 +13,10 @@
 		images = [],
 		options = { loop: false },
 		optionsThumbs = {
-		loop: false,
-		dragFree: true,
-		containScroll: 'keepSnaps'
-	},
+			loop: false,
+			dragFree: true,
+			containScroll: 'keepSnaps'
+		},
 		plugins = []
 	}: Props = $props();
 
@@ -43,6 +43,7 @@
 
 	function onThumbClick(index: number) {
 		if (!emblaMain) return;
+
 		emblaMain.scrollTo(index);
 	}
 </script>
@@ -82,7 +83,7 @@
 	.carousel {
 		display: flex;
 		flex-direction: column;
-        margin: 2rem 0;
+		margin: 2rem 0;
 	}
 
 	.embla {
@@ -97,7 +98,7 @@
 	.embla-slide {
 		flex: 0 0 100%;
 		min-width: 0;
-        max-height: 550px;
+		max-height: 550px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -139,5 +140,20 @@
 		border: 2px solid var(--color-primary);
 		border-radius: 12px;
 		box-shadow: 0 0px 10px var(--color-primary);
+	}
+
+	@media (max-width: 768px) {
+		.thumbs {
+			--thumbs-slide-height: 5rem;
+		}
+
+		.embla-slide {
+			max-height: 300px;
+		}
+
+		.thumb-slide {
+			width: calc(var(--thumbs-slide-height) * 1.5);
+			height: var(--thumbs-slide-height);
+		}
 	}
 </style>

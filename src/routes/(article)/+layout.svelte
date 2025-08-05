@@ -29,4 +29,10 @@
 		width: var(--article-width);
 		margin: 0 auto;
 	}
+
+	@media (max-width: 768px) {
+		main {
+			width: 90vw;
+		}
+	}
 </style>

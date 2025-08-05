@@ -43,6 +43,7 @@
 
 	@media (max-width: 768px) {
 		header {
+			width: 90vw;
 			align-items: flex-start;
 			padding: 1.5rem;
 		}

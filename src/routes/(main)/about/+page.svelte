@@ -1,7 +1,12 @@
 <script lang="ts">
-    import About from '$lib/sections/about.svelte';
+	import About from '$lib/sections/about.svelte';
 	import Contact from '$lib/sections/contact.svelte';
 </script>
 
-<About />
-<Contact />
+<div class="fullpage-container">
+	<About />
+	<Contact />
+</div>
+
+<style>
+</style>

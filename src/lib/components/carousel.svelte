@@ -15,17 +15,19 @@
 		slidesToScroll: 'auto'
 	};
 
-	let viewport: HTMLDivElement = $state();
-	let nextButton: HTMLButtonElement = $state();
-	let prevButton: HTMLButtonElement = $state();
-	let dots: HTMLDivElement = $state();
+	let viewport = $state<HTMLDivElement>();
+	let nextButton = $state<HTMLButtonElement>();
+	let prevButton = $state<HTMLButtonElement>();
+	let dots = $state<HTMLDivElement>();
 
 	let snapCount = $state(0);
 	const selectedDot = writable(0);
 
-	let embla: EmblaCarouselType = $state();
+	let embla = $state<EmblaCarouselType>();
 
 	function onInit() {
+		if (!embla) return;
+
 		snapCount = embla.scrollSnapList().length;
 
 		prevButton?.removeAttribute('disabled');
@@ -35,6 +37,8 @@
 	}
 
 	function onSelect() {
+		if (!embla) return;
+
 		if (embla.canScrollPrev()) prevButton?.removeAttribute('disabled');
 		else prevButton?.setAttribute('disabled', 'disabled');
 
@@ -45,6 +49,8 @@
 	}
 
 	onMount(() => {
+		if (!viewport) return;
+
 		embla = emblaCarousel(viewport, options);
 		embla.on('init', onInit);
 		embla.on('reInit', onInit);
@@ -64,7 +70,7 @@
 			class="embla-button"
 			aria-label="Previous"
 			bind:this={prevButton}
-			onclick={() => embla.scrollPrev()}
+			onclick={() => embla?.scrollPrev()}
 		>
 			<svg class="embla-button-svg" viewBox="0 0 532 532">
 				<path
@@ -80,13 +86,13 @@
 					<button
 						class="embla-dot embla-dot-selected"
 						aria-label="Go to slide {i + 1}"
-						onclick={() => embla.scrollTo(i)}
+						onclick={() => embla?.scrollTo(i)}
 					></button>
 				{:else}
 					<button
 						class="embla-dot"
 						aria-label="Go to slide {i + 1}"
-						onclick={() => embla.scrollTo(i)}
+						onclick={() => embla?.scrollTo(i)}
 					></button>
 				{/if}
 			{/each}
@@ -96,7 +102,7 @@
 			class="embla-button"
 			aria-label="Next"
 			bind:this={nextButton}
-			onclick={() => embla.scrollNext()}
+			onclick={() => embla?.scrollNext()}
 		>
 			<svg class="embla-button-svg" viewBox="0 0 532 532">
 				<path
