@@ -24,7 +24,7 @@
 <section bind:this={projectSection}>
 	<div class="section-header">
 		<h2 class="section-title text-gradient">Showcase</h2>
-		<a href="/projects" class="section-button hover-effect">View All →</a>
+		<a href="/projects" class="section-button hover-effect">View More →</a>
 	</div>
 	<div class="project-list">
 		<ProjectShowcase
