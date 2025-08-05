@@ -48,7 +48,7 @@
 
 <style>
 	article {
-		margin-bottom: 10rem;
+		margin-bottom: 20rem;
 	}
 
 	.page-heading {

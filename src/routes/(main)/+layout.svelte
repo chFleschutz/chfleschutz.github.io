@@ -29,5 +29,6 @@
 
 	main {
 		flex: 1;
+		margin-bottom: 20rem;
 	}
 </style>

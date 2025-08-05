@@ -6,7 +6,7 @@
 	import ProjectShowcase from '$lib/components/project-showcase.svelte';
 	import Contact from '$lib/sections/contact.svelte';
 
-	let projectSection: HTMLElement = $state();
+	let projectSection = $state<HTMLElement | null>();
 </script>
 
 <section style="margin-top: -140px;">
@@ -15,7 +15,7 @@
 		class="chevron hover-effect"
 		aria-label="Scroll to projects section"
 		onclick={() => {
-			projectSection.scrollIntoView({ behavior: 'smooth' });
+			projectSection?.scrollIntoView({ behavior: 'smooth' });
 		}}
 	>
 		<FontAwesomeIcon icon={faChevronDown} size="2x" />
