@@ -43,4 +43,20 @@
 		grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 		gap: 2rem;
 	}
+
+	@media (max-width: 768px) {
+		.projects-header {
+			text-align: center;
+			margin: 2rem 0;
+		}
+
+		h2 {
+			width: 100%;
+		}
+
+		.projects-list {
+			grid-template-columns: 1fr;
+			margin-bottom: 7rem;
+		}
+	}
 </style>

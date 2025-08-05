@@ -59,9 +59,8 @@
 
 		nav {
 			flex-direction: column;
-			gap: 1rem;
+			gap: 0.5rem;
 			align-items: flex-end;
-			position: absolute;
 			top: 1.5rem;
 			right: 1.5rem;
 		}

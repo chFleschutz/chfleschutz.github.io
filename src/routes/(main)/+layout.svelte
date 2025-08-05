@@ -32,4 +32,10 @@
 		flex: 1;
 		margin-bottom: 20rem;
 	}
+
+	@media (max-width: 768px) {
+		main {
+			margin-bottom: 10rem;
+		}
+	}
 </style>

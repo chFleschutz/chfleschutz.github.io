@@ -87,4 +87,17 @@
 		flex-direction: column;
 		gap: 100px;
 	}
+
+	@media (max-width: 768px) {
+		.section-header {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			padding: 4rem 0;
+		}
+
+		.section-button {
+			margin-left: 0;
+		}
+	}
 </style>

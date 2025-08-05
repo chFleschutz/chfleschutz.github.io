@@ -20,7 +20,6 @@
 
 <style>
 	.about {
-		width: 70vw;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		align-items: center;
@@ -51,6 +50,7 @@
 		.about {
 			grid-template-columns: 1fr;
 			gap: 2rem;
+			margin: 2rem auto;
 		}
 
 		.about-text {
@@ -58,7 +58,7 @@
 		}
 
 		.about-image {
-			max-width: 200px;
+			max-width: 250px;
 			justify-self: center;
 		}
 	}

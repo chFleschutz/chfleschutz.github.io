@@ -35,6 +35,7 @@
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
+		padding: 1rem;
 		margin-top: 20rem;
 	}
 
@@ -65,5 +66,15 @@
 
 	.copied-message.visible {
 		opacity: 1;
+	}
+
+	@media (max-width: 768px) {
+		.contact {
+			margin-top: 15rem;
+		}
+
+		.email-container {
+			padding: 0.5rem 1.5rem;
+		}
 	}
 </style>

@@ -4,7 +4,7 @@ tags:
     - C++20
     - CMake
     - Qt
-coverImage: /images/ik.jpg
+coverImage: /images/inverse-kinematics/ik.jpg
 images: 
     - /images/inverse-kinematics/ik-demo.webp
 repo: https://github.com/chFleschutz/inverse-kinematics-algorithms

@@ -77,4 +77,20 @@
 		padding: 0.15rem 1rem;
 		font-size: 0.875rem;
 	}
+
+	@media (max-width: 768px) {
+		.page-heading {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+
+		.repo-link {
+			margin-top: 0.5rem;
+		}
+
+		.tags {
+			justify-content: center;
+		}
+	}
 </style>
