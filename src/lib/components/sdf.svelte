@@ -5,10 +5,14 @@
 	import vertexShader from '$shaders/sdf.vert';
 	import fragmentShader from '$shaders/sdf-iterations.frag';
 
-	let canvas: HTMLCanvasElement = $state();
-	let container: HTMLDivElement = $state();
+	let canvas = $state<HTMLCanvasElement>();
+	let container = $state<HTMLDivElement>();
 
 	onMount(() => {
+		if (!canvas || !container) {
+			throw new Error('Canvas or container not found');
+		}
+
 		const parent = canvas.parentElement;
 
 		const context = canvas.getContext('webgl2');
@@ -77,6 +81,8 @@
 
 		// Resize
 		const onResize = () => {
+			if (!container || !canvas) return;
+
 			renderer.setSize(container.clientWidth, container.clientHeight);
 			material.uniforms.uResolution.value.set(container.clientWidth, container.clientHeight);
 		};
@@ -84,6 +90,8 @@
 
 		// Mouse position
 		const onMouseMove = (event: MouseEvent) => {
+			if (!canvas) return;
+
 			const rect = canvas.getBoundingClientRect();
 			mouse = new THREE.Vector2(
 				((event.clientX - rect.left) / rect.width) * 2 - 1,
