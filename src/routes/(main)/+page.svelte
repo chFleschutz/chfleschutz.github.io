@@ -53,12 +53,23 @@
 </section>
 
 <style>
+	@keyframes bounce {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(10px);
+		}
+	}
+
 	.chevron {
 		position: absolute;
-		font-size: 0.75rem;
-		bottom: 2rem;
-		padding: 0.5rem;
-		left: calc(50% - 1.25rem);
+		font-size: 1rem;
+		bottom: 0.5rem;
+		padding: 2rem;
+		left: calc(50% - 3rem);
+		animation: bounce 2s infinite;
 	}
 
 	.section-header {
