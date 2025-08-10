@@ -48,7 +48,7 @@
 		/>
 	</div>
 </section>
-<section>
+<section style="margin-top: 15rem;">
 	<Contact />
 </section>
 

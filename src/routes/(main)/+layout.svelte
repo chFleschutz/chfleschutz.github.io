@@ -30,7 +30,7 @@
 
 	main {
 		flex: 1;
-		margin-bottom: 20rem;
+		margin-bottom: 15rem;
 	}
 
 	@media (max-width: 768px) {

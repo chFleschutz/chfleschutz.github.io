@@ -3,10 +3,13 @@
 	import Contact from '$lib/sections/contact.svelte';
 </script>
 
-<div class="fullpage-container">
+<div class="fullpage-container about">
 	<About />
 	<Contact />
 </div>
 
 <style>
+	.about {
+		gap: 7rem;
+	}
 </style>

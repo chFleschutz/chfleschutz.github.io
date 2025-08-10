@@ -24,7 +24,7 @@
 		grid-template-columns: 1fr 1fr;
 		align-items: center;
 		gap: 5%;
-		margin: 5rem auto;
+		margin: 2rem auto;
 	}
 
 	.about-text {

@@ -36,7 +36,6 @@
 		align-items: center;
 		text-align: center;
 		padding: 1rem;
-		margin-top: 20rem;
 	}
 
 	.email-container {
