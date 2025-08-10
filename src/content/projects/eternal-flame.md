@@ -1,5 +1,6 @@
 ---
 title: Eternal Flame 
+description: Third person parkour game developed during a game jam in Unreal Engine 5.
 tags: 
     - Unreal Engine
     - Game Jam

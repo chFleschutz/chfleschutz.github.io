@@ -1,5 +1,6 @@
 ---
 title: Bachelor Thesis 
+description: Implemented a Vulkan renderer for an OpenGL based framework by creating an abstract rendering interface.
 tags: 
     - C++
     - Qt

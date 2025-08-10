@@ -1,5 +1,6 @@
 ---
 title: Aegix Engine
+description: A Vulkan game engine written in C++ with PBR, a framegraph for multipass rendering and ECS scene management.
 coverImage: /images/aegix/aegix-helmets.webp
 images: 
     - /images/aegix/aegix-helmets.webp

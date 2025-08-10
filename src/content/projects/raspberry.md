@@ -1,5 +1,6 @@
 ---
 title: Raspberry
+description: Top-down adventure game set in a steampunk world and developed during a game jam in Unity.
 tags: 
     - Unity
     - Game Jam

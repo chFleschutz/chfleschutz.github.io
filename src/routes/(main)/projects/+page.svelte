@@ -28,6 +28,7 @@
 				title={project.metadata.title}
 				link={`/projects/${project.id}`}
 				image={project.metadata.coverImage}
+				description={project.metadata.description}
 			/>
 		{/each}
 	</div>
@@ -35,7 +36,8 @@
 
 <style>
 	.projects-header {
-		margin: 4rem 0;
+		margin-top: 4rem;
+		margin-bottom: 2rem;
 	}
 
 	.projects-list {

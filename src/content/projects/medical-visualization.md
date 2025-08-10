@@ -1,5 +1,6 @@
 ---
 title: Medical Visualization
+description: Visualizes CT scans with direct volume rendering and slice viewing using Qt and OpenGL.
 coverImage: /images/medical-vis/volume-render-phong.webp
 images: 
     - /images/medical-vis/volume-render-phong.webp

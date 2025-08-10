@@ -1,5 +1,6 @@
 ---
 title: Hive Mind
+description: Turn-based strategy prototype with random generation and A* pathfinding developed in Unreal Engine 5.
 tags: 
     - Unreal Engine
     - C++

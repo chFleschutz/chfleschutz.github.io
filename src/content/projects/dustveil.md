@@ -1,5 +1,6 @@
 ---
 title: Dustveil
+description: Horde shooter with co-op multiplayer, built in Unreal Engine 5 as a student team project.
 coverImage: /images/dustveil/dustveil-horde.webp
 images: 
     - /images/dustveil/dustveil-horde.webp

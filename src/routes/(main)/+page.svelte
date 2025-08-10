@@ -29,20 +29,20 @@
 	<div class="project-list">
 		<ProjectShowcase
 			title="Aegix Engine"
-			description="A modern C++20 Vulkan game engine with PBR, GLTF model loading, and a custom framegraph."
+			description="A Vulkan game engine written in C++ with PBR, a framegraph for multipass rendering and ECS scene management."
 			link="/projects/aegix-engine"
 			image="/images/aegix/aegix-helmets.webp"
 		/>
 		<ProjectShowcase
 			title="Dustveil"
-			description="A horde shooter built in Unreal Engine 5 with co-op multiplayer, developed as a student team project."
+			description="A Horde shooter with co-op multiplayer, built in Unreal Engine 5 as a student team project."
 			link="/projects/dustveil"
 			image="/images/dustveil/dustveil-horde.webp"
 			reversed={true}
 		/>
 		<ProjectShowcase
 			title="Medical Visualization"
-			description="Visualizes CT scans using OpenGL volume rendering and slice viewing, built in C++20 with Qt."
+			description="Visualizes CT scans with direct volume rendering and slice viewing using Qt and OpenGL."
 			link="/projects/medical-visualization"
 			image="/images/medical-vis/volume-render-phong.webp"
 		/>

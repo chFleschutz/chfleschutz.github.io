@@ -2,6 +2,7 @@ import type { SvelteComponent } from 'svelte';
 
 export interface ProjectMetadata {
     title: string;
+    description?: string;
     coverImage: string;
     images?: string[];
     tags?: string[];

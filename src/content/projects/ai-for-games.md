@@ -1,5 +1,6 @@
 ---
 title: AI for Games
+description: Collection of AI algorithms, including flowfield pathfinding, influence mapping and R-Q learning.
 tags: 
     - C++20
     - Qt

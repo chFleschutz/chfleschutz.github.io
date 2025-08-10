@@ -1,5 +1,6 @@
 ---
 title: Inverse Kinematics
+description: Implementation of IK algorithms CCD and FABRIK in C++.
 tags: 
     - C++20
     - CMake

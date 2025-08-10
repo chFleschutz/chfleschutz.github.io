@@ -1,5 +1,6 @@
 ---
 title: Abduction in Lab 42
+description: Virtual reality puzzle game developed in Unity, where you must rescue your robot companion.
 tags: 
     - Unity
     - C#
