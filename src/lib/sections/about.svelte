@@ -15,7 +15,7 @@
 			2026.
 		</p>
 	</div>
-	<img class="about-image" src="/images/portrait.jpg" alt="" />
+	<img class="about-image" src="/images/about/portrait.webp" alt="" />
 </div>
 
 <style>
