@@ -5,7 +5,7 @@
 
 <div class="hero">
 	<div class="hero-text">
-		<h2 class="text-gradient">Hi, I'm Chris</h2>
+		<h2 class="text-gradient">Hi, I'm Christoph</h2>
 		<p>I'm a master's student specializing in game engineering, C++ and real-time graphics</p>
 		<LinkIcons />
 	</div>
