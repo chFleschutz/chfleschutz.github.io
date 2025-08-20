@@ -6,7 +6,7 @@
 <div class="hero">
 	<div class="hero-text">
 		<h2 class="text-gradient">Hi, I'm Christoph</h2>
-		<p>I'm a master's student specializing in game engineering, C++ and real-time graphics</p>
+		<p>I'm a master's student specializing in C++ programming and real-time graphics</p>
 		<LinkIcons />
 	</div>
 	<div class="sdf">
@@ -34,7 +34,7 @@
 	}
 
 	.hero-text h2 {
-		font-size: 4rem;
+		font-size: 3.5rem;
 	}
 
 	.hero-text p {
